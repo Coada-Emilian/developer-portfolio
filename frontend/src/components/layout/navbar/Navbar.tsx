@@ -1,11 +1,12 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import type { IUser } from "../../../@types/interfaces/IUser";
 import NavbarActions from "./NavbarActions";
 import NavbarBrand from "./NavbarBrand";
 import NavbarDesktopNavigation from "./NavbarDesktopNavigation";
 import NavbarMobileNavigation from "./NavbarMobileNavigation";
 
-function Navbar() {
+function Navbar({ user }: { user: IUser }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -14,9 +15,9 @@ function Navbar() {
     <header className="relative bg-navy-950 text-white">
       <nav className="mx-auto flex w-full items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
         <NavbarBrand
-          firstName="Emilian"
-          lastName="Coada"
-          subtitle="Développeur Full Stack"
+          firstName={user.firstName}
+          lastName={user.lastName}
+          subtitle={user.subtitle}
         />
 
         <NavbarDesktopNavigation />
