@@ -1,6 +1,6 @@
-import { Target } from "lucide-react";
+import { Target } from 'lucide-react'
 
-import footerBackground from "../../../assets/images/footer_background_mobile.png";
+import footerBackground from '../../../assets/images/footer_background_mobile.png'
 
 export default function MobileFooter() {
   return (
@@ -21,12 +21,11 @@ export default function MobileFooter() {
           <h2 className="text-base font-extrabold">Mon objectif</h2>
 
           <p className="mt-1 text-xs font-medium leading-relaxed">
-            Continuer à progresser en tant que développeur Full Stack,
-            contribuer à des projets concrets et évoluer au sein d'une équipe
-            stimulante.
+            Continuer à progresser en tant que développeur Full Stack, contribuer à des projets
+            concrets et évoluer au sein d'une équipe stimulante.
           </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }

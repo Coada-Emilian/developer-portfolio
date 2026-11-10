@@ -1,4 +1,4 @@
-import { Code2, FolderKanban, House, Mail, UserRound } from "lucide-react";
+import { Code2, FolderKanban, House, Mail, UserRound } from 'lucide-react'
 
 export default function NavbarDesktopNavigation() {
   return (
@@ -8,36 +8,24 @@ export default function NavbarDesktopNavigation() {
         Accueil
       </a>
 
-      <a
-        href="#about"
-        className="flex items-center gap-2 transition hover:text-blue-500"
-      >
+      <a href="/about" className="flex items-center gap-2 transition hover:text-blue-500">
         <UserRound size={18} />À propos
       </a>
 
-      <a
-        href="#projects"
-        className="flex items-center gap-2 transition hover:text-blue-500"
-      >
+      <a href="/projects" className="flex items-center gap-2 transition hover:text-blue-500">
         <FolderKanban size={18} />
         Projets
       </a>
 
-      <a
-        href="#skills"
-        className="flex items-center gap-2 transition hover:text-blue-500"
-      >
+      <a href="/skills" className="flex items-center gap-2 transition hover:text-blue-500">
         <Code2 size={18} />
         Compétences
       </a>
 
-      <a
-        href="#contact"
-        className="flex items-center gap-2 transition hover:text-blue-500"
-      >
+      <a href="/contact" className="flex items-center gap-2 transition hover:text-blue-500">
         <Mail size={18} />
         Contact
       </a>
     </div>
-  );
+  )
 }

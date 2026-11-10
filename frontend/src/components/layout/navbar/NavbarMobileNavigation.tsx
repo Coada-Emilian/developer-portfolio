@@ -1,16 +1,7 @@
-import {
-  Code2,
-  Download,
-  FolderKanban,
-  House,
-  Mail,
-  UserRound,
-} from "lucide-react";
-import type { NavbarMobileNavigationProps } from "../../../@types/props/navbar.props";
+import { Code2, Download, FolderKanban, House, Mail, UserRound } from 'lucide-react'
+import type { NavbarMobileNavigationProps } from '../../../@types/props/navbar.props'
 
-export default function NavbarMobileNavigation({
-  closeMenu,
-}: NavbarMobileNavigationProps) {
+export default function NavbarMobileNavigation({ closeMenu }: NavbarMobileNavigationProps) {
   return (
     <nav
       id="mobile-navigation"
@@ -27,7 +18,7 @@ export default function NavbarMobileNavigation({
         </a>
 
         <a
-          href="#about"
+          href="/about"
           onClick={closeMenu}
           className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
         >
@@ -35,7 +26,7 @@ export default function NavbarMobileNavigation({
         </a>
 
         <a
-          href="#projects"
+          href="/projects"
           onClick={closeMenu}
           className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
         >
@@ -44,7 +35,7 @@ export default function NavbarMobileNavigation({
         </a>
 
         <a
-          href="#skills"
+          href="/skills"
           onClick={closeMenu}
           className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
         >
@@ -53,7 +44,7 @@ export default function NavbarMobileNavigation({
         </a>
 
         <a
-          href="#contact"
+          href="/contact"
           onClick={closeMenu}
           className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
         >
@@ -72,5 +63,5 @@ export default function NavbarMobileNavigation({
         </a>
       </div>
     </nav>
-  );
+  )
 }
