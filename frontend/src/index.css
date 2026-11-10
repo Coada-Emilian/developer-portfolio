@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Brand colours */
@@ -21,8 +21,8 @@
   --color-text-secondary: #52677f;
 
   /* Typography */
-  --font-heading: "Inter", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 @layer base {

@@ -1,4 +1,4 @@
-import type { HeroSectionProps } from "../../../../@types/props/heroSection.props";
+import type { HeroSectionProps } from '../../../../@types/props/heroSection.props'
 
 export default function HeroSectionIntroduction({ user }: HeroSectionProps) {
   return (
@@ -24,21 +24,19 @@ export default function HeroSectionIntroduction({ user }: HeroSectionProps) {
       </h1>
 
       {/* Professional title. */}
-      <h2 className="mt-1 text-base font-medium sm:text-2xl lg:text-3xl">
-        {user.subtitle}
-      </h2>
+      <h2 className="mt-1 text-base font-medium sm:text-2xl lg:text-3xl">{user.subtitle}</h2>
 
       {/* Shorter introduction displayed on mobile. */}
       <p className="mt-3 w-xs max-w-lg text-xs leading-relaxed text-blue-50 lg:hidden">
-        Je conçois et développe des applications web modernes, robustes et
-        centrées sur les besoins utilisateurs.
+        Je conçois et développe des applications web modernes, robustes et centrées sur les besoins
+        utilisateurs.
       </p>
 
       {/* Alternative introduction displayed on desktop. */}
       <p className="mt-3 hidden w-lg text-base leading-relaxed text-blue-50 lg:block">
-        Concevoir des solutions utiles, apprendre en continu et transformer des
-        idées en applications concrètes.
+        Concevoir des solutions utiles, apprendre en continu et transformer des idées en
+        applications concrètes.
       </p>
     </>
-  );
+  )
 }

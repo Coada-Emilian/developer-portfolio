@@ -1,70 +1,68 @@
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
-import { CAROUSEL_CONFIG } from "../../../../config/carousel.config";
-import { projectScreenshots } from "../../../../data/projectScreenshots";
+import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
+import { projectScreenshots } from '../../../../data/projectScreenshots'
 
 export default function MainProjectSectionCarousel() {
   // Tracks the active screenshot, autoplay state and lightbox visibility.
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   // Displays the previous screenshot, wrapping around to the last one.
   const showPrevious = () => {
-    setActiveIndex((current) =>
-      current === 0 ? projectScreenshots.length - 1 : current - 1,
-    );
-  };
+    setActiveIndex((current) => (current === 0 ? projectScreenshots.length - 1 : current - 1))
+  }
 
   // Displays the next screenshot, wrapping around to the first one.
   const showNext = () => {
-    setActiveIndex((current) => (current + 1) % projectScreenshots.length);
-  };
+    setActiveIndex((current) => (current + 1) % projectScreenshots.length)
+  }
 
   // Automatically advances the carousel while it is active and unpaused.
   useEffect(() => {
-    if (isPaused || isModalOpen || projectScreenshots.length <= 1) return;
+    if (isPaused || isModalOpen || projectScreenshots.length <= 1) return
 
-    const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL);
+    const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL)
 
     // Resets the interval when the active screenshot or carousel state changes.
-    return () => clearInterval(interval);
-  }, [isPaused, isModalOpen, activeIndex]);
+    return () => clearInterval(interval)
+  }, [isPaused, isModalOpen, activeIndex])
 
   // Handles keyboard navigation and closing the lightbox.
   useEffect(() => {
-    if (!isModalOpen) return;
+    if (!isModalOpen) return
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setIsModalOpen(false);
+      if (event.key === 'Escape') {
+        setIsModalOpen(false)
       }
 
-      if (event.key === "ArrowLeft") {
-        showPrevious();
+      if (event.key === 'ArrowLeft') {
+        showPrevious()
       }
 
-      if (event.key === "ArrowRight") {
-        showNext();
+      if (event.key === 'ArrowRight') {
+        showNext()
       }
-    };
+    }
 
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
 
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isModalOpen]);
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isModalOpen])
 
   // Prevents the background page from scrolling while the lightbox is open.
   useEffect(() => {
-    if (!isModalOpen) return;
+    if (!isModalOpen) return
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden'
 
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isModalOpen]);
+      document.body.style.overflow = ''
+    }
+  }, [isModalOpen])
 
   return (
     <>
@@ -80,14 +78,12 @@ export default function MainProjectSectionCarousel() {
             key={screenshot}
             type="button"
             onClick={() => {
-              setActiveIndex(index);
-              setIsModalOpen(true);
+              setActiveIndex(index)
+              setIsModalOpen(true)
             }}
             aria-label={`Agrandir la capture ${index + 1}`}
             className={`absolute inset-0 h-full w-full cursor-zoom-in transition-opacity duration-700 ${
-              index === activeIndex
-                ? "opacity-100"
-                : "pointer-events-none opacity-0"
+              index === activeIndex ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
           >
             <img
@@ -127,9 +123,7 @@ export default function MainProjectSectionCarousel() {
               aria-label={`Afficher la capture ${index + 1}`}
               aria-current={index === activeIndex}
               className={`h-2 rounded-full transition-all duration-300 ${
-                index === activeIndex
-                  ? "w-5 bg-blue-600"
-                  : "w-2 bg-blue-300 hover:bg-blue-500"
+                index === activeIndex ? 'w-5 bg-blue-600' : 'w-2 bg-blue-300 hover:bg-blue-500'
               }`}
             />
           ))}
@@ -146,7 +140,7 @@ export default function MainProjectSectionCarousel() {
           onClick={(event) => {
             // Closes the lightbox only when clicking the backdrop itself.
             if (event.target === event.currentTarget) {
-              setIsModalOpen(false);
+              setIsModalOpen(false)
             }
           }}
         >
@@ -196,9 +190,7 @@ export default function MainProjectSectionCarousel() {
                 onClick={() => setActiveIndex(index)}
                 aria-label={`Afficher la capture ${index + 1}`}
                 className={`h-2.5 rounded-full transition-all ${
-                  index === activeIndex
-                    ? "w-6 bg-white"
-                    : "w-2.5 bg-white/40 hover:bg-white/80"
+                  index === activeIndex ? 'w-6 bg-white' : 'w-2.5 bg-white/40 hover:bg-white/80'
                 }`}
               />
             ))}
@@ -206,5 +198,5 @@ export default function MainProjectSectionCarousel() {
         </div>
       )}
     </>
-  );
+  )
 }

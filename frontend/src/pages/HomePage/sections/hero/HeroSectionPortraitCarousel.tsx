@@ -1,41 +1,36 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
-import type { HeroPortraitCarouselProps } from "../../../../@types/props/heroSection.props";
-import { CAROUSEL_CONFIG } from "../../../../config/carousel.config";
+import type { HeroPortraitCarouselProps } from '../../../../@types/props/heroSection.props'
+import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
 
-export default function HeroSectionPortraitCarousel({
-  photos,
-  alt,
-}: HeroPortraitCarouselProps) {
+export default function HeroSectionPortraitCarousel({ photos, alt }: HeroPortraitCarouselProps) {
   // Tracks the currently displayed photo and autoplay state.
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
 
   // Moves to the previous photo, wrapping around to the last one.
   const showPrevious = () => {
-    setActiveIndex((current) =>
-      current === 0 ? photos.length - 1 : current - 1,
-    );
-  };
+    setActiveIndex((current) => (current === 0 ? photos.length - 1 : current - 1))
+  }
 
   // Moves to the next photo, wrapping around to the first one.
   const showNext = () => {
-    setActiveIndex((current) => (current + 1) % photos.length);
-  };
+    setActiveIndex((current) => (current + 1) % photos.length)
+  }
 
   // Automatically advances the carousel until it is paused.
   useEffect(() => {
-    if (isPaused || photos.length <= 1) return;
+    if (isPaused || photos.length <= 1) return
 
-    const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL);
+    const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL)
 
     // Clears the previous interval when the effect runs again or unmounts.
-    return () => clearInterval(interval);
-  }, [isPaused, photos.length]);
+    return () => clearInterval(interval)
+  }, [isPaused, photos.length])
 
   // Nothing to display if no photos have been provided.
-  if (photos.length === 0) return null;
+  if (photos.length === 0) return null
 
   return (
     <div
@@ -51,7 +46,7 @@ export default function HeroSectionPortraitCarousel({
             src={photo}
             alt={alt}
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-${CAROUSEL_CONFIG.TRANSITION_DURATION} ${
-              index === activeIndex ? "opacity-100" : "opacity-0"
+              index === activeIndex ? 'opacity-100' : 'opacity-0'
             }`}
           />
         ))}
@@ -90,13 +85,11 @@ export default function HeroSectionPortraitCarousel({
             aria-label={`Afficher la photo ${index + 1}`}
             aria-current={index === activeIndex}
             className={`h-2 rounded-full transition-all ${
-              index === activeIndex
-                ? "w-5 bg-white"
-                : "w-2 bg-white/50 hover:bg-white/80"
+              index === activeIndex ? 'w-5 bg-white' : 'w-2 bg-white/50 hover:bg-white/80'
             }`}
           />
         ))}
       </div>
     </div>
-  );
+  )
 }

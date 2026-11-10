@@ -1,10 +1,6 @@
-import type { TechnologyCardProps } from "../../../../@types/props/technologiesSection.props";
+import type { TechnologyCardProps } from '../../../../@types/props/technologiesSection.props'
 
-export default function TechnologyCard({
-  name,
-  icon: Icon,
-  altName,
-}: TechnologyCardProps) {
+export default function TechnologyCard({ name, icon: Icon, altName }: TechnologyCardProps) {
   return (
     // Technology card with a responsive icon and label.
     <div className="flex h-full flex-col items-center justify-center gap-3 rounded-xl border border-blue-100 bg-slate-100 px-4 py-2 shadow-sm md:py-4">
@@ -21,5 +17,5 @@ export default function TechnologyCard({
         {altName}
       </span>
     </div>
-  );
+  )
 }

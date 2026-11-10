@@ -1,55 +1,55 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
-import { CAROUSEL_CONFIG } from "../../../../config/carousel.config";
-import { technologies } from "../../../../data/technologies";
-import TechnologyCard from "./TechnologyCard";
+import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
+import { technologies } from '../../../../data/technologies'
+import TechnologyCard from './TechnologyCard'
 
 export default function TechnologiesSection() {
   // Tracks the active position, autoplay state and number of visible cards.
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const [visibleCount, setVisibleCount] = useState(3)
 
   // Adjusts the number of visible cards according to the screen width.
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
 
     const updateVisibleCount = () => {
-      setVisibleCount(mediaQuery.matches ? 5 : 3);
-      setActiveIndex(0);
-    };
+      setVisibleCount(mediaQuery.matches ? 5 : 3)
+      setActiveIndex(0)
+    }
 
-    updateVisibleCount();
-    mediaQuery.addEventListener("change", updateVisibleCount);
+    updateVisibleCount()
+    mediaQuery.addEventListener('change', updateVisibleCount)
 
     return () => {
-      mediaQuery.removeEventListener("change", updateVisibleCount);
-    };
-  }, []);
+      mediaQuery.removeEventListener('change', updateVisibleCount)
+    }
+  }, [])
 
   // Calculates the last valid carousel position based on visible cards.
-  const maxIndex = Math.max(0, technologies.length - visibleCount);
+  const maxIndex = Math.max(0, technologies.length - visibleCount)
 
   // Displays the previous position, wrapping around to the end.
   const showPrevious = () => {
-    setActiveIndex((current) => (current === 0 ? maxIndex : current - 1));
-  };
+    setActiveIndex((current) => (current === 0 ? maxIndex : current - 1))
+  }
 
   // Displays the next position, wrapping around to the beginning.
   const showNext = () => {
-    setActiveIndex((current) => (current >= maxIndex ? 0 : current + 1));
-  };
+    setActiveIndex((current) => (current >= maxIndex ? 0 : current + 1))
+  }
 
   // Automatically advances the carousel while it is active and unpaused.
   useEffect(() => {
-    if (isPaused || maxIndex === 0) return;
+    if (isPaused || maxIndex === 0) return
 
-    const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL);
+    const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL)
 
     // Resets the interval whenever the active position or carousel state changes.
-    return () => clearInterval(interval);
-  }, [isPaused, activeIndex, maxIndex]);
+    return () => clearInterval(interval)
+  }, [isPaused, activeIndex, maxIndex])
 
   return (
     <section className="bg-surface px-3 py-4 sm:px-8 md:py-8 lg:px-12 xl:px-36">
@@ -113,9 +113,7 @@ export default function TechnologiesSection() {
                 aria-label={`Afficher les technologies à partir de la position ${index + 1}`}
                 aria-current={activeIndex === index}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  activeIndex === index
-                    ? "w-5 bg-blue-600"
-                    : "w-2 bg-blue-300 hover:bg-blue-500"
+                  activeIndex === index ? 'w-5 bg-blue-600' : 'w-2 bg-blue-300 hover:bg-blue-500'
                 }`}
               />
             ))}
@@ -123,5 +121,5 @@ export default function TechnologiesSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

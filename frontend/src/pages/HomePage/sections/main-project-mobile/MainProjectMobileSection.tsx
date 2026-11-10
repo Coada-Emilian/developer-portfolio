@@ -1,5 +1,5 @@
-import MainProjectMobileSectionInformation from "./MainProjectMobileSectionInformation";
-import MainProjectMobileSectionScreenshot from "./MainProjectMobileSectionScreenshot";
+import MainProjectMobileSectionInformation from './MainProjectMobileSectionInformation'
+import MainProjectMobileSectionScreenshot from './MainProjectMobileSectionScreenshot'
 
 export default function MainProjectMobileSection() {
   return (
@@ -21,5 +21,5 @@ export default function MainProjectMobileSection() {
         <MainProjectMobileSectionInformation />
       </div>
     </section>
-  );
+  )
 }

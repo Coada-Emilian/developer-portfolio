@@ -1,7 +1,7 @@
-import { GithubIcon } from "@dev.icons/react";
-import { ExternalLink, Stethoscope } from "lucide-react";
+import { GithubIcon } from '@dev.icons/react'
+import { ExternalLink, Stethoscope } from 'lucide-react'
 
-import { projectTechnologies } from "../../../../data/projectTechnologies";
+import { projectTechnologies } from '../../../../data/projectTechnologies'
 
 export default function MainProjectMobileSectionInformation() {
   return (
@@ -17,8 +17,8 @@ export default function MainProjectMobileSectionInformation() {
 
       {/* Short project description adapted for mobile. */}
       <p className="mt-2 text-xs leading-relaxed font-medium text-text-primary">
-        Gestion de cabinet de kinésithérapie. Application full stack pour les
-        patients, les rendez-vous, les soins et la facturation.
+        Gestion de cabinet de kinésithérapie. Application full stack pour les patients, les
+        rendez-vous, les soins et la facturation.
       </p>
 
       {/* Technologies used to build the project. */}
@@ -52,5 +52,5 @@ export default function MainProjectMobileSectionInformation() {
         </a>
       </div>
     </>
-  );
+  )
 }

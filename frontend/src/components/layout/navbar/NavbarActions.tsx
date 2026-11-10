@@ -1,9 +1,9 @@
-import { Download } from "lucide-react";
+import { Download } from 'lucide-react'
 
 export default function NavbarActions() {
   return (
     <>
-      {" "}
+      {' '}
       <div className="flex items-center gap-1 rounded-full border border-navy-800 p-1">
         <button className="rounded-full bg-blue-600 px-2 sm:px-3 py-1 text-xs sm:text-sm font-semibold">
           FR
@@ -21,5 +21,5 @@ export default function NavbarActions() {
         CV (PDF)
       </a>
     </>
-  );
+  )
 }

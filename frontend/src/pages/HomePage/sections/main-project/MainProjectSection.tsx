@@ -1,5 +1,5 @@
-import MainProjectSectionInformation from "./MainProjectSectionInformation";
-import MainProjectSectionScreenshot from "./MainProjectSectionScreenshot";
+import MainProjectSectionInformation from './MainProjectSectionInformation'
+import MainProjectSectionScreenshot from './MainProjectSectionScreenshot'
 
 export default function MainProjectSection() {
   return (
@@ -27,5 +27,5 @@ export default function MainProjectSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

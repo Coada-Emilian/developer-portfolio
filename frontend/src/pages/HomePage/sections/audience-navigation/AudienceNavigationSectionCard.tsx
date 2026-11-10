@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from 'lucide-react'
 
-import type { AudienceNavigationSectionCardProps } from "../../../../@types/props/audienceNavigationSection.props";
+import type { AudienceNavigationSectionCardProps } from '../../../../@types/props/audienceNavigationSection.props'
 
 export default function AudienceNavigationSectionCard({
   title,
@@ -26,5 +26,5 @@ export default function AudienceNavigationSectionCard({
       {/* Visual indicator that the card leads to another section or page. */}
       <ArrowRight size={26} className="shrink-0 text-navy-950" />
     </a>
-  );
+  )
 }

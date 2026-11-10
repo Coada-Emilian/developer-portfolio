@@ -1,4 +1,4 @@
-import footerBackground from "../../../assets/images/footer_background_desktop.png";
+import footerBackground from '../../../assets/images/footer_background_desktop.png'
 
 export default function DesktopFooter() {
   return (
@@ -8,7 +8,7 @@ export default function DesktopFooter() {
         className="absolute inset-x-0 -top-24 bottom-0 -z-10 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${footerBackground})`,
-          backgroundPosition: "center 85%",
+          backgroundPosition: 'center 85%',
         }}
       />
 
@@ -28,5 +28,5 @@ export default function DesktopFooter() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

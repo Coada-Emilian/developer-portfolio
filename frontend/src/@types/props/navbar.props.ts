@@ -1,14 +1,14 @@
-import type { IUser } from "../interfaces/IUser";
+import type { IUser } from '../interfaces/IUser'
 
 export interface NavbarBrandProps {
-  firstName: string;
-  lastName: string;
-  subtitle: string;
+  firstName: string
+  lastName: string
+  subtitle: string
 }
 export interface NavbarMobileNavigationProps {
-  closeMenu: () => void;
+  closeMenu: () => void
 }
 
 export interface NavbarProps {
-  user: IUser;
+  user: IUser
 }
