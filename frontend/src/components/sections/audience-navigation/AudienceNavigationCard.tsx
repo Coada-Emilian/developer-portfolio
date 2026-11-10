@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import type { AudienceNavigationProps } from "../../../@types/props/heroSection.props";
+import type { AudienceNavigationProps } from "../../../@types/props/audienceNavigation.props";
 
 export default function AudienceNavigationCard({
   title,
