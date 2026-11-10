@@ -1,10 +1,10 @@
 import type { HeroSectionProps } from "../../../@types/props/heroSection.props";
 import heroBackground from "../../../assets/images/hero_background.png";
 import heroBackgroundMobile from "../../../assets/images/hero_background_mobile.png";
-import userImage from "../../../assets/images/user_image.png";
 
 import HeroSectionActions from "./HeroSectionActions";
 import HeroSectionIntroduction from "./HeroSectionIntroduction";
+import HeroSectionPortraitCarousel from "./HeroSectionPortraitCarousel";
 export default function HeroSection({ user }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-80 items-center overflow-hidden px-5 py-8 sm:px-8 lg:min-h-95 lg:px-16">
@@ -19,13 +19,10 @@ export default function HeroSection({ user }: HeroSectionProps) {
       />
 
       <div className="relative z-10 flex w-full items-center gap-8">
-        <div className="relative hidden shrink-0 lg:block">
-          <img
-            src={userImage}
-            alt={`${user.firstName} ${user.lastName}`}
-            className="h-48 w-48 rounded-full border-2 border-white object-cover"
-          />
-        </div>
+        <HeroSectionPortraitCarousel
+          photos={user.photos}
+          alt={`${user.firstName} ${user.lastName}`}
+        />
 
         <div className="hidden h-40 w-px shrink-0 bg-blue-100/70 lg:block" />
 
