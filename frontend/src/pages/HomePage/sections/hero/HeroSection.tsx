@@ -1,10 +1,10 @@
-import type { HeroSectionProps } from "../../../@types/props/heroSection.props";
-import heroBackground from "../../../assets/images/hero_background.png";
-import heroBackgroundMobile from "../../../assets/images/hero_background_mobile.png";
+import type { HeroSectionProps } from '../../../../@types/props/heroSection.props'
+import heroBackground from '../../../../assets/images/hero_background.png'
+import heroBackgroundMobile from '../../../../assets/images/hero_background_mobile.png'
 
-import HeroSectionActions from "./HeroSectionActions";
-import HeroSectionIntroduction from "./HeroSectionIntroduction";
-import HeroSectionPortraitCarousel from "./HeroSectionPortraitCarousel";
+import HeroSectionActions from './HeroSectionActions'
+import HeroSectionIntroduction from './HeroSectionIntroduction'
+import HeroSectionPortraitCarousel from './HeroSectionPortraitCarousel'
 
 export default function HeroSection({ user }: HeroSectionProps) {
   return (
@@ -39,5 +39,5 @@ export default function HeroSection({ user }: HeroSectionProps) {
         </div>
       </div>
     </section>
-  );
+  )
 }

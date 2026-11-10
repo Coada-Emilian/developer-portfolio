@@ -1,4 +1,4 @@
-import type { TechnologyCardProps } from "../../../@types/props/technologiesSection.props";
+import type { TechnologyCardProps } from "../../../../@types/props/technologiesSection.props";
 
 export default function TechnologyCard({
   name,

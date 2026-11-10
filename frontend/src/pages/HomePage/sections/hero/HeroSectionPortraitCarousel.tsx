@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import type { HeroPortraitCarouselProps } from "../../../@types/props/heroSection.props";
-import { CAROUSEL_CONFIG } from "../../../config/carousel.config";
+import type { HeroPortraitCarouselProps } from "../../../../@types/props/heroSection.props";
+import { CAROUSEL_CONFIG } from "../../../../config/carousel.config";
 
 export default function HeroSectionPortraitCarousel({
   photos,

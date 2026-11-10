@@ -1,4 +1,4 @@
-import type { HeroSectionProps } from "../../../@types/props/heroSection.props";
+import type { HeroSectionProps } from "../../../../@types/props/heroSection.props";
 
 export default function HeroSectionIntroduction({ user }: HeroSectionProps) {
   return (

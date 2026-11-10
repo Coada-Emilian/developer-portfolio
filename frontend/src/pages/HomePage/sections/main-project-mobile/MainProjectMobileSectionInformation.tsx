@@ -1,7 +1,7 @@
 import { GithubIcon } from "@dev.icons/react";
 import { ExternalLink, Stethoscope } from "lucide-react";
 
-import { projectTechnologies } from "../../../data/projectTechnologies";
+import { projectTechnologies } from "../../../../data/projectTechnologies";
 
 export default function MainProjectMobileSectionInformation() {
   return (
