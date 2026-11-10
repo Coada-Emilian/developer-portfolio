@@ -99,7 +99,7 @@ export default function MainProjectSectionCarousel() {
           type="button"
           onClick={showPrevious}
           aria-label="Capture précédente"
-          className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 text-blue-900 shadow-md transition hover:bg-white"
+          className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 text-blue-900 shadow-md transition hover:bg-white cursor-pointer"
         >
           <ChevronLeft size={20} />
         </button>
@@ -108,7 +108,7 @@ export default function MainProjectSectionCarousel() {
           type="button"
           onClick={showNext}
           aria-label="Capture suivante"
-          className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 text-blue-900 shadow-md transition hover:bg-white"
+          className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2 text-blue-900 shadow-md transition hover:bg-white cursor-pointer"
         >
           <ChevronRight size={20} />
         </button>
