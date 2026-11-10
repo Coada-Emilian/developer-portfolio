@@ -1,12 +1,12 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import type { IUser } from "../../../@types/interfaces/IUser";
+import type { NavbarProps } from "../../../@types/props/navbar.props";
 import NavbarActions from "./NavbarActions";
 import NavbarBrand from "./NavbarBrand";
 import NavbarDesktopNavigation from "./NavbarDesktopNavigation";
 import NavbarMobileNavigation from "./NavbarMobileNavigation";
 
-function Navbar({ user }: { user: IUser }) {
+function Navbar({ user }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMobileMenuOpen(false);
