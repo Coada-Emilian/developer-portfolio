@@ -59,7 +59,7 @@ export default function HeroSectionPortraitCarousel({
             type="button"
             onClick={showPrevious}
             aria-label="Photo précédente"
-            className="absolute -left-3 top-20 rounded-full bg-white/90 p-1.5 text-blue-900 shadow-md transition hover:bg-white"
+            className="absolute -left-3 top-20 rounded-full bg-white/90 p-1.5 text-blue-900 shadow-md transition hover:bg-white cursor-pointer"
           >
             <ChevronLeft size={18} />
           </button>
@@ -68,7 +68,7 @@ export default function HeroSectionPortraitCarousel({
             type="button"
             onClick={showNext}
             aria-label="Photo suivante"
-            className="absolute -right-3 top-20 rounded-full bg-white/90 p-1.5 text-blue-900 shadow-md transition hover:bg-white"
+            className="absolute -right-3 top-20 rounded-full bg-white/90 p-1.5 text-blue-900 shadow-md transition hover:bg-white cursor-pointer"
           >
             <ChevronRight size={18} />
           </button>
