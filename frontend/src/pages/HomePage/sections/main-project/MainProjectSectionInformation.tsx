@@ -1,8 +1,8 @@
-import { GithubIcon } from "@dev.icons/react";
-import { ExternalLink, Stethoscope } from "lucide-react";
+import { GithubIcon } from '@dev.icons/react'
+import { ExternalLink, Stethoscope } from 'lucide-react'
 
-import projectBackground from "../../../../assets/images/project_background.png";
-import { projectTechnologies } from "../../../../data/projectTechnologies";
+import projectBackground from '../../../../assets/images/project_background.png'
+import { projectTechnologies } from '../../../../data/projectTechnologies'
 
 export default function MainProjectSectionInformation() {
   return (
@@ -22,13 +22,11 @@ export default function MainProjectSectionInformation() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-extrabold text-text-primary">
-            KineSoin
-          </h3>
+          <h3 className="text-3xl font-extrabold text-text-primary">KineSoin</h3>
 
           <p className="mt-1 text-base font-medium text-text-primary">
-            Application de gestion pour cabinet de kinésithérapie. Gestion des
-            patients, rendez-vous, séances et facturation.
+            Application de gestion pour cabinet de kinésithérapie. Gestion des patients,
+            rendez-vous, séances et facturation.
           </p>
         </div>
       </div>
@@ -48,7 +46,7 @@ export default function MainProjectSectionInformation() {
       {/* Links to the live project and its source code. */}
       <div className="relative flex flex-wrap gap-4">
         <a
-          href="#"
+          href="/project/1"
           className="flex items-center gap-2 rounded-xl bg-blue-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
         >
           Voir le projet
@@ -56,7 +54,7 @@ export default function MainProjectSectionInformation() {
         </a>
 
         <a
-          href="#"
+          href="https://github.com/Coada-Emilian/kineSoin"
           className="flex items-center rounded-xl border border-blue-900 bg-slate-100 px-6 py-3 font-semibold text-text-primary transition hover:bg-blue-50"
         >
           <GithubIcon className="mr-2 inline h-6 w-6" />
@@ -64,5 +62,5 @@ export default function MainProjectSectionInformation() {
         </a>
       </div>
     </div>
-  );
+  )
 }
