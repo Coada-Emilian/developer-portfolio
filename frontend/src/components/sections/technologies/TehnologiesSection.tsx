@@ -4,7 +4,7 @@ import TechnologyCard from "./TechnologyCard";
 export default function TechnologiesSection() {
   return (
     <section className="bg-surface px-3 py-4 sm:px-8 md:py-8 lg:px-12 xl:px-36">
-      <div className="mx-auto max-w-7xl md:max-w-full">
+      <div className="mx-auto max-w-7xl md:max-w-11/12">
         <h2 className="text-left text-lg font-extrabold text-text-primary md:text-2xl">
           Technologies principales
         </h2>
