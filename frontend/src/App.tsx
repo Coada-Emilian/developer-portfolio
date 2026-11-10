@@ -1,6 +1,7 @@
 import Navbar from "./components/layout/navbar/Navbar";
 import AudienceNavigationSection from "./components/sections/audience-navigation/AudienceNavigationSection";
 import HeroSection from "./components/sections/hero/HeroSection";
+import MainProjectSection from "./components/sections/main-project/MainProjectSection";
 import TechnologiesSection from "./components/sections/technologies/TehnologiesSection";
 import { user } from "./data/user";
 
@@ -12,6 +13,8 @@ export default function App() {
       <HeroSection user={user} />
 
       <AudienceNavigationSection />
+
+      <MainProjectSection />
 
       <TechnologiesSection />
     </main>
