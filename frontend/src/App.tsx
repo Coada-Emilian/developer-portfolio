@@ -1,3 +1,4 @@
+import DesktopFooter from "./components/layout/footer/DesktopFooter";
 import Navbar from "./components/layout/navbar/Navbar";
 import AudienceNavigationSection from "./components/sections/audience-navigation/AudienceNavigationSection";
 import HeroSection from "./components/sections/hero/HeroSection";
@@ -20,6 +21,8 @@ export default function App() {
       <MainProjectMobileSection />
 
       <TechnologiesSection />
+
+      <DesktopFooter />
     </main>
   );
 }
