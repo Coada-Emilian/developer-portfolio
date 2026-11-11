@@ -6,7 +6,7 @@ import type { ProfileCardProps } from '../../../../@types/props/profileCard.prop
 
 export default function ProfileCard({ user }: ProfileCardProps) {
   return (
-    <article className="flex w-full max-w-sm flex-col gap-4 rounded-2xl border border-slate-200 bg-slate-100 p-4 shadow-sm">
+    <article className="flex w-full max-w-sm flex-col gap-4 rounded-2xl border border-slate-200 bg-blue-100 p-4 shadow-sm">
       {/* Profile information */}
       <div className="flex items-start gap-3 sm:flex-col">
         {/* Profile photo */}
@@ -17,7 +17,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
         />
 
         {/* Contact information and CV */}
-        <div className="flex min-w-0 flex-1 flex-col gap-2 sm:w-11/12 sm:self-center">
+        <div className="flex min-w-0 flex-1 flex-col gap-2 p-1 sm:w-11/12 sm:self-center">
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(user.location)}`}
             target="_blank"
