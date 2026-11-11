@@ -1,6 +1,6 @@
 import { highlights } from '../../../../data/aboutHighlights'
 
-export default function AboutHighlightsSection() {
+export default function HighlightsSection() {
   return (
     <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 sm:10/12">
       {/* Section heading */}

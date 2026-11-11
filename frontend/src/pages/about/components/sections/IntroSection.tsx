@@ -1,6 +1,6 @@
 import { Code2, Layers3, Rocket } from 'lucide-react'
 
-export default function AboutIntroductionSection() {
+export default function IntroductionSection() {
   return (
     <section className="flex flex-col gap-4">
       {/* Section heading */}
