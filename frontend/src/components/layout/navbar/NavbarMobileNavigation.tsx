@@ -1,5 +1,6 @@
 import { Code2, Download, FolderKanban, House, Mail, UserRound } from 'lucide-react'
 import type { NavbarMobileNavigationProps } from '../../../@types/props/navbar.props'
+import NavbarNavigationLink from './NavbarNavigationLink'
 
 export default function NavbarMobileNavigation({ closeMenu }: NavbarMobileNavigationProps) {
   return (
@@ -8,49 +9,41 @@ export default function NavbarMobileNavigation({ closeMenu }: NavbarMobileNaviga
       className="absolute left-0 top-full z-50 w-full border-t border-navy-800 bg-navy-950 px-5 py-4 shadow-lg lg:hidden"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-2">
-        <a
-          href="/"
+        <NavbarNavigationLink
+          to="/"
+          end={true}
           onClick={closeMenu}
-          className="flex items-center gap-3 rounded-lg px-3 py-2 text-blue-500 hover:bg-navy-800 text-sm"
-        >
-          <House size={18} />
-          Accueil
-        </a>
+          icon={<House size={20} />}
+          label="Accueil"
+        />
 
-        <a
-          href="/about"
+        <NavbarNavigationLink
+          to="/about"
           onClick={closeMenu}
-          className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
-        >
-          <UserRound size={20} />À propos
-        </a>
+          icon={<UserRound size={20} />}
+          label="À propos"
+        />
 
-        <a
-          href="/projects"
+        <NavbarNavigationLink
+          to="/projects"
           onClick={closeMenu}
-          className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
-        >
-          <FolderKanban size={20} />
-          Projets
-        </a>
+          icon={<FolderKanban size={20} />}
+          label="Projets"
+        />
 
-        <a
-          href="/skills"
+        <NavbarNavigationLink
+          to="/skills"
           onClick={closeMenu}
-          className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
-        >
-          <Code2 size={20} />
-          Compétences
-        </a>
+          icon={<Code2 size={20} />}
+          label="Compétences"
+        />
 
-        <a
-          href="/contact"
+        <NavbarNavigationLink
+          to="/contact"
           onClick={closeMenu}
-          className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-navy-800 text-sm"
-        >
-          <Mail size={20} />
-          Contact
-        </a>
+          icon={<Mail size={20} />}
+          label="Contact"
+        />
 
         <a
           href="/cv.pdf"
