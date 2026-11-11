@@ -1,5 +1,5 @@
 import type { HeroSectionProps } from '../../../../@types/props/heroSection.props'
-import heroBackground from '../../../../assets/images/hero_background.png'
+import heroBackground from '../../../../assets/images/general_hero_background.png'
 import heroBackgroundMobile from '../../../../assets/images/hero_background_mobile.png'
 
 import HeroSectionActions from './HeroSectionActions'
