@@ -1,6 +1,9 @@
+import HeroSection from './sections/HeroSection'
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-surface px-6 py-16 text-text-primary">
+    <main className="min-h-screen bg-surface  text-text-primary">
+      <HeroSection />
       {/* Page introduction and personal presentation. */}
       <section className="mx-auto max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">

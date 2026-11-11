@@ -7,7 +7,7 @@ import TechnologiesSection from './sections/technologies/TechnologiesSection'
 
 export default function HomePage() {
   return (
-    <>
+    <main className="min-h-screen bg-surface text-text-primary">
       <HeroSection user={user} />
 
       <AudienceNavigationSection />
@@ -17,6 +17,6 @@ export default function HomePage() {
       <MainProjectMobileSection />
 
       <TechnologiesSection />
-    </>
+    </main>
   )
 }

@@ -12,3 +12,11 @@ export interface NavbarMobileNavigationProps {
 export interface NavbarProps {
   user: IUser
 }
+
+export interface NavbarNavigationLinkProps {
+  to: string
+  end?: boolean
+  icon: React.ReactNode
+  label: string
+  onClick?: () => void
+}

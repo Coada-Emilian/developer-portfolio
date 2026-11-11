@@ -1,12 +1,5 @@
 import { NavLink } from 'react-router-dom'
-
-interface NavbarNavigationLinkProps {
-  to: string
-  end?: boolean
-  icon: React.ReactNode
-  label: string
-  onClick?: () => void
-}
+import type { NavbarNavigationLinkProps } from '../../../@types/props/navbar.props'
 
 export default function NavbarNavigationLink({
   to,
