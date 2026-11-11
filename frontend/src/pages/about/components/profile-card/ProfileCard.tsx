@@ -33,7 +33,8 @@ export default function ProfileCard({ user }: ProfileCardProps) {
             className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 sm:text-sm"
           >
             <Mail className="size-4 shrink-0 text-blue-800 sm:size-5" />
-            <span className="break-all">{user.email}</span>
+            <span className="break-all hidden sm:block">{user.email}</span>
+            <span className="break-all sm:hidden">Email</span>
           </a>
 
           <a
@@ -43,7 +44,8 @@ export default function ProfileCard({ user }: ProfileCardProps) {
             className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 sm:text-sm"
           >
             <FaLinkedin className="size-4 shrink-0 text-blue-800 sm:size-5" />
-            <span className="break-all">{user.linkedin}</span>
+            <span className="break-all hidden sm:block">{user.linkedin}</span>
+            <span className="break-all sm:hidden">LinkedIn</span>
           </a>
 
           <a
@@ -53,7 +55,8 @@ export default function ProfileCard({ user }: ProfileCardProps) {
             className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 sm:text-sm"
           >
             <GithubIcon className="size-4 shrink-0 text-blue-800 sm:size-5" />
-            <span className="break-all">{user.github}</span>
+            <span className="break-all hidden sm:block">{user.github}</span>
+            <span className="break-all sm:hidden">GitHub</span>
           </a>
 
           {/* CV download */}
