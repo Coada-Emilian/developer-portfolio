@@ -7,7 +7,7 @@ export default function ObjectivesSection() {
 
       <svg
         viewBox="0 0 24 24"
-        className="size-6 shrink-0 text-blue-800 sm:size-7"
+        className="size-5 shrink-0 text-blue-800 sm:size-7"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -18,8 +18,9 @@ export default function ObjectivesSection() {
 
       <div>
         <div className="mb-2">
-          <h2 className="text-base font-bold text-slate-900">Mes objectifs</h2>
-          <div className="mt-1 h-0.5 w-8 rounded-full bg-blue-500" />
+          <h2 className="text-base sm:text-xl font-bold sm:font-extrabold text-slate-900">
+            Mes objectifs
+          </h2>
         </div>
         {/* Objectives */}
         <ul className="flex flex-col gap-2 pl-1">

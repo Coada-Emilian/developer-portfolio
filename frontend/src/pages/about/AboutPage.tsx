@@ -10,7 +10,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-surface text-text-primary">
       <HeroSection />
 
-      <div className="flex flex-col gap-2 p-4 lg:flex-row lg:items-start lg:gap-6 lg:px-8">
+      <div className="flex flex-col gap-2 px-4 py-1 lg:py-4 lg:flex-row lg:items-start lg:gap-6 lg:px-8">
         {/* Profile card */}
         <div className="w-full lg:w-80 lg:shrink-0">
           <ProfileCard user={user} />
@@ -27,9 +27,11 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="w-11/12 h-0.5 mx-auto bg-gray-200"></div>
+      <div className="w-11/12 h-0.5 mx-auto bg-gray-200 hidden sm:block"></div>
 
-      <ObjectivesSection />
+      <div className="flex flex-col gap-2 px-4 py-1 lg:py-4 lg:flex-row lg:items-start lg:gap-6 lg:px-8">
+        <ObjectivesSection />
+      </div>
     </main>
   )
 }
