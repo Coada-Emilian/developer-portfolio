@@ -12,12 +12,12 @@ import {
   SkillsPage,
 } from './pages'
 
-import MainLayout from './components/layout/main-layout/MainLayout'
+import Layout from './components/layout/layout/Layout'
 
 export default function App() {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
+      <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/developer" element={<DevPage />} />

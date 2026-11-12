@@ -1,10 +1,10 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
-import type { NavbarProps } from '../../../@types/props/navbar.props'
-import NavbarActions from './NavbarActions'
-import NavbarBrand from './NavbarBrand'
-import NavbarDesktopNavigation from './NavbarDesktopNavigation'
-import NavbarMobileNavigation from './NavbarMobileNavigation'
+import type { NavbarProps } from '../../../@types/props/layout/layout.props'
+import NavbarActions from './components/NavbarActions'
+import NavbarBrand from './components/NavbarBrand'
+import NavbarDesktopNavigation from './components/navigation/NavbarDesktopNavigation'
+import NavbarMobileNavigation from './components/navigation/NavbarMobileNavigation'
 
 function Navbar({ user }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

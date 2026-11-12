@@ -8,4 +8,9 @@ export const user: IUser = {
   lastName: 'Coada',
   subtitle: 'Développeur Full Stack',
   photos: [firstUserPhoto, secondUserPhoto, thirdUserPhoto],
+  location: 'Messé, France',
+  email: 'emilian.coada@gmail.com',
+  linkedin: 'linkedin.com/in/emilian-coada',
+  github: 'github.com/Coada-Emilian',
+  cvUrl: 'https://example.com/emilian-coada-cv.pdf',
 }

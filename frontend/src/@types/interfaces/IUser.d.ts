@@ -3,4 +3,9 @@ export interface IUser {
   lastName: string
   subtitle: string
   photos: string[]
+  location: string
+  email: string
+  linkedin: string
+  github: string
+  cvUrl: string
 }
