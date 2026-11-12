@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/developer" element={<DevPage />} />
         <Route path="/lead" element={<LeadPage />} />
-        <Route path="/project/:id" element={<ProjectPage />} />
+        <Route path="/projects/:id" element={<ProjectPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/recruiter" element={<RecruiterPage />} />
         <Route path="/skills" element={<SkillsPage />} />

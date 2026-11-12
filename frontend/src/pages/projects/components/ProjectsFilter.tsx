@@ -17,7 +17,7 @@ export default function ProjectFilters({ activeFilter, onFilterChange }: Project
             type="button"
             aria-pressed={isActive}
             onClick={() => onFilterChange(label)}
-            className={`flex cursor-pointer items-center gap-2 rounded-full border px-3 py-2 text-xs font-semibold transition sm:px-4 sm:py-2.5 sm:text-sm ${
+            className={`flex cursor-pointer items-center gap-2 rounded-full border px-3 py-2 text-xxs  font-semibold transition sm:px-4 sm:py-2.5 sm:text-sm ${
               isActive
                 ? 'border-blue-600 bg-blue-600 text-white'
                 : 'border-blue-200 bg-blue-50 text-slate-800 hover:border-blue-400 hover:bg-blue-100'
