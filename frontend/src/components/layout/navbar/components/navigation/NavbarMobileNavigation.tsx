@@ -49,7 +49,7 @@ export default function NavbarMobileNavigation({ closeMenu }: NavbarMobileNaviga
           href="/cv.pdf"
           download
           onClick={closeMenu}
-          className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 font-semibold text-navy-950 w-fit mx-auto text-sm"
+          className="mx-auto mt-2 flex w-fit items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-semibold text-navy-950"
         >
           <Download size={18} />
           Télécharger mon CV

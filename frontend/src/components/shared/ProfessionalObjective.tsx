@@ -1,13 +1,14 @@
 import { Target } from 'lucide-react'
 
-import footerBackground from '../../../../assets/images/footer_background_mobile.png'
+import background from '../../assets/images/footer_background_desktop.png'
 
-export default function MobileFooter() {
+export default function ProfessionalObjective() {
   return (
-    <footer className="bg-surface px-4 py-6 md:hidden">
+    <div className="bg-surface px-4 py-6">
+      {' '}
       <div
         className="relative flex items-start gap-4 overflow-hidden rounded-2xl bg-cover bg-center p-2"
-        style={{ backgroundImage: `url(${footerBackground})` }}
+        style={{ backgroundImage: `url(${background})` }}
       >
         <div className="absolute inset-0 bg-blue-950/20" />
 
@@ -26,6 +27,6 @@ export default function MobileFooter() {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   )
 }

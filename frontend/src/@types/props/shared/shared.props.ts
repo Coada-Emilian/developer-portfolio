@@ -1,4 +1,6 @@
 export interface PageHeroProps {
   title: string
-  subtitle?: string
+  desktopSubtitle?: string
+  tabletSubtitle?: string
+  mobileSubtitle?: string
 }

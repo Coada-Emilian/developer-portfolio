@@ -1,6 +1,7 @@
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-surface px-6 py-16 text-text-primary">
+    <main className="min-h-screen bg-surface text-text-primary">
+      {' '}
       {/* Page introduction and overview of the project portfolio. */}
       <section className="mx-auto max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Mes projets</p>
