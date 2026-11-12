@@ -3,8 +3,10 @@ import type { LucideIcon } from 'lucide-react'
 import type { IUser } from '../../../interfaces/IUser'
 
 export interface AudienceNavigationSectionCardProps {
-  title: string
-  description: string
+  desktopTitle: string
+  desktopDescription: string
+  tabletTitle: string
+  tabletDescription: string
   href: string
   icon: LucideIcon
 }
