@@ -27,7 +27,7 @@ export default function ObjectivesSection() {
           {objectives.map((objective) => (
             <li
               key={objective}
-              className="flex items-start gap-2 text-xxs font-medium leading-relaxed text-slate-700 sm:text-xs"
+              className="flex items-start gap-2 text-xxs font-medium leading-relaxed text-slate-700 sm:text-sm "
             >
               <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-blue-600" />
               <span>{objective}</span>

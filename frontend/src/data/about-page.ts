@@ -1,14 +1,18 @@
 import {
   BookOpen,
   BriefcaseBusiness,
+  Camera,
   ChartNoAxesColumnIncreasing,
   Code2,
+  Gamepad2,
   GraduationCap,
   MapPin,
+  Mountain,
   RefreshCw,
   Rocket,
   Settings,
   Users,
+  Utensils,
 } from 'lucide-react'
 
 export const approaches = [
@@ -52,4 +56,12 @@ export const values = [
   { label: 'Adaptabilité', icon: RefreshCw },
   { label: 'Curiosité', icon: BookOpen },
   { label: 'Progression continue', icon: ChartNoAxesColumnIncreasing },
+]
+
+export const interests = [
+  { label: 'Jeux vidéo', icon: Gamepad2 },
+  { label: 'Photographie', icon: Camera },
+  { label: 'Randonnée & nature', icon: Mountain },
+  { label: 'Cuisine', icon: Utensils },
+  { label: 'Histoire & mythologie', icon: BookOpen },
 ]

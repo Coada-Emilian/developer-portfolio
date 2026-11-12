@@ -18,7 +18,7 @@ export default function ValuesSection() {
           >
             <Icon className="size-5 shrink-0 text-blue-700 sm:size-7" />
 
-            <span className="text-xxs font-medium leading-tight text-slate-700 sm:text-xs">
+            <span className="text-xxs font-medium leading-tight text-slate-700 sm:text-sm sm:font-bold">
               {label}
             </span>
           </div>

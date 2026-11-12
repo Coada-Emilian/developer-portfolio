@@ -32,7 +32,7 @@ export default function ApproachSection() {
           {approaches.map((approach) => (
             <li
               key={approach}
-              className="flex items-start gap-2 text-xxs font-medium leading-relaxed text-slate-700 sm:text-xs"
+              className="flex items-start gap-2 text-xxs font-medium leading-relaxed text-slate-700 sm:text-sm"
             >
               <svg
                 viewBox="0 0 24 24"
