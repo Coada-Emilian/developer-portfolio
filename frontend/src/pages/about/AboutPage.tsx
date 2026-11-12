@@ -1,5 +1,6 @@
 import { user } from '../../data/user'
 import ProfileCard from './components/profile-card/ProfileCard'
+import ApproachSection from './components/sections/ApproachSection'
 import HeroSection from './components/sections/HeroSection'
 import HighlightsSection from './components/sections/HighlightsSection'
 import IntroductionSection from './components/sections/IntroSection'
@@ -29,8 +30,11 @@ export default function AboutPage() {
 
       <div className="w-11/12 h-0.5 mx-auto bg-gray-200 hidden sm:block"></div>
 
-      <div className="flex flex-col gap-2 px-4 py-1 lg:py-4 lg:flex-row lg:items-start lg:gap-6 lg:px-8">
-        <ObjectivesSection />
+      <div className="flex flex-col gap-2 px-4 py-1 lg:py-4 lg:flex-row lg:items-start lg:gap-6 lg:px-8 lg:pb-10">
+        <div className="flex flex-col gap-2 flex-1">
+          <ObjectivesSection />
+          <ApproachSection />
+        </div>
       </div>
     </main>
   )

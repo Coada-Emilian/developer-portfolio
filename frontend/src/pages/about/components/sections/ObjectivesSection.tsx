@@ -2,7 +2,7 @@ import { objectives } from '../../../../data/aboutObjectives'
 
 export default function ObjectivesSection() {
   return (
-    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 w-fit flex gap-4 ">
+    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 w-full sm:w-1/4 flex gap-4 ">
       {/* Section heading */}
 
       <svg
