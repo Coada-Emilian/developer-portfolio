@@ -1,5 +1,5 @@
-import MainProjectSectionInformation from './MainProjectSectionInformation'
-import MainProjectSectionScreenshot from './MainProjectSectionScreenshot'
+import MainProjectSectionInformation from './components/MainProjectSectionInformation'
+import MainProjectSectionScreenshot from './components/MainProjectSectionScreenshot'
 
 export default function MainProjectSection() {
   return (

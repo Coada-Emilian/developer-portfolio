@@ -1,6 +1,6 @@
 import { BriefcaseBusiness, Code2, Users } from 'lucide-react'
 
-import AudienceNavigationSectionCard from './AudienceNavigationSectionCard'
+import AudienceNavigationSectionCard from './components/AudienceNavigationSectionCard'
 
 export default function AudienceNavigationSection() {
   return (

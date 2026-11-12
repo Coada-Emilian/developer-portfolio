@@ -1,10 +1,10 @@
-import type { HeroSectionProps } from '../../../../@types/props/heroSection.props'
+import type { HeroSectionProps } from '../../../../@types/props/pages/home/homePage.props'
 import heroBackground from '../../../../assets/images/general_hero_background.png'
 import heroBackgroundMobile from '../../../../assets/images/hero_background_mobile.png'
 
-import HeroSectionActions from './HeroSectionActions'
-import HeroSectionIntroduction from './HeroSectionIntroduction'
-import HeroSectionPortraitCarousel from './HeroSectionPortraitCarousel'
+import HeroSectionActions from './components/HeroSectionActions'
+import HeroSectionIntroduction from './components/HeroSectionIntroduction'
+import HeroSectionPortraitCarousel from './components/HeroSectionPortraitCarousel'
 
 export default function HeroSection({ user }: HeroSectionProps) {
   return (

@@ -2,8 +2,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
-import { technologies } from '../../../../data/home-page'
-import TechnologyCard from './TechnologyCard'
+import { technologies } from '../../../../data/pages/home'
+import TechnologyCard from './components/TechnologyCard'
 
 export default function TechnologiesSection() {
   // Tracks the active position, autoplay state and number of visible cards.

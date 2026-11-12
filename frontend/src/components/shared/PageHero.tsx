@@ -1,7 +1,7 @@
 import heroBackground from '../../assets/images/general_hero_background.png'
 import heroBackgroundMobile from '../../assets/images/hero_background_mobile.png'
 
-import type { PageHeroProps } from '../../@types/props/shared.props'
+import type { PageHeroProps } from '../../@types/props/shared/shared.props'
 
 export default function PageHero({ title, subtitle }: PageHeroProps) {
   return (

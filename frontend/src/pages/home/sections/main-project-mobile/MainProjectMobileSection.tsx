@@ -1,5 +1,5 @@
-import MainProjectMobileSectionInformation from './MainProjectMobileSectionInformation'
-import MainProjectMobileSectionScreenshot from './MainProjectMobileSectionScreenshot'
+import MainProjectMobileSectionInformation from './components/MainProjectMobileSectionInformation'
+import MainProjectMobileSectionScreenshot from './components/MainProjectMobileSectionScreenshot'
 
 export default function MainProjectMobileSection() {
   return (

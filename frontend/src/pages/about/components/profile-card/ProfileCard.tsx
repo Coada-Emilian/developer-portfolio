@@ -2,7 +2,7 @@ import { Download, Mail, MapPin } from 'lucide-react'
 
 import { GithubIcon } from '@dev.icons/react/mono'
 import { FaLinkedin } from 'react-icons/fa'
-import type { ProfileCardProps } from '../../../../@types/props/profileCard.props'
+import type { ProfileCardProps } from '../../../../@types/props/pages/about/aboutPage.props'
 
 export default function ProfileCard({ user }: ProfileCardProps) {
   return (

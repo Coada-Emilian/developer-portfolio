@@ -1,13 +1,15 @@
 import { user } from '../../data/user'
 import ProfileCard from './components/profile-card/ProfileCard'
-import ApproachSection from './components/sections/ApproachSection'
-import HeroSection from './components/sections/HeroSection'
-import HighlightsSection from './components/sections/HighlightsSection'
-import InterestsSection from './components/sections/InterestsSection'
-import IntroductionSection from './components/sections/IntroSection'
-import ObjectivesSection from './components/sections/ObjectivesSection'
-import ValuesSection from './components/sections/ValuesSection'
-import VisionSection from './components/sections/VisionSection'
+import {
+  ApproachSection,
+  HeroSection,
+  HighlightsSection,
+  InterestsSection,
+  IntroductionSection,
+  ObjectivesSection,
+  ValuesSection,
+  VisionSection,
+} from './sections'
 
 export default function AboutPage() {
   return (

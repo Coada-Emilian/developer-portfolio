@@ -1,0 +1,8 @@
+export { default as ApproachSection } from './ApproachSection'
+export { default as HeroSection } from './HeroSection'
+export { default as HighlightsSection } from './HighlightsSection'
+export { default as InterestsSection } from './InterestsSection'
+export { default as IntroductionSection } from './IntroductionSection'
+export { default as ObjectivesSection } from './ObjectivesSection'
+export { default as ValuesSection } from './ValuesSection'
+export { default as VisionSection } from './VisionSection'
