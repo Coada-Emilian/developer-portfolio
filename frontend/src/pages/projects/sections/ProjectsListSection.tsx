@@ -45,7 +45,7 @@ export default function ProjectsListSection() {
       <ProjectsFilter activeFilter={activeFilter} onFilterChange={handleFilterChange} />
 
       {/* Project cards */}
-      <div className="mx-auto flex w-full flex-col gap-4 lg:w-11/12">
+      <div className="mx-auto flex w-full flex-col gap-4 lg:w-11/12 lg:mb-4">
         {paginatedProjects.map((project) => (
           <div key={project.id}>
             <ProjectCard project={project} />
