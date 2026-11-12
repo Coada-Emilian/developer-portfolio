@@ -6,13 +6,13 @@ export default function IntroductionSection() {
     <section className="flex flex-col gap-4">
       {/* Section heading */}
       <div>
-        <h2 className="text-sm sm:text-2xl font-extrabold text-slate-900">Qui suis-je ?</h2>
+        <h2 className="text-sm font-extrabold text-slate-900 sm:text-2xl">Qui suis-je ?</h2>
         <TitleUnderline />
       </div>
 
-      {/* Introduction */}
-      <div className="flex flex-col gap-3 text-xs sm:text-base leading-relaxed text-slate-700">
-        {/* Mobile version */}
+      {/* Introduction text */}
+      <div className="flex flex-col gap-3 text-xs leading-relaxed text-slate-700 sm:text-base">
+        {/* Shorter introduction for mobile */}
         <div className="flex flex-col gap-2 sm:hidden">
           <p>
             Développeur Full Stack en reconversion, je viens de la prothèse dentaire, un métier qui
@@ -25,7 +25,7 @@ export default function IntroductionSection() {
           </p>
         </div>
 
-        {/* Desktop version */}
+        {/* Expanded introduction for tablet and desktop */}
         <div className="hidden flex-col gap-3 sm:flex">
           <p>
             Développeur Full Stack en reconversion professionnelle, je viens du domaine de la
@@ -41,7 +41,7 @@ export default function IntroductionSection() {
         </div>
       </div>
 
-      {/* Key points */}
+      {/* Key points highlighting development focus and mindset */}
       <div className="flex flex-wrap gap-2">
         <div className="flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1.5 text-xxs font-medium text-blue-900 sm:text-sm">
           <Code2 className="size-3.5 sm:size-5.5" />

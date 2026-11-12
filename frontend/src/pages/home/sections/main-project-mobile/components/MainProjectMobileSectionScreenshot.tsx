@@ -85,7 +85,7 @@ export default function MainProjectMobileSectionScreenshot() {
     <>
       {/* Mobile carousel with touch-based autoplay control. */}
       <div
-        className="relative flex h-44 items-center justify-center overflow-hidden rounded-xl bg-white p-2"
+        className="relative flex h-44 items-center justify-center overflow-hidden rounded-xl bg-blue-100 p-2 md:h-80"
         onTouchStart={handleTouchInteraction}
       >
         {/* Screenshot buttons: only the active screenshot is interactive. */}

@@ -9,7 +9,7 @@ import HeroSectionPortraitCarousel from './components/HeroSectionPortraitCarouse
 export default function HeroSection({ user }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-80 items-center overflow-hidden px-5 py-8 sm:px-8 lg:min-h-95 lg:px-16">
-      {/* Mobile background */}
+      {/* Mobile and tablet background */}
       <div
         className="absolute inset-0 bg-cover bg-no-repeat bg-position-[100%_center] lg:hidden"
         style={{ backgroundImage: `url(${heroBackgroundMobile})` }}
@@ -23,7 +23,7 @@ export default function HeroSection({ user }: HeroSectionProps) {
 
       {/* Hero content */}
       <div className="relative z-10 flex w-full items-center gap-8">
-        {/* Desktop portrait carousel */}
+        {/* Portrait carousel, visible on desktop */}
         <HeroSectionPortraitCarousel
           photos={user.photos}
           alt={`${user.firstName} ${user.lastName}`}

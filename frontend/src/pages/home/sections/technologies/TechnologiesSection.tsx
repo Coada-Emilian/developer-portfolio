@@ -72,7 +72,7 @@ export default function TechnologiesSection() {
             type="button"
             onClick={showPrevious}
             aria-label="Technologies précédentes"
-            className="absolute top-1/2 -left-3 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1.5 text-blue-900 shadow-md transition hover:bg-blue-50 md:-left-5 md:p-2"
+            className="absolute top-5/12 -left-3 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1.5 text-blue-900 shadow-md transition hover:bg-blue-50 md:-left-5 md:p-2"
           >
             <ChevronLeft size={20} />
           </button>
@@ -98,7 +98,7 @@ export default function TechnologiesSection() {
             type="button"
             onClick={showNext}
             aria-label="Technologies suivantes"
-            className="absolute top-1/2 -right-3 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1.5 text-blue-900 shadow-md transition hover:bg-blue-50 md:-right-5 md:p-2"
+            className="absolute top-5/12 -right-3 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-white p-1.5 text-blue-900 shadow-md transition hover:bg-blue-50 md:-right-5 md:p-2"
           >
             <ChevronRight size={20} />
           </button>
