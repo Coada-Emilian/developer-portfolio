@@ -1,15 +1,17 @@
 import TitleUnderline from '../../../components/ui/TitleUnderline'
-
 import { values } from '../../../data/pages/about'
 
 export default function ValuesSection() {
   return (
     <section>
-      <h2 className="mb-2 text-base font-bold text-slate-900  sm:font-extrabold sm:text-xl">
+      {/* Section heading */}
+      <h2 className="mb-2 text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
         Ce qui me définit
       </h2>
+
       <TitleUnderline />
 
+      {/* Grid of personal and professional values */}
       <div className="grid grid-cols-5 gap-2">
         {values.map(({ label, icon: Icon }) => (
           <div

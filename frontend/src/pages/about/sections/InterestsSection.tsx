@@ -6,15 +6,15 @@ export default function InterestsSection() {
     <section>
       {/* Section heading */}
       <div className="mb-2">
-        <h2 className="mb-2 text-base font-bold text-slate-900  sm:font-extrabold sm:text-xl">
+        <h2 className="mb-2 text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
           Centres d'intérêt
         </h2>
 
         <TitleUnderline />
       </div>
 
-      {/* Interests */}
-      <div className="grid grid-cols-5 gap-2 lg:flex lg:flex-col lg:gap-2 rounded-xl lg:border lg:border-blue-100 lg:bg-blue-100 lg:p-3 ">
+      {/* Interests grid on mobile and tablet, vertical list on desktop */}
+      <div className="grid grid-cols-5 gap-2 rounded-xl lg:flex lg:flex-col lg:gap-2 lg:border lg:border-blue-100 lg:bg-blue-100 lg:p-3">
         {interests.map(({ label, icon: Icon }) => (
           <div
             key={label}
