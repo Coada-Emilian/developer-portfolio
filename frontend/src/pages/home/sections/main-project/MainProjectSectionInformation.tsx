@@ -2,7 +2,7 @@ import { GithubIcon } from '@dev.icons/react'
 import { ExternalLink, Stethoscope } from 'lucide-react'
 
 import projectBackground from '../../../../assets/images/project_background.png'
-import { projectTechnologies } from '../../../../data/projectTechnologies'
+import { projectTechnologies } from '../../../../data/home-page'
 
 export default function MainProjectSectionInformation() {
   return (

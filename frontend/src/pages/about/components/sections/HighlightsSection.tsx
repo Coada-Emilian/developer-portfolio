@@ -1,4 +1,5 @@
-import { highlights } from '../../../../data/aboutHighlights'
+import TitleUnderline from '../../../../components/shared/TitleUnderline'
+import { highlights } from '../../../../data/about-page'
 
 export default function HighlightsSection() {
   return (
@@ -8,7 +9,7 @@ export default function HighlightsSection() {
         <h2 className="text-base sm:text-xl sm:font-extrabold font-bold text-slate-900">
           En quelques points
         </h2>
-        <div className="mt-1 h-0.5 sm:h-1 w-8 rounded-full bg-blue-500" />
+        <TitleUnderline />
       </div>
 
       {/* Highlights */}

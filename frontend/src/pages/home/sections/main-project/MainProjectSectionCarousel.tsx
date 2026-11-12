@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
-import { projectScreenshots } from '../../../../data/projectScreenshots'
+import { projectScreenshots } from '../../../../data/home-page'
 
 export default function MainProjectSectionCarousel() {
   // Tracks the active screenshot, autoplay state and lightbox visibility.

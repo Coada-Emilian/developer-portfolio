@@ -1,8 +1,8 @@
-import { approaches } from '../../../../data/aboutAproaches'
+import { approaches } from '../../../../data/about-page'
 
 export default function ApproachSection() {
   return (
-    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 flex gap-4 w-full sm:w-1/4">
+    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 flex gap-4 w-full">
       {/* Section icon */}
       <svg
         viewBox="0 0 24 24"

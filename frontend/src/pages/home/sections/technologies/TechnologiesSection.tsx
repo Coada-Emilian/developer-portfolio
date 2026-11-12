@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
-import { technologies } from '../../../../data/technologies'
+import { technologies } from '../../../../data/home-page'
 import TechnologyCard from './TechnologyCard'
 
 export default function TechnologiesSection() {

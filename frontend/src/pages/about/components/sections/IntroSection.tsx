@@ -1,4 +1,5 @@
 import { Code2, Layers3, Rocket } from 'lucide-react'
+import TitleUnderline from '../../../../components/shared/TitleUnderline'
 
 export default function IntroductionSection() {
   return (
@@ -6,7 +7,7 @@ export default function IntroductionSection() {
       {/* Section heading */}
       <div>
         <h2 className="text-sm sm:text-2xl font-extrabold text-slate-900">Qui suis-je ?</h2>
-        <div className="mt-2 h-1 w-6 sm:w-10 rounded-full bg-blue-500" />
+        <TitleUnderline />
       </div>
 
       {/* Introduction */}
