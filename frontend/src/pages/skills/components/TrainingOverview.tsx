@@ -26,7 +26,7 @@ function RotatingCourseTitle({ courses }: RotatingCourseTitleProps) {
 
   return (
     <p
-      className="truncate text-xs text-text-secondary"
+      className="truncate text-xs font-medium text-text-secondary"
       title={`${activeCourse.provider} - ${activeCourse.title}`}
     >
       {activeCourse.title}
@@ -40,12 +40,12 @@ export default function TrainingOverview() {
       {/* Training section introduction */}
       <div className="flex min-w-70 items-center gap-3">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-          <GraduationCap size={26} />
+          <GraduationCap className="size-9" />
         </div>
 
         <div>
-          <h3 className="font-bold text-text-primary">Formation & apprentissage</h3>
-          <p className="text-xs text-text-secondary">
+          <h3 className="font-bold text-lg text-text-primary">Formation & apprentissage</h3>
+          <p className="text-sm text-text-secondary font-medium">
             Parcours, formations terminées, en cours et à venir.
           </p>
         </div>
@@ -63,12 +63,14 @@ export default function TrainingOverview() {
               key={item.id}
               className="flex min-w-0 items-center gap-3 rounded-xl border border-blue-100 bg-surface px-4 py-3"
             >
-              <Icon size={21} className={`shrink-0 ${item.color}`} />
+              <Icon className={`shrink-0 ${item.color} size-8`} />
 
               <div className="min-w-0">
-                <h4 className="text-xs font-bold text-text-primary">{item.title}</h4>
+                <h4 className="text-base font-bold text-text-primary">{item.title}</h4>
 
-                <p className="text-xs text-text-secondary">{item.courses.length} formations</p>
+                <p className="text-sm text-text-secondary font-semibold">
+                  {item.courses.length} formations
+                </p>
 
                 <RotatingCourseTitle courses={item.courses} />
               </div>
