@@ -6,14 +6,12 @@ export default function SkillsOverview() {
   return (
     <aside className="grid grid-cols-1 gap-5 lg:h-full lg:grid-rows-2">
       {/* Global proficiency levels */}
-      <section className="h-fit min-h-0 rounded-2xl border border-border bg-surface p-5 shadow-sm">
+      <section className="h-fit min-h-0 rounded-2xl border border-border bg-blue-50 p-5 shadow-sm">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
             <TrendingUp className="size-8 lg:size-9" />
           </div>
-          <h3 className="text-lg font-extrabold text-text-primary md:text-xl lg:text-2xl">
-            Niveau global
-          </h3>
+          <h3 className="text-lg font-extrabold text-text-primary md:text-xl">Niveau global</h3>
         </div>
 
         {/* Proficiency levels and progress bars */}
@@ -40,14 +38,12 @@ export default function SkillsOverview() {
       </section>
 
       {/* Professional strengths */}
-      <section className="h-full min-h-0 rounded-2xl border border-border bg-surface p-5 shadow-sm">
+      <section className="h-full min-h-0 rounded-2xl border border-border bg-blue-50 p-5 shadow-sm">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
             <Star className="size-8 lg:size-9" />
           </div>
-          <h3 className="text-lg font-extrabold text-text-primary md:text-xl lg:text-2xl">
-            Points forts
-          </h3>
+          <h3 className="text-lg font-extrabold text-text-primary md:text-xl">Points forts</h3>
         </div>
 
         {/* List of key strengths */}

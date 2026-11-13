@@ -19,7 +19,7 @@ export default function SkillsNavigation() {
                 `group mx-auto flex w-11/12 items-center justify-between gap-3 rounded-xl border px-4 py-2 transition-colors duration-200 sm:px-5 ${
                   isActive
                     ? 'border-blue-600 bg-blue-600 text-white'
-                    : 'border-blue-200 bg-surface text-text-primary hover:bg-blue-50'
+                    : 'border-blue-200 bg-blue-50 text-text-primary hover:bg-blue-50'
                 }`
               }
             >

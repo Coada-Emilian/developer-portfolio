@@ -49,10 +49,10 @@ export default function SkillsPage() {
 
           {/* Personal skills section */}
           {pathname === '/skills/personal' && (
-            <>
+            <div className="space-y-10">
               <PersonalSkillsSection />
               <TeamContributionSection />
-            </>
+            </div>
           )}
 
           {/* Complementary information section */}

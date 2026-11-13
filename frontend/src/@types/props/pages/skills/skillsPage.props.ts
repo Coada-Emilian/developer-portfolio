@@ -12,3 +12,9 @@ export interface TechnologyCategoryCardProps {
   icon: ElementType | null
   technologies: ITechnology[]
 }
+
+export interface PersonalSkillCardProps {
+  title: string
+  description: string
+  icon: ElementType
+}
