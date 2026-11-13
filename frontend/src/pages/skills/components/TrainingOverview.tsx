@@ -1,6 +1,7 @@
 import { ArrowRight, GraduationCap } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import { trainingItems } from '../../../data/pages/skills'
 
 interface RotatingCourseTitleProps {
@@ -10,6 +11,7 @@ interface RotatingCourseTitleProps {
 function RotatingCourseTitle({ courses }: RotatingCourseTitleProps) {
   const [activeIndex, setActiveIndex] = useState(0)
 
+  // Rotate course titles every four seconds when multiple courses are available.
   useEffect(() => {
     if (courses.length <= 1) return
 
@@ -35,7 +37,7 @@ function RotatingCourseTitle({ courses }: RotatingCourseTitleProps) {
 export default function TrainingOverview() {
   return (
     <>
-      {/* Introduction */}
+      {/* Training section introduction */}
       <div className="flex min-w-70 items-center gap-3">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
           <GraduationCap size={26} />
@@ -51,7 +53,7 @@ export default function TrainingOverview() {
 
       <div className="h-12 w-0.5 shrink-0 bg-gray-300" />
 
-      {/* Training status */}
+      {/* Training categories and course information */}
       <div className="grid w-full min-w-0 flex-1 grid-cols-3 gap-3">
         {trainingItems.map((item) => {
           const Icon = item.icon
@@ -77,7 +79,7 @@ export default function TrainingOverview() {
 
       <div className="h-12 w-0.5 shrink-0 bg-gray-300" />
 
-      {/* Details link */}
+      {/* Link to the detailed training page */}
       <Link
         to="/skills/training"
         className="flex shrink-0 items-center gap-2 rounded-lg bg-blue-600 px-4 py-3 text-xs font-semibold text-white transition-colors hover:bg-blue-700"

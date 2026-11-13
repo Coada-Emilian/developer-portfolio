@@ -1,3 +1,9 @@
+// ==========================================
+// Imports
+// ==========================================
+
+// Lucide icons
+
 import {
   CalendarDays,
   CircleCheck,
@@ -16,6 +22,8 @@ import {
   Waypoints,
   Workflow,
 } from 'lucide-react'
+
+// Technology icons
 
 import {
   _React,
@@ -46,11 +54,20 @@ import {
   Vite,
 } from '@dev.icons/react'
 
+// Additional technology icons
+
 import { SiJunit5, SiKeycloak, SiMongoose } from 'react-icons/si'
+
+// Shared types
+
 import type { ITechnology } from '../../@types/interfaces/pages/skills/ITechnology'
 import type { SkillStatus } from '../../@types/types/pages/skills/skillStatus.types'
 
-// Navigation between Skills pages
+// ==========================================
+// Skills Navigation
+// ==========================================
+
+// Links between the different Skills page sections.
 
 export const navigationItems = [
   {
@@ -70,7 +87,7 @@ export const navigationItems = [
   },
 ]
 
-// Skills page section titles
+// Titles displayed according to the current route.
 
 export const skillsSections = {
   '/skills/technical': 'Compétences techniques',
@@ -78,7 +95,11 @@ export const skillsSections = {
   '/skills/complementary': 'Informations complémentaires',
 }
 
-// Frontend
+// ==========================================
+// Technical Skills
+// ==========================================
+
+// Frontend technologies.
 
 export const frontendSkills = {
   title: 'Frontend',
@@ -97,7 +118,7 @@ export const frontendSkills = {
   ] satisfies ITechnology[],
 }
 
-// Backend
+// Backend technologies.
 
 export const backendSkills = {
   title: 'Backend',
@@ -115,7 +136,7 @@ export const backendSkills = {
   ] satisfies ITechnology[],
 }
 
-// Databases
+// Database technologies
 
 export const databaseSkills = {
   title: 'Bases de données',
@@ -129,7 +150,7 @@ export const databaseSkills = {
   ] satisfies ITechnology[],
 }
 
-// Tools & Environment
+// Tools & Environment technologies
 
 export const toolsSkills = {
   title: 'Outils & Environnement',
@@ -148,7 +169,7 @@ export const toolsSkills = {
   ] satisfies ITechnology[],
 }
 
-// Testing & Quality
+// Testing & Quality technologies
 
 export const testingSkills = {
   title: 'Tests & Qualité',
@@ -160,7 +181,7 @@ export const testingSkills = {
   ] satisfies ITechnology[],
 }
 
-// Methodologies & Concepts
+// Methodologies & Concepts technologies
 
 export const methodologySkills = {
   title: 'Méthodologies & Concepts',
@@ -176,11 +197,38 @@ export const methodologySkills = {
   ] satisfies ITechnology[],
 }
 
+// All technical categories, used to render the technology cards.
+
+export const technologyCategories = [
+  frontendSkills,
+  backendSkills,
+  databaseSkills,
+  toolsSkills,
+  testingSkills,
+  methodologySkills,
+]
+
+// ==========================================
+// Skill Status & Proficiency
+// ==========================================
+
+// Colours associated with each technology experience level.
+
 export const statusColors: Record<SkillStatus, string> = {
   acquired: 'bg-green-500',
   developing: 'bg-blue-500',
   familiar: 'bg-amber-500',
 }
+
+// Labels displayed in the technology status legend.
+
+export const statuses = [
+  { label: 'Acquis', color: 'bg-green-500' },
+  { label: 'En développement', color: 'bg-blue-500' },
+  { label: 'Familiarisé', color: 'bg-amber-500' },
+]
+
+// Global proficiency levels displayed alongside the technology cards.
 
 export const globalLevels = [
   { name: 'Développement Backend', level: 'Avancé' },
@@ -190,6 +238,15 @@ export const globalLevels = [
   { name: 'Tests & Qualité', level: 'Intermédiaire' },
 ]
 
+// Visual widths associated with global proficiency levels.
+
+export const levelWidths = {
+  Avancé: 'w-5/6',
+  Intermédiaire: 'w-3/5',
+}
+
+// Professional strengths displayed in the Skills overview.
+
 export const strengths = [
   'Polyvalence Full Stack',
   'Capacité d’apprentissage rapide',
@@ -198,10 +255,12 @@ export const strengths = [
   'Collaboration et travail en équipe',
 ]
 
-export const levelWidths = {
-  Avancé: 'w-5/6',
-  Intermédiaire: 'w-3/5',
-}
+// ==========================================
+// Training & Learning
+// ==========================================
+
+// Training courses grouped by completion status.
+// Each course contains its title, provider, progress and status.
 
 export const trainingItems = [
   {
@@ -303,10 +362,4 @@ export const trainingItems = [
       },
     ],
   },
-]
-
-export const statuses = [
-  { label: 'Acquis', color: 'bg-green-500' },
-  { label: 'En développement', color: 'bg-blue-500' },
-  { label: 'Familiarisé', color: 'bg-amber-500' },
 ]

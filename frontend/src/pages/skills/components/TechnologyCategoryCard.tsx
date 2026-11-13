@@ -9,7 +9,7 @@ export default function TechnologyCategoryCard({
 }: TechnologyCategoryCardProps) {
   return (
     <article className="flex h-full flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm transition-shadow duration-200 hover:shadow-md md:p-6">
-      {/* Category heading */}
+      {/* Category heading and icon */}
       <div className="flex items-start gap-4">
         <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
           {CategoryIcon && <CategoryIcon className="size-8 lg:size-9" />}
@@ -19,13 +19,13 @@ export default function TechnologyCategoryCard({
           <h3 className="text-lg font-extrabold text-text-primary md:text-xl lg:text-2xl">
             {title}
           </h3>
-          <p className=" text-xs leading-relaxed font-medium text-text-secondary lg:text-sm">
+          <p className="text-xs leading-relaxed font-medium text-text-secondary lg:text-sm">
             {description}
           </p>
         </div>
       </div>
 
-      {/* Technologies */}
+      {/* Technology badges and proficiency indicators */}
       <div className="mt-5 flex flex-wrap gap-2">
         {technologies.map((technology) => {
           const TechnologyIcon = technology.icon
