@@ -4,7 +4,7 @@ import AudienceNavigationSectionCard from './components/AudienceNavigationSectio
 
 export default function AudienceNavigationSection() {
   return (
-    <section className="hidden bg-surface md:block">
+    <section className="hidden bg-blue-50 md:block">
       <div className="mx-auto grid grid-cols-3 gap-3 px-6 py-3 lg:gap-6 lg:px-36">
         {/* Recruiters: professional background and skills */}
         <AudienceNavigationSectionCard

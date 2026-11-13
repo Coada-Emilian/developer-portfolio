@@ -32,7 +32,7 @@ export default function NavbarMobileNavigation({ closeMenu }: NavbarMobileNaviga
         />
 
         <NavbarNavigationLink
-          to="/skills"
+          to="/skills/technical"
           onClick={closeMenu}
           icon={<Code2 size={20} />}
           label="Compétences"

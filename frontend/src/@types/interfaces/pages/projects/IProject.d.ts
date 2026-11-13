@@ -16,4 +16,5 @@ export interface IProject {
   technologies: string[]
   media: ProjectImage[]
   featured?: boolean
+  github?: string
 }

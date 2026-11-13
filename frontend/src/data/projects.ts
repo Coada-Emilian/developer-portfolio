@@ -41,6 +41,7 @@ export const projects: IProject[] = [
       { id: 'kinesoin-4', src: kinesoin4, alt: 'KineSoin – interface utilisateur' },
       { id: 'kinesoin-5', src: kinesoin5, alt: 'KineSoin – aperçu supplémentaire' },
     ],
+    github: 'https://github.com/Coada-Emilian/kineSoin',
   },
   {
     id: '2',
@@ -61,6 +62,7 @@ export const projects: IProject[] = [
       { id: 'backlogged-2', src: backlogged2, alt: 'Backlogged – interface utilisateur' },
       { id: 'backlogged-3', src: backlogged3, alt: 'Backlogged – écran de l’application' },
     ],
+    github: 'https://github.com/Coada-Emilian/vue-game-library',
   },
   {
     id: '3',
@@ -84,5 +86,6 @@ export const projects: IProject[] = [
       { id: 'seniorlove-5', src: seniorLove5, alt: 'SeniorLove – aperçu supplémentaire' },
       { id: 'seniorlove-6', src: seniorLove6, alt: 'SeniorLove – aperçu supplémentaire' },
     ],
+    github: 'https://github.com/Coada-Emilian/SeniorLove',
   },
 ]

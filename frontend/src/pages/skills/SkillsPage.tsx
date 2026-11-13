@@ -1,31 +1,45 @@
+import { Navigate, useLocation } from 'react-router-dom'
+import TechnicalSkillsSection from './sections/technical/TechnicalSkillsSection'
+
+import { skillsSections } from '../../data/pages/skills'
+
+import SkillsNavigation from './components/SkillsNavigation'
+import ComplementaryInformationSection from './sections/complementary/ComplementaryInformationSection'
+
+import HeroSection from './sections/HeroSection'
+import SkillsSection from './sections/PageSection'
+import PersonalSkillsSection from './sections/personal/PersonalSkillsSection'
+
 export default function SkillsPage() {
+  const { pathname } = useLocation()
+
+  // Retrieve the section title corresponding to the current route.
+  const sectionTitle = skillsSections[pathname as keyof typeof skillsSections]
+
+  // Redirect the base Skills route and unknown paths to technical skills.
+  if (pathname === '/skills' || !sectionTitle) {
+    return <Navigate to="/skills/technical" replace />
+  }
+
   return (
-    <main className="min-h-screen bg-surface px-6 py-16 text-text-primary">
-      {/* Page introduction and overview of professional skills. */}
-      <section className="mx-auto max-w-5xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-          Mes compétences
-        </p>
+    <main className="min-h-screen bg-surface text-text-primary">
+      {/* Shared page introduction and section navigation */}
+      <HeroSection />
 
-        <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Des compétences techniques, mais aussi humaines.
-        </h1>
+      <SkillsNavigation />
 
-        <div className="mt-4 h-1 w-12 rounded-full bg-blue-500" />
+      <div className="mx-auto w-11/12">
+        <SkillsSection title={sectionTitle}>
+          {/* Technical skills: technology categories and global overview */}
+          {pathname === '/skills/technical' && <TechnicalSkillsSection />}
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-primary">
-          Découvrez les compétences que j'ai développées à travers mes expériences professionnelles,
-          mes projets personnels et mon parcours d'apprentissage.
-        </p>
+          {/* Personal skills section */}
+          {pathname === '/skills/personal' && <PersonalSkillsSection />}
 
-        {/* Future content: technical, personal and complementary skills. */}
-        <div className="mt-12 rounded-xl border border-blue-100 bg-slate-100 p-8">
-          <p className="text-sm font-medium text-text-primary">
-            Retrouvez prochainement ici mes compétences techniques, mes qualités humaines et mes
-            connaissances complémentaires, organisées par domaine.
-          </p>
-        </div>
-      </section>
+          {/* Complementary information section */}
+          {pathname === '/skills/complementary' && <ComplementaryInformationSection />}
+        </SkillsSection>
+      </div>
     </main>
   )
 }

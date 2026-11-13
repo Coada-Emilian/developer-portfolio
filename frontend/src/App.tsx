@@ -25,7 +25,9 @@ export default function App() {
         <Route path="/projects/:id" element={<ProjectPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/recruiter" element={<RecruiterPage />} />
-        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/skills/technical" element={<SkillsPage />} />
+        <Route path="/skills/personal" element={<SkillsPage />} />
+        <Route path="/skills/complementary" element={<SkillsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
