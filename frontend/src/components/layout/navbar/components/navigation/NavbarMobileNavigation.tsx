@@ -33,7 +33,7 @@ export default function NavbarMobileNavigation({ closeMenu }: NavbarMobileNaviga
 
         <NavbarNavigationLink
           to="/skills/technical"
-          onClick={closeMenu}
+          matchPaths={['/skills/personal', '/skills/complementary']}
           icon={<Code2 size={20} />}
           label="Compétences"
         />

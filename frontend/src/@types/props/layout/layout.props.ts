@@ -19,4 +19,5 @@ export interface NavbarNavigationLinkProps {
   icon: React.ReactNode
   label: string
   onClick?: () => void
+  matchPaths?: string[]
 }

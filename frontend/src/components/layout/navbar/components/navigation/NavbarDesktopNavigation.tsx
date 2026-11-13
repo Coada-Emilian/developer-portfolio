@@ -10,7 +10,12 @@ export default function NavbarDesktopNavigation() {
 
       <NavbarNavigationLink to="/projects" icon={<FolderKanban size={18} />} label="Projets" />
 
-      <NavbarNavigationLink to="/skills/technical" icon={<Code2 size={18} />} label="Compétences" />
+      <NavbarNavigationLink
+        to="/skills/technical"
+        matchPaths={['/skills/personal', '/skills/complementary']}
+        icon={<Code2 size={18} />}
+        label="Compétences"
+      />
 
       <NavbarNavigationLink to="/contact" icon={<Mail size={18} />} label="Contact" />
     </div>
