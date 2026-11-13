@@ -1,4 +1,5 @@
 import { CalendarDays } from 'lucide-react'
+
 import { contactLinks } from '../../../data/pages/contact'
 
 export default function ContactInformationSection() {
@@ -21,11 +22,16 @@ export default function ContactInformationSection() {
         {contactLinks.map((contact) => {
           const Icon = contact.icon
           const ActionIcon = contact.actionIcon
+          const isEmail = contact.label === 'Email'
+          const href = isEmail ? `mailto:${contact.value}` : `https://${contact.value}`
 
           return (
-            <div
+            <a
               key={contact.label}
-              className="flex items-center gap-4 rounded-xl border border-blue-100 bg-blue-50/70 px-4 py-3"
+              href={href}
+              target={isEmail ? undefined : '_blank'}
+              rel={isEmail ? undefined : 'noopener noreferrer'}
+              className="flex items-center gap-4 rounded-xl border border-blue-100 bg-blue-50/70 px-4 py-3 transition-colors hover:border-blue-300 hover:bg-blue-100/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
             >
               <Icon className="size-8 shrink-0 text-blue-700" strokeWidth={2} />
 
@@ -40,14 +46,14 @@ export default function ContactInformationSection() {
                 strokeWidth={2}
                 aria-hidden="true"
               />
-            </div>
+            </a>
           )
         })}
       </div>
 
       {/* Availability information */}
-      <div className="flex items-center gap-4 rounded-xl bg-blue-100/70 p-4">
-        <CalendarDays className="size-9 shrink-0 text-blue-600" strokeWidth={2} />
+      <div className="mt-auto flex items-center gap-4 rounded-xl bg-blue-100/70 p-4">
+        <CalendarDays className="size-9 shrink-0 text-blue-700" strokeWidth={2} />
 
         <div>
           <h3 className="text-base font-bold text-text-primary">Disponibilité</h3>
