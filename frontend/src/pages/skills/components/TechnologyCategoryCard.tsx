@@ -10,16 +10,20 @@ export default function TechnologyCategoryCard({
   return (
     <article className="flex h-full flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm transition-shadow duration-200 hover:shadow-md md:p-6">
       {/* Category heading */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-start gap-4">
         <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-          {CategoryIcon && <CategoryIcon size={24} />}
+          {CategoryIcon && <CategoryIcon className="size-8 lg:size-9" />}
         </div>
 
-        <h3 className="text-lg font-bold text-text-primary md:text-xl">{title}</h3>
+        <div className="flex flex-col">
+          <h3 className="text-lg font-extrabold text-text-primary md:text-xl lg:text-2xl">
+            {title}
+          </h3>
+          <p className=" text-xs leading-relaxed font-medium text-text-secondary lg:text-sm">
+            {description}
+          </p>
+        </div>
       </div>
-
-      {/* Description */}
-      <p className="mt-4 text-sm leading-relaxed text-text-secondary">{description}</p>
 
       {/* Technologies */}
       <div className="mt-5 flex flex-wrap gap-2">
@@ -31,7 +35,7 @@ export default function TechnologyCategoryCard({
               key={technology.name}
               className="flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm text-text-primary"
             >
-              {TechnologyIcon && <TechnologyIcon size={18} />}
+              {TechnologyIcon && <TechnologyIcon className="size-5 lg:size-6" />}
 
               <span className="font-medium">{technology.name}</span>
 

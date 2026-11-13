@@ -304,3 +304,9 @@ export const trainingItems = [
     ],
   },
 ]
+
+export const statuses = [
+  { label: 'Acquis', color: 'bg-green-500' },
+  { label: 'En développement', color: 'bg-blue-500' },
+  { label: 'Familiarisé', color: 'bg-amber-500' },
+]
