@@ -3,7 +3,7 @@ import TitleUnderline from '../../../components/ui/TitleUnderline'
 
 export default function SkillsSection({ title, children }: SkillsSectionProps) {
   return (
-    <section className="w-full">
+    <section className="w-full mb-4">
       <h2 className="text-xl font-bold text-text-primary md:text-2xl">{title}</h2>
 
       <TitleUnderline />

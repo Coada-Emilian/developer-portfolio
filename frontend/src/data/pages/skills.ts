@@ -1,4 +1,7 @@
 import {
+  CalendarDays,
+  CircleCheck,
+  CirclePlay,
   CodeXml,
   Contact,
   Database,
@@ -199,3 +202,105 @@ export const levelWidths = {
   Avancé: 'w-5/6',
   Intermédiaire: 'w-3/5',
 }
+
+export const trainingItems = [
+  {
+    id: 'completed',
+    title: 'Formations terminées',
+    description: '7 formations complétées',
+    icon: CircleCheck,
+    color: 'text-green-600',
+    courses: [
+      {
+        title: 'The Web Developer BootCamp 2024',
+        provider: 'Udemy',
+        progress: 100,
+        status: 'completed',
+      },
+      {
+        title: 'Modern React with Redux',
+        provider: 'Udemy',
+        progress: 100,
+        status: 'completed',
+      },
+      {
+        title: 'Java Basics',
+        provider: 'OpenClassrooms',
+        progress: 100,
+        status: 'completed',
+      },
+      {
+        title: 'Spring Boot Basics',
+        provider: 'OpenClassrooms',
+        progress: 100,
+        status: 'completed',
+      },
+      {
+        title: 'Vue.js Basics',
+        provider: 'Grafikart',
+        progress: 100,
+        status: 'completed',
+      },
+      {
+        title: 'Java Programming Introduction for Beginners',
+        provider: 'Udemy',
+        progress: 100,
+        status: 'completed',
+      },
+      {
+        title: 'Spring Boot 4, Spring 7 & Hibernate for Beginners',
+        provider: 'Udemy',
+        progress: 100,
+        status: 'completed',
+      },
+    ],
+  },
+  {
+    id: 'in-progress',
+    title: 'En cours',
+    description: '1 formation en cours',
+    icon: CirclePlay,
+    color: 'text-blue-600',
+    courses: [
+      {
+        title: 'Full Stack: React and Java Spring Boot - The Developer Guide',
+        provider: 'Udemy',
+        progress: 3,
+        status: 'in-progress',
+      },
+      {
+        title: 'Java Masterclass 2025',
+        provider: 'Udemy',
+        progress: 31,
+        status: 'upcoming',
+      },
+    ],
+  },
+  {
+    id: 'upcoming',
+    title: 'À venir',
+    description: '4 formations prévues',
+    icon: CalendarDays,
+    color: 'text-blue-600',
+    courses: [
+      {
+        title: 'Google Cybersecurity',
+        provider: 'Coursera',
+        progress: 0,
+        status: 'upcoming',
+      },
+      {
+        title: 'Google AI',
+        provider: 'Coursera',
+        progress: 0,
+        status: 'upcoming',
+      },
+      {
+        title: 'Docker Mastery with Kubernetes + Swarm',
+        provider: 'Udemy',
+        progress: 0,
+        status: 'upcoming',
+      },
+    ],
+  },
+]
