@@ -26,6 +26,7 @@ export default function LanguagesCard() {
                   aria-label={`Drapeau ${language.name}`}
                   role="img"
                 />
+
                 <span className="text-sm font-semibold text-text-primary">{language.name}</span>
               </div>
 

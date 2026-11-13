@@ -4,7 +4,7 @@ import { personalSkills, workingPrinciples } from '../../../../data/pages/skills
 
 import PersonalSkillCard from '../../components/personal/PersonalSkillCard'
 
-export default function PersonalSkillsSection() {
+export default function SkillsSection() {
   return (
     <section className="grid grid-cols-1 gap-4 lg:grid-cols-[2fr_1fr] lg:gap-5">
       {/* Personal skills cards */}

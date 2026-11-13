@@ -1,17 +1,14 @@
 import { Navigate, useLocation } from 'react-router-dom'
+import TechnicalSkillsSection from './sections/technical/TechnicalSkillsSection'
 
-import { skillsSections, technologyCategories } from '../../data/pages/skills'
+import { skillsSections } from '../../data/pages/skills'
 
 import SkillsNavigation from './components/SkillsNavigation'
-import SkillsOverview from './components/technical/SkillsOverview'
-import TechnologyCategoryCard from './components/technical/TechnologyCategoryCard'
-import PersonalSkillsSection from './sections/personal/PersonalSkillSection'
+import ComplementaryInformationSection from './sections/complementary/ComplementaryInformationSection'
 
-import LanguagesCard from './components/complementary/LanguagesCard'
 import HeroSection from './sections/HeroSection'
-import TeamContributionSection from './sections/personal/TeamContributionSection'
-import SkillsSection from './sections/technical/TechnicalSkillsSection'
-import TrainingSection from './sections/technical/TrainingSection'
+import SkillsSection from './sections/PageSection'
+import PersonalSkillsSection from './sections/personal/PersonalSkillsSection'
 
 export default function SkillsPage() {
   const { pathname } = useLocation()
@@ -34,43 +31,14 @@ export default function SkillsPage() {
       <div className="mx-auto w-11/12">
         <SkillsSection title={sectionTitle}>
           {/* Technical skills: technology categories and global overview */}
-          {pathname === '/skills/technical' && (
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,3fr)_minmax(240px,1fr)] lg:items-stretch">
-              {/* Technology category cards */}
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {technologyCategories.map((category) => (
-                  <TechnologyCategoryCard key={category.title} {...category} />
-                ))}
-              </div>
-
-              {/* Global proficiency levels and professional strengths */}
-              <SkillsOverview />
-            </div>
-          )}
+          {pathname === '/skills/technical' && <TechnicalSkillsSection />}
 
           {/* Personal skills section */}
-          {pathname === '/skills/personal' && (
-            <div className="space-y-10">
-              <PersonalSkillsSection />
-              <TeamContributionSection />
-            </div>
-          )}
+          {pathname === '/skills/personal' && <PersonalSkillsSection />}
 
           {/* Complementary information section */}
-          {pathname === '/skills/complementary' && (
-            <>
-              <div>Complementary information content</div>
-              <LanguagesCard />
-            </>
-          )}
+          {pathname === '/skills/complementary' && <ComplementaryInformationSection />}
         </SkillsSection>
-
-        {/* Training overview displayed only on the technical skills page */}
-        {pathname === '/skills/technical' && (
-          <>
-            <TrainingSection />
-          </>
-        )}
       </div>
     </main>
   )

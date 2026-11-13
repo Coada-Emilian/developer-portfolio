@@ -8,21 +8,27 @@ import {
   BookOpen,
   BrainCircuit,
   CalendarDays,
+  Camera,
+  CarFront,
   CircleCheck,
   CirclePlay,
   CodeXml,
   Contact,
   Database,
   FlaskConical,
+  Gamepad2,
+  IdCard,
   Layers,
   LockKeyhole,
   Monitor,
+  Mountain,
   Network,
   RefreshCw,
   Rocket,
   Server,
   ShieldCheck,
   Users,
+  Utensils,
   Waypoints,
   Workflow,
 } from 'lucide-react'
@@ -436,4 +442,184 @@ export const languages = [
   { name: 'Roumain', country: 'ro', level: 'Natif', progress: 100 },
   { name: 'Anglais', country: 'gb', level: 'C2', progress: 95 },
   { name: 'Norvégien', country: 'no', level: 'A1', progress: 25 },
+]
+
+// ==========================================
+// Mobility
+// ==========================================
+
+export const mobility = {
+  icon: CarFront,
+  cardIcon: IdCard,
+  items: [
+    {
+      title: 'Permis B',
+      description: 'Véhicule personnel',
+    },
+  ],
+}
+
+// ==========================================
+// Interests
+// ==========================================
+
+export const interests = [
+  {
+    name: 'Jeux vidéo',
+    icon: Gamepad2,
+  },
+  {
+    name: 'Photographie',
+    icon: Camera,
+  },
+  {
+    name: 'Randonnée & nature',
+    icon: Mountain,
+  },
+  {
+    name: 'Cuisine',
+    icon: Utensils,
+  },
+  {
+    name: 'Histoire & mythologie',
+    icon: BookOpen,
+  },
+]
+
+// ==========================================
+// Professional Strengths
+// ==========================================
+
+export const profileStrengths = [
+  'Polyvalence (frontend & backend)',
+  'Autonomie et prise d’initiative',
+  'Capacité d’adaptation',
+  'Sens des responsabilités',
+  'Fiabilité et rigueur',
+]
+
+// ==========================================
+// Education & Qualifications
+// ==========================================
+
+// Formal education and professional training.
+// Entries are ordered from most recent to oldest.
+
+export const educationItems = [
+  {
+    id: 'web-development',
+    title: 'Titre Professionnel Développeur Web et Web Mobile',
+    institution: 'École O’Clock',
+    period: 'Mars 2024 – Novembre 2024',
+    qualification: 'Titre Professionnel (TP) Niveau 5',
+    field: 'Développement Web Full Stack',
+    description:
+      'Formation intensive en téléprésentiel couvrant la conception de pages web, de ressources numériques et de solutions informatiques.',
+    details: [
+      'Formation intensive en téléprésentiel',
+      'Développement de compétences en développement web full stack',
+      'Projet d’apothéose réalisé en équipe',
+      'Obtention du titre professionnel en décembre 2024',
+    ],
+    skills: ['HTML', 'CSS', 'Figma', 'Node.js', 'Express.js', 'React', 'JavaScript', 'PostgreSQL'],
+    status: 'completed',
+  },
+  {
+    id: 'bac-prothesiste-dentaire',
+    title: 'Baccalauréat Professionnel Prothèse Dentaire',
+    institution: 'Académie d’Art Dentaire Isabelle Dutel – Bordeaux',
+    period: 'Septembre 2016 – Juin 2017',
+    qualification: 'Baccalauréat Professionnel',
+    field: 'Technicien en Prothèses Dentaires',
+    description:
+      'Formation professionnelle en technologie dentaire, avec une spécialisation dans la fabrication et la réparation de prothèses dentaires et d’appareils.',
+    details: [
+      'Programme intensif en Technologie Dentaire',
+      'Spécialisation dans la fabrication et la réparation de prothèses dentaires et d’appareils',
+      'Mise en pratique des compétences techniques et manuelles',
+      'Obtention du Baccalauréat Professionnel en juillet 2017',
+    ],
+    skills: ['CAO', 'Technologie Dentaire', 'Gestion du temps', 'Organisation'],
+    status: 'completed',
+  },
+  {
+    id: 'bep-prothesiste-dentaire',
+    title: 'Brevet d’Études Professionnelles en Prothèse Dentaire',
+    institution: 'Académie d’Art Dentaire Isabelle Dutel – Bordeaux',
+    period: 'Septembre 2015 – Juin 2016',
+    qualification: 'Brevet d’Études Professionnelles',
+    field: 'Technicien en Prothèses Dentaires',
+    description:
+      'Formation fondamentale en anatomie dentaire, techniques de laboratoire et fabrication de prothèses.',
+    details: [
+      'Acquisition des compétences fondamentales en anatomie dentaire',
+      'Techniques de laboratoire et fabrication de prothèses',
+      'Première année de formation en Technologie Dentaire',
+      'Obtention du Brevet d’Études Professionnelles en juillet 2016',
+    ],
+    skills: ['Contrôle qualité', 'Précision et minutie', 'Anatomie dentaire', 'CAO'],
+    status: 'completed',
+  },
+  {
+    id: 'culinary-qualification',
+    title: 'Diplôme de qualification niveau II',
+    institution: 'L’école nationale d’excellence Bella Italia – Brăila, Roumanie',
+    period: 'Juin 2012 – Décembre 2012',
+    qualification: 'Diplôme de qualification niveau II',
+    field: 'Cuisinier, Arts culinaires',
+    description:
+      'Formation de six mois en arts culinaires, associant enseignement pratique et théorique.',
+    details: [
+      'Formation de 6 mois en arts culinaires',
+      'Instruction intensive à la fois pratique et théorique',
+      'Développement de compétences en préparation culinaire',
+    ],
+    skills: ['Créativité', 'Pédagogie culinaire', 'Communication', 'Gestion du temps'],
+    status: 'completed',
+  },
+  {
+    id: 'teaching-certificate',
+    title: 'Certificat de promotion',
+    institution: 'Université « Dunărea de Jos » de Galați, Roumanie',
+    period: 'Octobre 2008 – Juin 2011',
+    qualification: 'Certificat de promotion',
+    field: 'Préparation du personnel didactique',
+    description: 'Parcours de préparation pédagogique destiné au personnel enseignant.',
+    details: ['Psychologie de l’éducation', 'Pédagogie I et II', 'Didactique de la spécialité'],
+    skills: ['Psychologie de l’éducation', 'Pédagogie', 'Didactique'],
+    status: 'completed',
+  },
+  {
+    id: 'history-education',
+    title: 'Faculté d’Histoire, philosophie et théologie',
+    institution: 'Université « Dunărea de Jos » de Galați, Roumanie',
+    period: 'Octobre 2008 – Juin 2011',
+    qualification: 'Licence en Histoire et Éducation',
+    field: 'Histoire et Éducation',
+    description:
+      'Cursus de trois ans en histoire et éducation, avec des études historiques et pédagogiques approfondies.',
+    details: [
+      'Cursus de 3 ans en Histoire et Éducation',
+      'Études historiques et pédagogiques approfondies',
+      'Développement d’une compréhension approfondie des contextes historiques et éducatifs',
+    ],
+    skills: ['Communication', 'Histoire', 'Compétences analytiques'],
+    status: 'completed',
+  },
+  {
+    id: 'natural-sciences',
+    title: 'Diplôme de baccalauréat en Sciences Naturelles',
+    institution: 'Lycée pédagogique « D. P. Perpessicius » – Brăila, Roumanie',
+    period: 'Septembre 2004 – Juin 2008',
+    qualification: 'Diplôme de baccalauréat',
+    field: 'Sciences naturelles',
+    description: 'Formation secondaire de quatre ans en sciences naturelles.',
+    details: [
+      'Programme de 4 ans en sciences naturelles',
+      'Étude des matières scientifiques fondamentales',
+      'Acquisition d’une base solide en biologie, chimie, physique et sciences naturelles',
+    ],
+    skills: ['Esprit critique', 'Résolution de problèmes', 'Chimie', 'Physique', 'Biologie'],
+    status: 'completed',
+  },
 ]
