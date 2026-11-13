@@ -178,3 +178,24 @@ export const statusColors: Record<SkillStatus, string> = {
   developing: 'bg-blue-500',
   familiar: 'bg-amber-500',
 }
+
+export const globalLevels = [
+  { name: 'Développement Backend', level: 'Avancé' },
+  { name: 'Développement Frontend', level: 'Avancé' },
+  { name: 'Bases de données', level: 'Intermédiaire' },
+  { name: 'DevOps & Outils', level: 'Intermédiaire' },
+  { name: 'Tests & Qualité', level: 'Intermédiaire' },
+]
+
+export const strengths = [
+  'Polyvalence Full Stack',
+  'Capacité d’apprentissage rapide',
+  'Autonomie et résolution de problèmes',
+  'Sens de la qualité et du code maintenable',
+  'Collaboration et travail en équipe',
+]
+
+export const levelWidths = {
+  Avancé: 'w-5/6',
+  Intermédiaire: 'w-3/5',
+}
