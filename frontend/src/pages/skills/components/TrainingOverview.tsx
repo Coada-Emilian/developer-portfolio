@@ -34,7 +34,7 @@ function RotatingCourseTitle({ courses }: RotatingCourseTitleProps) {
 
 export default function TrainingOverview() {
   return (
-    <section className="flex items-center gap-5 rounded-2xl border border-blue-100 bg-blue-50/50 p-4 shadow-sm">
+    <>
       {/* Introduction */}
       <div className="flex min-w-70 items-center gap-3">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
@@ -85,6 +85,8 @@ export default function TrainingOverview() {
         Voir le détail
         <ArrowRight size={16} />
       </Link>
-    </section>
+
+      <div className="hidden lg:block"></div>
+    </>
   )
 }

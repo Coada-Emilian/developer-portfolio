@@ -15,6 +15,7 @@ import SkillsOverview from './components/SkillsOverview'
 import TechnologyCategoryCard from './components/TechnologyCategoryCard'
 import HeroSection from './sections/HeroSection'
 import SkillsSection from './sections/SkillsSection'
+import TrainingSection from './sections/TrainingSection'
 
 const technologyCategories = [
   frontendSkills,
@@ -61,7 +62,12 @@ export default function SkillsPage() {
           {pathname === '/skills/complementary' && <div>Complementary information content</div>}
         </SkillsSection>
 
-        {/* {pathname === '/skills/technical' && <TrainingSection />} */}
+        {pathname === '/skills/technical' && (
+          <>
+            <TrainingSection />
+            <div className="h-6 md:h-4 lg:hidden"></div>
+          </>
+        )}
       </div>
     </main>
   )
