@@ -1,23 +1,6 @@
-import { ArrowRight, CodeXml, Contact, Users } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
-
-const navigationItems = [
-  {
-    label: 'Compétences techniques',
-    path: '/skills/technical',
-    icon: CodeXml,
-  },
-  {
-    label: 'Compétences personnelles',
-    path: '/skills/personal',
-    icon: Users,
-  },
-  {
-    label: 'Informations complémentaires',
-    path: '/skills/complementary',
-    icon: Contact,
-  },
-]
+import { navigationItems } from '../../../data/pages/skills'
 
 export default function SkillsNavigation() {
   return (
