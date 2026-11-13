@@ -46,7 +46,7 @@ export default function MainProjectSectionInformation() {
       {/* Links to the live project and its source code. */}
       <div className="relative flex flex-wrap gap-4">
         <a
-          href="/project/1"
+          href="/projects/1"
           className="flex items-center gap-2 rounded-xl bg-blue-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
         >
           Voir le projet
