@@ -1,4 +1,4 @@
-import type { PersonalSkillCardProps } from '../../../@types/props/pages/skills/skillsPage.props'
+import type { PersonalSkillCardProps } from '../../../../@types/props/pages/skills/skillsPage.props'
 
 export default function PersonalSkillCard({
   title,

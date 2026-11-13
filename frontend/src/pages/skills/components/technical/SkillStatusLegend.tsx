@@ -1,4 +1,4 @@
-import { statuses } from '../../../data/pages/skills'
+import { statuses } from '../../../../data/pages/skills'
 
 export default function SkillStatusLegend() {
   return (

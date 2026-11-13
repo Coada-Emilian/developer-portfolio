@@ -2,7 +2,7 @@ import { ArrowRight, GraduationCap } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { trainingItems } from '../../../data/pages/skills'
+import { trainingItems } from '../../../../data/pages/skills'
 
 interface RotatingCourseTitleProps {
   courses: (typeof trainingItems)[number]['courses']

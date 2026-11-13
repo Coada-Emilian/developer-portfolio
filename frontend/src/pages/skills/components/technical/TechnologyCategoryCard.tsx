@@ -1,5 +1,5 @@
-import type { TechnologyCategoryCardProps } from '../../../@types/props/pages/skills/skillsPage.props'
-import { statusColors } from '../../../data/pages/skills'
+import type { TechnologyCategoryCardProps } from '../../../../@types/props/pages/skills/skillsPage.props'
+import { statusColors } from '../../../../data/pages/skills'
 
 export default function TechnologyCategoryCard({
   title,

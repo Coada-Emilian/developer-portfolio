@@ -1,6 +1,6 @@
 import { Check, Star, TrendingUp } from 'lucide-react'
 
-import { globalLevels, levelWidths, strengths } from '../../../data/pages/skills'
+import { globalLevels, levelWidths, strengths } from '../../../../data/pages/skills'
 
 export default function SkillsOverview() {
   return (

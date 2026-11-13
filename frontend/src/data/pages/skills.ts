@@ -428,3 +428,12 @@ export const teamContributions = [
   'Un état d’esprit constructif',
   'L’envie de faire progresser le projet',
 ]
+
+// Languages and their proficiency levels.
+
+export const languages = [
+  { name: 'Français', country: 'fr', level: 'B2', progress: 70 },
+  { name: 'Roumain', country: 'ro', level: 'Natif', progress: 100 },
+  { name: 'Anglais', country: 'gb', level: 'C2', progress: 95 },
+  { name: 'Norvégien', country: 'no', level: 'A1', progress: 25 },
+]

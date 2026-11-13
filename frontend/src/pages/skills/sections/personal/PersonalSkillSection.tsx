@@ -2,7 +2,7 @@ import { Check, Target } from 'lucide-react'
 
 import { personalSkills, workingPrinciples } from '../../../../data/pages/skills'
 
-import PersonalSkillCard from '../../components/PersonalSkillCard'
+import PersonalSkillCard from '../../components/personal/PersonalSkillCard'
 
 export default function PersonalSkillsSection() {
   return (

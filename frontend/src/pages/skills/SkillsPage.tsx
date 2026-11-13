@@ -3,10 +3,11 @@ import { Navigate, useLocation } from 'react-router-dom'
 import { skillsSections, technologyCategories } from '../../data/pages/skills'
 
 import SkillsNavigation from './components/SkillsNavigation'
-import SkillsOverview from './components/SkillsOverview'
-import TechnologyCategoryCard from './components/TechnologyCategoryCard'
+import SkillsOverview from './components/technical/SkillsOverview'
+import TechnologyCategoryCard from './components/technical/TechnologyCategoryCard'
 import PersonalSkillsSection from './sections/personal/PersonalSkillSection'
 
+import LanguagesCard from './components/complementary/LanguagesCard'
 import HeroSection from './sections/HeroSection'
 import TeamContributionSection from './sections/personal/TeamContributionSection'
 import SkillsSection from './sections/technical/TechnicalSkillsSection'
@@ -56,16 +57,18 @@ export default function SkillsPage() {
           )}
 
           {/* Complementary information section */}
-          {pathname === '/skills/complementary' && <div>Complementary information content</div>}
+          {pathname === '/skills/complementary' && (
+            <>
+              <div>Complementary information content</div>
+              <LanguagesCard />
+            </>
+          )}
         </SkillsSection>
 
         {/* Training overview displayed only on the technical skills page */}
         {pathname === '/skills/technical' && (
           <>
             <TrainingSection />
-
-            {/* Additional bottom spacing on smaller screens */}
-            <div className="h-6 md:h-4 lg:hidden" />
           </>
         )}
       </div>
