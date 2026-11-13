@@ -1,4 +1,4 @@
-import TrainingOverview from '../components/TrainingOverview'
+import TrainingOverview from '../../components/TrainingOverview'
 
 export default function TrainingSection() {
   return (

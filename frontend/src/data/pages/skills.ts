@@ -5,6 +5,8 @@
 // Lucide icons
 
 import {
+  BookOpen,
+  BrainCircuit,
   CalendarDays,
   CircleCheck,
   CirclePlay,
@@ -16,6 +18,8 @@ import {
   LockKeyhole,
   Monitor,
   Network,
+  RefreshCw,
+  Rocket,
   Server,
   ShieldCheck,
   Users,
@@ -362,4 +366,65 @@ export const trainingItems = [
       },
     ],
   },
+]
+
+// ==========================================
+// Personal Skills
+// ==========================================
+
+// Personal qualities and their descriptions.
+
+export const personalSkills = [
+  {
+    title: 'Esprit d’analyse',
+    description: 'Comprendre un besoin, découper un problème et proposer des solutions efficaces.',
+    icon: BrainCircuit,
+  },
+  {
+    title: 'Autonomie',
+    description:
+      'Avancer de manière proactive, prendre des initiatives et gérer mes missions en toute confiance.',
+    icon: Rocket,
+  },
+  {
+    title: 'Travail en équipe',
+    description: 'Collaborer, partager les connaissances et contribuer à un objectif commun.',
+    icon: Users,
+  },
+  {
+    title: 'Adaptabilité',
+    description:
+      'M’adapter à un nouvel environnement, à des outils ou à des changements de priorités.',
+    icon: RefreshCw,
+  },
+  {
+    title: 'Curiosité & apprentissage',
+    description:
+      'Explorer de nouvelles technologies, me former en continu et élargir mes compétences.',
+    icon: BookOpen,
+  },
+  {
+    title: 'Organisation',
+    description: 'Prioriser, planifier et tenir mes engagements pour avancer efficacement.',
+    icon: CalendarDays,
+  },
+]
+
+// Principles guiding the way I approach my work.
+
+export const workingPrinciples = [
+  'Orienté solution et résolution de problèmes',
+  'Communication claire et bienveillante',
+  'Rigueur et sens de la qualité',
+  'Esprit d’amélioration continue',
+  'Ouverture aux retours et aux nouvelles idées',
+]
+
+// Contributions I bring to a team.
+
+export const teamContributions = [
+  'Une vision globale du produit',
+  'De la fiabilité et du suivi',
+  'Un état d’esprit constructif',
+  'L’envie de faire progresser le projet',
 ]

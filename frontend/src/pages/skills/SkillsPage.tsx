@@ -5,10 +5,12 @@ import { skillsSections, technologyCategories } from '../../data/pages/skills'
 import SkillsNavigation from './components/SkillsNavigation'
 import SkillsOverview from './components/SkillsOverview'
 import TechnologyCategoryCard from './components/TechnologyCategoryCard'
+import PersonalSkillsSection from './sections/personal/PersonalSkillSection'
 
 import HeroSection from './sections/HeroSection'
-import SkillsSection from './sections/SkillsSection'
-import TrainingSection from './sections/TrainingSection'
+import TeamContributionSection from './sections/personal/TeamContributionSection'
+import SkillsSection from './sections/technical/TechnicalSkillsSection'
+import TrainingSection from './sections/technical/TrainingSection'
 
 export default function SkillsPage() {
   const { pathname } = useLocation()
@@ -46,7 +48,12 @@ export default function SkillsPage() {
           )}
 
           {/* Personal skills section */}
-          {pathname === '/skills/personal' && <div>Personal skills content</div>}
+          {pathname === '/skills/personal' && (
+            <>
+              <PersonalSkillsSection />
+              <TeamContributionSection />
+            </>
+          )}
 
           {/* Complementary information section */}
           {pathname === '/skills/complementary' && <div>Complementary information content</div>}

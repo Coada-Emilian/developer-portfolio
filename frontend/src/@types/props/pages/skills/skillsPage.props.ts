@@ -1,7 +1,7 @@
 import type { ElementType } from 'react'
 import type { ITechnology } from '../../../interfaces/pages/skills/ITechnology.d.ts'
 
-export interface SkillsSectionProps {
+export interface TechnicalSkillsSectionProps {
   title: string
   children: React.ReactNode
 }

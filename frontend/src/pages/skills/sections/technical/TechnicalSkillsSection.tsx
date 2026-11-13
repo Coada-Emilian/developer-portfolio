@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router-dom'
 
-import type { SkillsSectionProps } from '../../../@types/props/pages/skills/skillsPage.props'
-import TitleUnderline from '../../../components/ui/TitleUnderline'
+import type { TechnicalSkillsSectionProps } from '../../../../@types/props/pages/skills/skillsPage.props'
+import TitleUnderline from '../../../../components/ui/TitleUnderline'
 
-import SkillStatusLegend from '../components/SkillStatusLegend'
+import SkillStatusLegend from '../../components/SkillStatusLegend'
 
-export default function SkillsSection({ title, children }: SkillsSectionProps) {
+export default function TechnicalSkillsSection({ title, children }: TechnicalSkillsSectionProps) {
   const { pathname } = useLocation()
 
   return (
