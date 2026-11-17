@@ -1,4 +1,14 @@
-import { Code2, Layers3, RefreshCw, Search, ShieldCheck, Users } from 'lucide-react'
+import {
+  Code2,
+  Database,
+  Layers3,
+  Monitor,
+  RefreshCw,
+  Search,
+  Server,
+  ShieldCheck,
+  Users,
+} from 'lucide-react'
 import type { IWorkflowStep } from '../../@types/interfaces/pages/lead/IWorkflowStep'
 import type { IHighlight } from '../../@types/interfaces/shared/IHighlight'
 
@@ -50,5 +60,23 @@ export const workflowSteps: IWorkflowStep[] = [
     description:
       'Intégrer, recueillir les retours et faire évoluer la solution de manière progressive.',
     icon: RefreshCw,
+  },
+]
+
+export const environments = [
+  {
+    title: 'Backend',
+    icon: Server,
+    technologies: ['Java', 'Spring Boot', 'REST API', 'Node.js', 'Express.js'],
+  },
+  {
+    title: 'Frontend',
+    icon: Monitor,
+    technologies: ['React', 'Vue.js', 'TypeScript'],
+  },
+  {
+    title: 'Data & outils',
+    icon: Database,
+    technologies: ['PostgreSQL', 'MongoDB', 'Docker', 'Git'],
   },
 ]
