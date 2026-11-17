@@ -13,7 +13,7 @@ export default function AudienceNavigationSection() {
           desktopDescription="Mon parcours, mes compétences et mes projets clés."
           tabletTitle="Recruteurs"
           tabletDescription="Parcours, compétences et projets."
-          href="/recruiter"
+          href="/recruiters"
           icon={Users}
         />
 
@@ -23,7 +23,7 @@ export default function AudienceNavigationSection() {
           desktopDescription="Ma façon de travailler, mes réalisations et la valeur que je peux apporter."
           tabletTitle="Leads"
           tabletDescription="Méthode de travail et contributions."
-          href="/lead"
+          href="/leads"
           icon={BriefcaseBusiness}
         />
 
@@ -33,7 +33,7 @@ export default function AudienceNavigationSection() {
           desktopDescription="Le détail des projets, les choix techniques, l'architecture et le code source."
           tabletTitle="Développeurs"
           tabletDescription="Projets, architecture et choix techniques."
-          href="/developer"
+          href="/developers"
           icon={Code2}
         />
       </div>
