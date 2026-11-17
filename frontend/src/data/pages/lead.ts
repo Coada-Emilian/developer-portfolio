@@ -1,13 +1,19 @@
 import {
+  BarChart3,
+  Bug,
+  CheckCircle2,
   Code2,
   Database,
   Layers3,
+  MessageCircle,
+  MessageSquare,
   Monitor,
   RefreshCw,
   Search,
   Server,
   ShieldCheck,
   Users,
+  Zap,
 } from 'lucide-react'
 import type { IWorkflowStep } from '../../@types/interfaces/pages/lead/IWorkflowStep'
 import type { IHighlight } from '../../@types/interfaces/shared/IHighlight'
@@ -85,4 +91,52 @@ export const technicalChallenges = [
   'Structurer l’interface en composants réutilisables et cohérents.',
   'Gérer les relations entre les données (patients, rendez-vous, séances, facturation).',
   'Connecter le frontend et le backend via une API REST sécurisée.',
+]
+
+export const collaborationValues = [
+  {
+    title: 'Communication',
+    description: 'Des échanges clairs, réguliers et orientés solution.',
+    icon: MessageCircle,
+  },
+  {
+    title: 'Autonomie',
+    description:
+      "Capacité à avancer de manière autonome, tout en sollicitant l'équipe si nécessaire.",
+    icon: Zap,
+  },
+  {
+    title: 'Feedback',
+    description: 'À l’écoute des retours pour ajuster, progresser et améliorer la qualité.',
+    icon: MessageSquare,
+  },
+  {
+    title: 'Progression continue',
+    description: 'Une veille régulière et une volonté constante de développer mes compétences.',
+    icon: BarChart3,
+  },
+]
+
+export const aiUses = [
+  {
+    title: 'Explorer des solutions',
+    description: 'Comparer différentes approches et mieux comprendre les concepts techniques.',
+    icon: Search,
+  },
+  {
+    title: 'Faciliter le débogage',
+    description: 'Analyser les erreurs, identifier des pistes et comprendre leur origine.',
+    icon: Bug,
+  },
+  {
+    title: 'Comprendre le code',
+    description:
+      'Examiner les propositions, approfondir leur fonctionnement et évaluer leur pertinence.',
+    icon: Code2,
+  },
+  {
+    title: 'Vérifier avant intégration',
+    description: 'Contrôler les solutions proposées et valider leur comportement par des tests.',
+    icon: CheckCircle2,
+  },
 ]

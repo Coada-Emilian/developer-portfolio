@@ -5,6 +5,7 @@ export interface PageHeroProps {
   desktopSubtitle?: string
   tabletSubtitle?: string
   mobileSubtitle?: string
+  backButton?: boolean
 }
 
 export interface SectionHeadingProps {
