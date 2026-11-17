@@ -1,4 +1,5 @@
-import { Code2, Layers3, ShieldCheck, Users } from 'lucide-react'
+import { Code2, Layers3, RefreshCw, Search, ShieldCheck, Users } from 'lucide-react'
+import type { IWorkflowStep } from '../../@types/interfaces/pages/lead/IWorkflowStep'
 import type { IHighlight } from '../../@types/interfaces/shared/IHighlight'
 
 export const highlights: IHighlight[] = [
@@ -24,5 +25,30 @@ export const highlights: IHighlight[] = [
     title: "Esprit d'équipe",
     description: "Une communication transparente, de l'entraide et un sens de l'objectif commun.",
     icon: Users,
+  },
+]
+
+export const workflowSteps: IWorkflowStep[] = [
+  {
+    title: 'Comprendre le besoin',
+    description:
+      'Échanger, clarifier les attentes et identifier les priorités pour cadrer le travail.',
+    icon: Search,
+  },
+  {
+    title: 'Concevoir la solution',
+    description: 'Proposer une approche simple, cohérente et adaptée au contexte technique.',
+    icon: Layers3,
+  },
+  {
+    title: 'Développer & tester',
+    description: 'Implémenter de façon itérative, avec des tests et des validations régulières.',
+    icon: Code2,
+  },
+  {
+    title: 'Intégrer & améliorer',
+    description:
+      'Intégrer, recueillir les retours et faire évoluer la solution de manière progressive.',
+    icon: RefreshCw,
   },
 ]

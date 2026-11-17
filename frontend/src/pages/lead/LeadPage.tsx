@@ -1,6 +1,7 @@
 import HighlightsSection from '../../components/shared/HighlightsSection'
 import { highlights } from '../../data/pages/lead'
 import HeroSection from './sections/HeroSection'
+import WorkflowSection from './sections/WorkflowSection'
 
 export default function LeadPage() {
   return (
@@ -10,6 +11,7 @@ export default function LeadPage() {
 
       <div className="flex flex-col gap-5 px-4 py-5 sm:gap-6 sm:px-6 lg:p-6">
         <HighlightsSection highlights={highlights} />
+        <WorkflowSection />
       </div>
     </main>
   )
