@@ -7,6 +7,7 @@ import HeroSectionActions from './components/HeroSectionActions'
 import HeroSectionIntroduction from './components/HeroSectionIntroduction'
 import HeroSectionPortraitCarousel from './components/HeroSectionPortraitCarousel'
 
+// Homepage hero presenting the user's profile, introduction and primary actions.
 export default function HeroSection({ user }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-80 items-center overflow-hidden px-5 py-8 sm:px-8 lg:min-h-95 lg:px-16">
@@ -32,6 +33,7 @@ export default function HeroSection({ user }: HeroSectionProps) {
 
         <div className="max-w-2xl text-white">
           <HeroSectionIntroduction user={user} />
+
           <HeroSectionActions />
         </div>
       </div>

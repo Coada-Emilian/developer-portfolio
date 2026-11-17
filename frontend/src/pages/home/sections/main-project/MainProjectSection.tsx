@@ -3,6 +3,7 @@ import SectionHeading from '../../../../components/shared/SectionHeading'
 import MainProjectSectionInformation from './components/MainProjectSectionInformation'
 import MainProjectSectionScreenshot from './components/MainProjectSectionScreenshot'
 
+// Displays the featured project in a two-column desktop layout.
 export default function MainProjectSection() {
   return (
     // Desktop presentation; mobile and tablet use a dedicated component.

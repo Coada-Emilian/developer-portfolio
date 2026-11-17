@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { CAROUSEL_CONFIG } from '../../../../../config/carousel.config'
 import { projectScreenshots } from '../../../../../data/pages/home'
 
+// Displays the featured project's screenshots in a touch-friendly carousel with an expanded lightbox.
 export default function MainProjectMobileSectionScreenshot() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)

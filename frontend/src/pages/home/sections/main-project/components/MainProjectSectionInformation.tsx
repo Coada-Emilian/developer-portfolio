@@ -5,6 +5,7 @@ import projectBackground from '../../../../../assets/images/project_background.p
 
 import { projectTechnologies } from '../../../../../data/pages/home'
 
+// Presents the featured project's identity, technologies and navigation links.
 export default function MainProjectSectionInformation() {
   return (
     <div

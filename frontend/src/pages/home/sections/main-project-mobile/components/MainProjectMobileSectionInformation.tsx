@@ -3,6 +3,7 @@ import { ExternalLink, Stethoscope } from 'lucide-react'
 
 import { projectTechnologies } from '../../../../../data/pages/home'
 
+// Displays the featured project's details, technology stack and navigation links on mobile and tablet.
 export default function MainProjectMobileSectionInformation() {
   return (
     <>

@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 
 import type { AudienceNavigationSectionCardProps } from '../../../../../@types/props/pages/home/homePage.props'
 
+// Reusable audience navigation card with responsive content variants.
 export default function AudienceNavigationSectionCard({
   desktopTitle,
   desktopDescription,
@@ -14,7 +15,7 @@ export default function AudienceNavigationSectionCard({
     // The entire card is clickable and navigates to its target page.
     <a
       href={href}
-      className="flex cursor-pointer items-center gap-5 rounded-xl border border-blue-200/70 bg-slate-100 px-6 py-4 transition-colors duration-200 hover:border-blue-300 hover:bg-blue-50"
+      className="flex cursor-pointer items-center gap-5 rounded-xl border border-blue-200/70 bg-slate-100 px-6 py-4 transition-colors duration-200 hover:border-blue-300 hover:bg-blue-100"
     >
       <Icon className="size-8 shrink-0 text-blue-600 lg:size-11.5" />
 

@@ -2,6 +2,7 @@ import type { SectionHeadingProps } from '../../@types/props/shared/shared.props
 
 import TitleUnderline from '../ui/TitleUnderline'
 
+// Reusable section heading with optional subsection styling and decorative underline.
 export default function SectionHeading({ title, subsection, underline }: SectionHeadingProps) {
   return (
     <div>

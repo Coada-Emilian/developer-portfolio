@@ -2,6 +2,7 @@ import { BriefcaseBusiness, Code2, Users } from 'lucide-react'
 
 import AudienceNavigationSectionCard from './components/AudienceNavigationSectionCard'
 
+// Provides audience-specific navigation for recruiters, technical leads and developers.
 export default function AudienceNavigationSection() {
   return (
     <section className="hidden bg-blue-50 md:block">

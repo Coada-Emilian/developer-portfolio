@@ -7,6 +7,7 @@ import { technologies } from '../../../../data/pages/home'
 
 import TechnologyCard from './components/TechnologyCard'
 
+// Showcases the main technologies through a responsive, automatically rotating carousel.
 export default function TechnologiesSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
