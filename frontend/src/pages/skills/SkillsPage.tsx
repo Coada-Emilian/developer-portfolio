@@ -2,13 +2,14 @@ import { Navigate, useLocation } from 'react-router-dom'
 
 import { skillsSections } from '../../data/pages/skills'
 
+import {
+  ComplementaryInformationSection,
+  HeroSection,
+  PersonalSkillsSection,
+  PageSection as SkillsSection,
+  TechnicalSkillsSection,
+} from './sections'
 import SkillsNavigation from './components/SkillsNavigation'
-import HeroSection from './sections/HeroSection'
-import SkillsSection from './sections/PageSection'
-
-import ComplementaryInformationSection from './sections/complementary/ComplementaryInformationSection'
-import PersonalSkillsSection from './sections/personal/PersonalSkillsSection'
-import TechnicalSkillsSection from './sections/technical/TechnicalSkillsSection'
 
 // Renders the Skills page content according to the current route.
 export default function SkillsPage() {

@@ -1,6 +1,4 @@
-import ContactFormSection from './sections/ContactFormSection'
-import ContactInformationSection from './sections/ContactInformationSection'
-import HeroSection from './sections/HeroSection'
+import { ContactFormSection, ContactInformationSection, HeroSection } from './sections'
 
 // Assembles the Contact page with its introduction, contact details and form.
 export default function ContactPage() {

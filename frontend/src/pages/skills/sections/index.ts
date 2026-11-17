@@ -1,0 +1,5 @@
+export { default as ComplementaryInformationSection } from './complementary/ComplementaryInformationSection'
+export { default as HeroSection } from './HeroSection'
+export { default as PageSection } from './PageSection'
+export { default as PersonalSkillsSection } from './personal/PersonalSkillsSection'
+export { default as TechnicalSkillsSection } from './technical/TechnicalSkillsSection'

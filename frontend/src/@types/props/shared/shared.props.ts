@@ -14,3 +14,12 @@ export interface SectionHeadingProps {
 export interface TitleUnderlineProps {
   subsection?: boolean
 }
+
+export interface MainProjectSectionCarouselModalProps {
+  setIsModalOpen: (isOpen: boolean) => void
+  projectScreenshots: string[]
+  activeIndex: number
+  setActiveIndex: (index: number) => void
+  showPrevious: () => void
+  showNext: () => void
+}
