@@ -1,12 +1,14 @@
 import HighlightsSection from '../../components/shared/HighlightsSection'
 import { highlights } from '../../data/pages/lead'
 import { ContactSection } from '../recruiter/sections'
-import AIAssistedDevelopmentSection from './sections/AIAssistedDevelopmentSection'
-import CollaborationSection from './sections/CollaborationSection'
-import FeaturedProjectSection from './sections/featured-project/FeaturedProjectSection'
-import HeroSection from './sections/HeroSection'
-import TechnicalEnvironmentSection from './sections/TechnicalEnvironmentSection'
-import WorkflowSection from './sections/WorkflowSection'
+import {
+  AIAssistedDevelopmentSection,
+  CollaborationSection,
+  FeaturedProjectSection,
+  HeroSection,
+  TechnicalEnvironmentSection,
+  WorkflowSection,
+} from './sections'
 
 export default function LeadPage() {
   return (
