@@ -9,28 +9,28 @@ import { projects } from '../../../data/projects'
 
 const PROJECTS_PER_PAGE = 3
 
+// Displays the project listing with category filtering and pagination.
 export default function ProjectsListSection() {
   const [activeFilter, setActiveFilter] = useState<ProjectFilter>('Tous')
   const [currentPage, setCurrentPage] = useState(1)
 
-  // Display all projects or filter by their assigned categories
+  // Filter projects by category, or display the full list.
   const filteredProjects =
     activeFilter === 'Tous'
       ? projects
       : projects.filter((project) => project.categories.includes(activeFilter))
 
-  // Calculate pagination
+  // Calculate the number of pages and derive the projects for the current page.
   const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE)
   const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE
   const paginatedProjects = filteredProjects.slice(startIndex, startIndex + PROJECTS_PER_PAGE)
 
-  // Reset pagination when changing filters
+  // Return to the first page whenever the selected category changes.
   const handleFilterChange = (filter: ProjectFilter) => {
     setActiveFilter(filter)
     setCurrentPage(1)
   }
 
-  // Navigate between pages
   const goToPreviousPage = () => {
     setCurrentPage((page) => Math.max(1, page - 1))
   }
@@ -41,11 +41,9 @@ export default function ProjectsListSection() {
 
   return (
     <section className="flex flex-col gap-6 p-4">
-      {/* Project category filters */}
       <ProjectsFilter activeFilter={activeFilter} onFilterChange={handleFilterChange} />
 
-      {/* Project cards */}
-      <div className="mx-auto flex w-full flex-col gap-4 lg:w-11/12 lg:mb-4">
+      <div className="mx-auto flex w-full flex-col gap-4 lg:mb-4 lg:w-11/12">
         {paginatedProjects.map((project) => (
           <div key={project.id}>
             <ProjectCard project={project} />
@@ -53,7 +51,6 @@ export default function ProjectsListSection() {
         ))}
       </div>
 
-      {/* Pagination controls */}
       {totalPages > 1 && (
         <nav aria-label="Pagination des projets" className="flex items-center justify-center gap-4">
           <button
@@ -66,7 +63,6 @@ export default function ProjectsListSection() {
             <ChevronLeft className="size-5" />
           </button>
 
-          {/* Page indicators */}
           <div className="flex items-center gap-2">
             {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
               <button
