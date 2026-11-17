@@ -1,7 +1,7 @@
-import { highlights } from '../../../data/pages/recruiter'
-
 // Highlights the four main strengths and professional characteristics relevant to recruiters.
-export default function HighlightsSection() {
+import type { HighlightsSectionProps } from '../../@types/props/shared/shared.props'
+
+export default function HighlightsSection({ highlights }: HighlightsSectionProps) {
   return (
     <section
       aria-label="Points clés de mon profil"

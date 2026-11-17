@@ -8,7 +8,7 @@ export default function MainProjectSection() {
   return (
     // Desktop presentation; mobile and tablet use a dedicated component.
     <section className="hidden bg-surface px-6 py-8 lg:block lg:px-12 xl:px-36">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto">
         <div className="flex items-start gap-3">
           <SectionHeading title="Projet principal" underline />
 
@@ -17,7 +17,7 @@ export default function MainProjectSection() {
           </span>
         </div>
 
-        <div className="mx-auto mt-5 grid w-11/12 grid-cols-2 items-center gap-10">
+        <div className="mx-auto mt-5 grid grid-cols-2 items-center gap-10">
           <MainProjectSectionScreenshot />
 
           <MainProjectSectionInformation />

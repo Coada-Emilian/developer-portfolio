@@ -1,3 +1,4 @@
+import { highlights } from '../../data/pages/recruiter'
 import {
   ContactSection,
   FeaturedProjectSection,
@@ -16,7 +17,7 @@ export default function RecruiterPage() {
 
       {/* Groups the recruiter page content into distinct sections with consistent spacing. */}
       <div className="flex flex-col gap-5 px-4 py-5 sm:gap-6 sm:px-6 lg:p-6">
-        <HighlightsSection />
+        <HighlightsSection highlights={highlights} />
 
         {/* Presents professional experience alongside the main technical skills. */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
