@@ -4,10 +4,12 @@ import { FaLinkedin } from 'react-icons/fa'
 
 import type { ProfileCardProps } from '../../../../@types/props/pages/about/aboutPage.props'
 
+// Displays the user's profile photo, contact information and downloadable CV.
 export default function ProfileCard({ user }: ProfileCardProps) {
   return (
     <article className="flex w-full max-w-full flex-col gap-4 rounded-2xl border border-slate-200 bg-blue-100 p-4 shadow-sm md:mx-auto md:max-w-10/12 lg:max-w-sm">
       <div className="flex items-start gap-3 sm:flex-col">
+        {/* Profile image adapts its aspect ratio and positioning to the available screen size. */}
         <img
           src={user.photos[0]}
           alt={`${user.firstName} ${user.lastName}`}
@@ -15,11 +17,12 @@ export default function ProfileCard({ user }: ProfileCardProps) {
         />
 
         <div className="flex min-w-0 flex-1 flex-col gap-2 p-1 px-2 sm:w-11/12 sm:self-center">
+          {/* Contact links display their full values on larger screens and shorter labels on mobile. */}
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(user.location)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
+            className="flex items-center gap-2 text-xs font-semibold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
           >
             <MapPin className="size-4 shrink-0 text-blue-800 md:size-6" />
             <span>{user.location}</span>
@@ -27,7 +30,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
 
           <a
             href={`mailto:${user.email}`}
-            className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
+            className="flex items-center gap-2 text-xs font-semibold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
           >
             <Mail className="size-4 shrink-0 text-blue-800 md:size-6" />
             <span className="hidden break-all sm:block">{user.email}</span>
@@ -38,7 +41,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
             href={`https://${user.linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
+            className="flex items-center gap-2 text-xs font-semibold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
           >
             <FaLinkedin className="size-4 shrink-0 text-blue-800 md:size-6" />
             <span className="hidden break-all sm:block">{user.linkedin}</span>
@@ -49,13 +52,14 @@ export default function ProfileCard({ user }: ProfileCardProps) {
             href={`https://${user.github}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs font-bold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
+            className="flex items-center gap-2 text-xs font-semibold text-slate-600 transition hover:text-blue-600 md:text-base lg:text-sm"
           >
             <GithubIcon className="size-4 shrink-0 text-blue-800 md:size-6" />
             <span className="hidden break-all sm:block">{user.github}</span>
             <span className="break-all sm:hidden">GitHub</span>
           </a>
 
+          {/* CV download action. */}
           <div className="mt-2 border-t border-slate-200 pt-3">
             <a
               href={user.cvUrl}

@@ -1,10 +1,10 @@
 import SectionHeading from '../../../components/shared/SectionHeading'
 import { approaches } from '../../../data/pages/about'
 
+// Describes the user's development principles and approach to building applications.
 export default function ApproachSection() {
   return (
     <section className="flex w-full gap-4 rounded-xl border border-blue-100 bg-blue-100 p-4">
-      {/* Approach section icon */}
       <svg
         viewBox="0 0 24 24"
         className="size-5 shrink-0 text-blue-800 sm:size-7"
@@ -21,17 +21,14 @@ export default function ApproachSection() {
       </svg>
 
       <div className="flex flex-col gap-2">
-        {/* Section heading */}
         <SectionHeading title="Mon approche" subsection />
 
-        {/* List of development principles */}
         <ul className="flex flex-col gap-2 pl-1">
           {approaches.map((approach) => (
             <li
               key={approach}
               className="flex items-start gap-2 text-xxs font-medium leading-relaxed text-slate-700 sm:text-sm"
             >
-              {/* List item checkmark */}
               <svg
                 viewBox="0 0 24 24"
                 className="mt-0.5 size-3.5 shrink-0 text-blue-600"

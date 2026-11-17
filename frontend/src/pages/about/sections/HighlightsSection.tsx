@@ -1,14 +1,12 @@
 import SectionHeading from '../../../components/shared/SectionHeading'
 import { highlights } from '../../../data/pages/about'
 
+// Displays a concise overview of the user's personal and professional highlights.
 export default function HighlightsSection() {
   return (
-    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 flex flex-col gap-2">
-      {/* Section heading */}
-
+    <section className="flex flex-col gap-2 rounded-xl border border-blue-100 bg-blue-100 p-4">
       <SectionHeading title="En quelques points" subsection underline />
 
-      {/* List of personal and professional highlights */}
       <ul className="flex flex-col gap-2 sm:px-2">
         {highlights.map(({ icon: Icon, label }) => (
           <li

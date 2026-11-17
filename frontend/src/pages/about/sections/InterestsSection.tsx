@@ -1,10 +1,10 @@
 import SectionHeading from '../../../components/shared/SectionHeading'
 import { interests } from '../../../data/pages/about'
 
+// Displays the user's personal interests with a responsive layout.
 export default function InterestsSection() {
   return (
     <section className="flex flex-col gap-2">
-      {/* Section heading */}
       <SectionHeading title="Centres d'intérêt" underline subsection />
 
       {/* Interests grid on mobile and tablet, vertical list on desktop */}

@@ -1,13 +1,12 @@
 import SectionHeading from '../../../components/shared/SectionHeading'
 import { values } from '../../../data/pages/about'
 
+// Highlights the personal and professional values that guide the user's work.
 export default function ValuesSection() {
   return (
     <section className="flex flex-col gap-2">
-      {/* Section heading */}
       <SectionHeading title="Ce qui me définit" underline subsection />
 
-      {/* Grid of personal and professional values */}
       <div className="grid grid-cols-5 gap-2">
         {values.map(({ label, icon: Icon }) => (
           <div

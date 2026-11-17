@@ -1,12 +1,11 @@
 import SectionHeading from '../../../components/shared/SectionHeading'
 
+// Presents the user's personal vision and guiding professional ambition.
 export default function VisionSection() {
   return (
     <section className="flex flex-col gap-2">
-      {/* Section heading */}
       <SectionHeading title="Ma vision" underline subsection />
 
-      {/* Vision statement */}
       <div className="flex items-center justify-center gap-3 rounded-xl bg-blue-100 p-3 md:mx-auto md:w-10/12 lg:w-full">
         <span className="text-2xl font-bold leading-none text-blue-600 sm:text-4xl">“</span>
 

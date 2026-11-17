@@ -1,10 +1,10 @@
 import SectionHeading from '../../../components/shared/SectionHeading'
 import { objectives } from '../../../data/pages/about'
 
+// Presents the user's professional objectives in a compact section.
 export default function ObjectivesSection() {
   return (
     <section className="flex w-full gap-4 rounded-xl border border-blue-100 bg-blue-100 p-4">
-      {/* Objectives section icon */}
       <svg
         viewBox="0 0 24 24"
         className="size-5 shrink-0 text-blue-800 sm:size-7"
@@ -17,10 +17,8 @@ export default function ObjectivesSection() {
       </svg>
 
       <div className="flex flex-col gap-2">
-        {/* Section heading */}
         <SectionHeading title="Mes objectifs" subsection />
 
-        {/* List of professional objectives */}
         <ul className="flex flex-col gap-2 pl-1">
           {objectives.map((objective) => (
             <li
