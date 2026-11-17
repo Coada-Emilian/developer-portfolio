@@ -51,7 +51,7 @@ export default function RecruiterJourneySection() {
 
         <div className="relative flex flex-col gap-6">
           {/* Vertical line connecting the two stages of the professional journey. */}
-          <div className="absolute bottom-8 left-6 top-8 w-px bg-blue-200" />
+          <div className="absolute bottom-8 left-4 md:left-5 lg:left-6 top-8 w-px bg-blue-200" />
 
           {journey.map((item) => {
             const Icon = item.icon
@@ -61,16 +61,16 @@ export default function RecruiterJourneySection() {
                 key={item.title}
                 className="relative grid grid-cols-[3rem_minmax(0,1fr)] items-start gap-4"
               >
-                <div className="relative z-10 flex size-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                  <Icon aria-hidden="true" className="size-6" strokeWidth={2} />
+                <div className="relative z-10 flex size-8 md:size-10 lg:size-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                  <Icon aria-hidden="true" className="size-4 md:size-5 lg:size-6" strokeWidth={2} />
                 </div>
 
                 <div className="relative pt-0.5">
-                  <h3 className="text-sm font-bold leading-snug text-text-primary md:text-base">
+                  <h3 className="text-sm md:text-base lg:text-lg font-bold leading-snug text-text-primary">
                     {item.title}
                   </h3>
 
-                  <p className="mt-0.5 text-xs leading-relaxed text-text-secondary md:text-sm">
+                  <p className="mt-0.5 text-xs md:text-sm lg:text-base leading-relaxed text-text-secondary">
                     {item.description}
                   </p>
                 </div>

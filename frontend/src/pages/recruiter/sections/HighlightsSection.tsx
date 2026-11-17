@@ -5,7 +5,7 @@ export default function HighlightsSection() {
   return (
     <section
       aria-label="Points clés de mon profil"
-      className="grid grid-cols-1 overflow-hidden rounded-2xl border border-blue-200 bg-blue-100 sm:grid-cols-2 lg:grid-cols-4 mx-2 mt-4"
+      className="grid grid-cols-1 overflow-hidden lg:rounded-2xl border border-blue-200 bg-blue-50 sm:grid-cols-2 lg:grid-cols-4"
     >
       {highlights.map((highlight, index) => {
         const Icon = highlight.icon
@@ -13,7 +13,7 @@ export default function HighlightsSection() {
         return (
           <article
             key={highlight.title}
-            className={`flex items-center gap-4 px-5 py-4 lg:gap-3 lg:px-4 ${
+            className={`flex items-center gap-4 px-5 py-2 lg:gap-3 lg:px-4 ${
               index !== 0 ? 'border-t border-blue-200 sm:border-t-0' : ''
             } ${index % 2 !== 0 ? 'sm:border-l sm:border-blue-200' : ''} ${
               index !== 0 ? 'lg:border-l lg:border-blue-200' : ''

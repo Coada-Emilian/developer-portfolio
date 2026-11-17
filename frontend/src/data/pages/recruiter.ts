@@ -1,3 +1,14 @@
+import {
+  Java,
+  SpringIcon,
+  _React,
+  _Vue,
+  TypescriptIcon,
+  Postgresql,
+  DockerIcon,
+  Git,
+  GithubIcon,
+} from '@dev.icons/react'
 import { BriefcaseBusiness, Code2, Layers3, Microscope, Target, TrendingUp } from 'lucide-react'
 
 export const highlights = [
@@ -123,4 +134,16 @@ export const experiences = [
       'Gestion de situations comportementales difficiles avec calme, patience et maîtrise de soi.',
     ],
   },
+]
+
+export const technologies = [
+  { name: 'Java', icon: Java },
+  { name: 'Spring Boot', icon: SpringIcon },
+  { name: 'React', icon: _React },
+  { name: 'Vue.js', icon: _Vue },
+  { name: 'TypeScript', icon: TypescriptIcon },
+  { name: 'PostgreSQL', icon: Postgresql },
+  { name: 'Docker', icon: DockerIcon },
+  { name: 'Git', icon: Git },
+  { name: 'GitHub', icon: GithubIcon },
 ]
