@@ -1,3 +1,5 @@
+import type { IHighlight } from '../../interfaces/shared/IHighlight'
+
 export interface PageHeroProps {
   title: string
   desktopSubtitle?: string
@@ -22,4 +24,8 @@ export interface MainProjectSectionCarouselModalProps {
   setActiveIndex: (index: number) => void
   showPrevious: () => void
   showNext: () => void
+}
+
+export interface HighlightsSectionProps {
+  highlights: IHighlight[]
 }
