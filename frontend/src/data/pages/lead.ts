@@ -80,3 +80,9 @@ export const environments = [
     technologies: ['PostgreSQL', 'MongoDB', 'Docker', 'Git'],
   },
 ]
+
+export const technicalChallenges = [
+  'Structurer l’interface en composants réutilisables et cohérents.',
+  'Gérer les relations entre les données (patients, rendez-vous, séances, facturation).',
+  'Connecter le frontend et le backend via une API REST sécurisée.',
+]

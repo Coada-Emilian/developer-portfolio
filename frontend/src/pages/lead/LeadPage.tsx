@@ -1,5 +1,6 @@
 import HighlightsSection from '../../components/shared/HighlightsSection'
 import { highlights } from '../../data/pages/lead'
+import FeaturedProjectSection from './sections/featured-project/FeaturedProjectSection'
 import HeroSection from './sections/HeroSection'
 import TechnicalEnvironmentSection from './sections/TechnicalEnvironmentSection'
 import WorkflowSection from './sections/WorkflowSection'
@@ -14,6 +15,7 @@ export default function LeadPage() {
         <HighlightsSection highlights={highlights} />
         <WorkflowSection />
         <TechnicalEnvironmentSection />
+        <FeaturedProjectSection />
       </div>
     </main>
   )
