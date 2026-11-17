@@ -1,22 +1,19 @@
-import TitleUnderline from '../ui/TitleUnderline'
+import type { SectionHeadingProps } from '../../@types/props/shared/shared.props'
 
-interface SectionHeadingProps {
-  title: string
-  subsection?: boolean
-  underline?: boolean
-}
+import TitleUnderline from '../ui/TitleUnderline'
 
 export default function SectionHeading({ title, subsection, underline }: SectionHeadingProps) {
   return (
     <div>
       <h2
-        className={`${subsection ? 'text-xs sm:text-xl' : 'text-sm sm:text-2xl'} font-extrabold text-slate-900 `}
+        className={`${
+          subsection ? 'text-xs sm:text-xl' : 'text-sm sm:text-2xl'
+        } font-extrabold text-slate-900`}
       >
         {title}
       </h2>
 
-      {underline && subsection && <TitleUnderline subsection />}
-      {underline && !subsection && <TitleUnderline />}
+      {underline && <TitleUnderline subsection={subsection} />}
     </div>
   )
 }

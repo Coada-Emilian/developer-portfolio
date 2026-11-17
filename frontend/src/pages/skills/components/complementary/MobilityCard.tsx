@@ -14,7 +14,7 @@ export default function MobilityCard() {
       </div>
 
       {/* Driving licence and vehicle information */}
-      <div className="flex items-center gap-3 rounded-lg border border-blue-100 bg-blue-100/60 p-3">
+      <div className="flex items-center gap-3 rounded-lg border border-blue-100 bg-blue-100 p-3">
         <mobility.cardIcon
           className="size-5 md:size-6 lg:size-7 shrink-0 text-blue-600"
           strokeWidth={2}

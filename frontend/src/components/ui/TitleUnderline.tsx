@@ -1,6 +1,4 @@
-interface TitleUnderlineProps {
-  subsection?: boolean
-}
+import type { TitleUnderlineProps } from '../../@types/props/shared/shared.props'
 
 export default function TitleUnderline({ subsection }: TitleUnderlineProps) {
   return (

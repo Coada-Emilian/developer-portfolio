@@ -21,7 +21,7 @@ export default function InterestsCard() {
           return (
             <li
               key={interest.name}
-              className="flex items-center lg:justify-center gap-3 rounded-lg border border-blue-100 bg-surface px-3 py-2 w-fit"
+              className="flex items-center lg:justify-center gap-3 rounded-lg border border-blue-100 bg-blue-100 px-3 py-2 w-fit"
             >
               <Icon className="size-5 md:size-6 lg:size-7 shrink-0 text-blue-600" strokeWidth={2} />
 

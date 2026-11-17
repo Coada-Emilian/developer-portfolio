@@ -75,15 +75,17 @@ export default function DiplomasSection() {
                   strokeWidth={2}
                 />
 
-                <h4 className="text-sm font-bold text-text-primary">{item.title}</h4>
+                <h4 className="text-sm md:text-base lg:text-lg font-bold text-text-primary">
+                  {item.title}
+                </h4>
               </div>
 
               <div className="min-w-0">
-                <p className="truncate text-xs font-medium text-text-secondary">
+                <p className="truncate text-xs md:text-sm lg:text-base font-medium text-text-secondary">
                   {item.institution}
                 </p>
 
-                <p className="text-xs text-text-secondary">{item.period}</p>
+                <p className="text-xs md:text-sm text-text-secondary">{item.period}</p>
               </div>
             </article>
           ))}

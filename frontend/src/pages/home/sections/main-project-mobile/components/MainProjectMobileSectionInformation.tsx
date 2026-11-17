@@ -6,7 +6,6 @@ import { projectTechnologies } from '../../../../../data/pages/home'
 export default function MainProjectMobileSectionInformation() {
   return (
     <>
-      {/* Project identity and representative icon */}
       <div className="mt-4 flex items-center gap-3">
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-blue-100 md:h-10 md:w-10">
           <Stethoscope className="h-4 w-4 text-blue-500 md:h-5 md:w-5" />
@@ -15,13 +14,11 @@ export default function MainProjectMobileSectionInformation() {
         <h3 className="text-sm font-extrabold text-text-primary md:text-xl">KineSoin</h3>
       </div>
 
-      {/* Short project description */}
       <p className="mt-2 text-[11px] font-medium leading-relaxed text-text-primary md:text-base">
         Gestion de cabinet de kinésithérapie. Application full stack pour les patients, les
         rendez-vous, les soins et la facturation.
       </p>
 
-      {/* Technologies used to build the project */}
       <div className="mt-4 flex flex-wrap gap-2">
         {projectTechnologies.map((technology) => (
           <span
@@ -33,7 +30,6 @@ export default function MainProjectMobileSectionInformation() {
         ))}
       </div>
 
-      {/* Links to the project and its GitHub repository */}
       <div className="mt-5 flex items-center gap-3 md:justify-center md:gap-5">
         <a
           href="#"

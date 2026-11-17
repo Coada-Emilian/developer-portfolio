@@ -1,4 +1,5 @@
 import type { HeroSectionProps } from '../../../../@types/props/pages/home/homePage.props'
+
 import heroBackground from '../../../../assets/images/general_hero_background.png'
 import heroBackgroundMobile from '../../../../assets/images/hero_background_mobile.png'
 
@@ -21,18 +22,14 @@ export default function HeroSection({ user }: HeroSectionProps) {
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
 
-      {/* Hero content */}
       <div className="relative z-10 flex w-full items-center gap-8">
-        {/* Portrait carousel, visible on desktop */}
         <HeroSectionPortraitCarousel
           photos={user.photos}
           alt={`${user.firstName} ${user.lastName}`}
         />
 
-        {/* Vertical separator, visible on desktop */}
         <div className="hidden h-40 w-px shrink-0 bg-blue-100/70 lg:block" />
 
-        {/* Introduction and navigation actions */}
         <div className="max-w-2xl text-white">
           <HeroSectionIntroduction user={user} />
           <HeroSectionActions />

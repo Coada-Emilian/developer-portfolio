@@ -6,7 +6,7 @@ export default function AudienceNavigationSection() {
   return (
     <section className="hidden bg-blue-50 md:block">
       <div className="mx-auto grid grid-cols-3 gap-3 px-6 py-3 lg:gap-6 lg:px-36">
-        {/* Recruiters: professional background and skills */}
+        {/* Recruiters: career path, skills and key projects */}
         <AudienceNavigationSectionCard
           desktopTitle="Pour les recruteurs"
           desktopDescription="Mon parcours, mes compétences et mes projets clés."
@@ -16,7 +16,7 @@ export default function AudienceNavigationSection() {
           icon={Users}
         />
 
-        {/* Technical leads: working methods and contributions */}
+        {/* Technical leads: working methods and professional contributions */}
         <AudienceNavigationSectionCard
           desktopTitle="Pour les responsables techniques"
           desktopDescription="Ma façon de travailler, mes réalisations et la valeur que je peux apporter."
@@ -26,7 +26,7 @@ export default function AudienceNavigationSection() {
           icon={BriefcaseBusiness}
         />
 
-        {/* Developers: technical details and source code */}
+        {/* Developers: project architecture, technical choices and source code */}
         <AudienceNavigationSectionCard
           desktopTitle="Pour les développeurs"
           desktopDescription="Le détail des projets, les choix techniques, l'architecture et le code source."

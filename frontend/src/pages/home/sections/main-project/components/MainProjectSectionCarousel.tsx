@@ -1,36 +1,32 @@
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { CAROUSEL_CONFIG } from '../../../../../config/carousel.config'
 import { projectScreenshots } from '../../../../../data/pages/home'
 
 export default function MainProjectSectionCarousel() {
-  // Tracks the active screenshot, autoplay state and lightbox visibility.
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Displays the previous screenshot, wrapping around to the last one.
-  const showPrevious = () => {
+  const showPrevious = useCallback(() => {
     setActiveIndex((current) => (current === 0 ? projectScreenshots.length - 1 : current - 1))
-  }
+  }, [])
 
-  // Displays the next screenshot, wrapping around to the first one.
-  const showNext = () => {
+  const showNext = useCallback(() => {
     setActiveIndex((current) => (current + 1) % projectScreenshots.length)
-  }
+  }, [])
 
-  // Automatically advances the carousel while it is active and unpaused.
+  // Automatically advances the carousel while active and unpaused.
   useEffect(() => {
     if (isPaused || isModalOpen || projectScreenshots.length <= 1) return
 
     const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL)
 
-    // Resets the interval when the active screenshot or carousel state changes.
     return () => clearInterval(interval)
-  }, [isPaused, isModalOpen, activeIndex])
+  }, [isPaused, isModalOpen, activeIndex, showNext])
 
-  // Handles keyboard navigation and closing the lightbox.
+  // Handles keyboard navigation while the lightbox is open.
   useEffect(() => {
     if (!isModalOpen) return
 
@@ -51,9 +47,9 @@ export default function MainProjectSectionCarousel() {
     document.addEventListener('keydown', handleKeyDown)
 
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isModalOpen])
+  }, [isModalOpen, showPrevious, showNext])
 
-  // Prevents the background page from scrolling while the lightbox is open.
+  // Prevents background scrolling while the lightbox is open.
   useEffect(() => {
     if (!isModalOpen) return
 
@@ -66,13 +62,11 @@ export default function MainProjectSectionCarousel() {
 
   return (
     <>
-      {/* Main carousel with autoplay paused while the user hovers over it. */}
       <div
         className="relative flex h-full w-full items-center justify-center"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Screenshot buttons: only the active screenshot is interactive. */}
         {projectScreenshots.map((screenshot, index) => (
           <button
             key={screenshot}
@@ -94,7 +88,6 @@ export default function MainProjectSectionCarousel() {
           </button>
         ))}
 
-        {/* Previous and next navigation controls. */}
         <button
           type="button"
           onClick={showPrevious}
@@ -113,7 +106,6 @@ export default function MainProjectSectionCarousel() {
           <ChevronRight size={20} />
         </button>
 
-        {/* Indicators allow visitors to jump directly to a screenshot. */}
         <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full bg-white/80 px-3 py-2 shadow-sm">
           {projectScreenshots.map((screenshot, index) => (
             <button
@@ -130,7 +122,6 @@ export default function MainProjectSectionCarousel() {
         </div>
       </div>
 
-      {/* Lightbox displays the selected screenshot over the entire viewport. */}
       {isModalOpen && (
         <div
           role="dialog"
@@ -138,13 +129,12 @@ export default function MainProjectSectionCarousel() {
           aria-label="Aperçu des captures KineSoin"
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4 md:p-10"
           onClick={(event) => {
-            // Closes the lightbox only when clicking the backdrop itself.
+            // Only closes when the backdrop itself is clicked.
             if (event.target === event.currentTarget) {
               setIsModalOpen(false)
             }
           }}
         >
-          {/* Closes the lightbox and returns to the main carousel. */}
           <button
             type="button"
             onClick={() => setIsModalOpen(false)}
@@ -154,7 +144,6 @@ export default function MainProjectSectionCarousel() {
             <X size={28} />
           </button>
 
-          {/* Previous screenshot navigation. */}
           <button
             type="button"
             onClick={showPrevious}
@@ -164,14 +153,12 @@ export default function MainProjectSectionCarousel() {
             <ChevronLeft size={28} />
           </button>
 
-          {/* Enlarged version of the currently selected screenshot. */}
           <img
             src={projectScreenshots[activeIndex]}
             alt={`Capture d'écran ${activeIndex + 1} de KineSoin`}
             className="max-h-[85vh] max-w-[85vw] object-contain"
           />
 
-          {/* Next screenshot navigation. */}
           <button
             type="button"
             onClick={showNext}
@@ -181,7 +168,6 @@ export default function MainProjectSectionCarousel() {
             <ChevronRight size={28} />
           </button>
 
-          {/* Indicators allow navigation between screenshots in the lightbox. */}
           <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3">
             {projectScreenshots.map((screenshot, index) => (
               <button

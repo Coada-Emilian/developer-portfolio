@@ -1,37 +1,32 @@
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import { CAROUSEL_CONFIG } from '../../../../../config/carousel.config'
 import { projectScreenshots } from '../../../../../data/pages/home'
 
 export default function MainProjectMobileSectionScreenshot() {
-  // Tracks the active screenshot, autoplay state and lightbox visibility.
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Stores the timeout used to resume autoplay after touch interaction.
   const touchTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  // Displays the previous screenshot, wrapping around to the last one.
-  const showPrevious = () => {
+  const showPrevious = useCallback(() => {
     setActiveIndex((current) => (current === 0 ? projectScreenshots.length - 1 : current - 1))
-  }
+  }, [])
 
-  // Displays the next screenshot, wrapping around to the first one.
-  const showNext = () => {
+  const showNext = useCallback(() => {
     setActiveIndex((current) => (current + 1) % projectScreenshots.length)
-  }
+  }, [])
 
-  // Automatically advances the carousel while it is active and unpaused.
+  // Automatically advances the carousel while active and unpaused.
   useEffect(() => {
     if (isPaused || isModalOpen || projectScreenshots.length <= 1) return
 
     const interval = setInterval(showNext, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL)
 
-    // Resets the interval whenever the active screenshot or carousel state changes.
     return () => clearInterval(interval)
-  }, [isPaused, isModalOpen, activeIndex])
+  }, [isPaused, isModalOpen, activeIndex, showNext])
 
   // Pauses autoplay during touch interaction and resumes it after the configured delay.
   const handleTouchInteraction = () => {
@@ -43,10 +38,11 @@ export default function MainProjectMobileSectionScreenshot() {
 
     touchTimeout.current = setTimeout(() => {
       setIsPaused(false)
+      touchTimeout.current = null
     }, CAROUSEL_CONFIG.AUTO_PLAY_INTERVAL)
   }
 
-  // Clears any pending timeout when the component unmounts.
+  // Clears pending timeouts when the component unmounts.
   useEffect(() => {
     return () => {
       if (touchTimeout.current) {
@@ -55,7 +51,7 @@ export default function MainProjectMobileSectionScreenshot() {
     }
   }, [])
 
-  // Handles keyboard navigation and closing the lightbox.
+  // Handles keyboard navigation while the lightbox is open.
   useEffect(() => {
     if (!isModalOpen) return
 
@@ -68,9 +64,9 @@ export default function MainProjectMobileSectionScreenshot() {
     document.addEventListener('keydown', handleKeyDown)
 
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isModalOpen])
+  }, [isModalOpen, showPrevious, showNext])
 
-  // Prevents the background page from scrolling while the lightbox is open.
+  // Prevents background scrolling while the lightbox is open.
   useEffect(() => {
     if (!isModalOpen) return
 
@@ -83,12 +79,10 @@ export default function MainProjectMobileSectionScreenshot() {
 
   return (
     <>
-      {/* Mobile carousel with touch-based autoplay control. */}
       <div
         className="relative flex h-44 items-center justify-center overflow-hidden rounded-xl bg-blue-100 p-2 md:h-80"
         onTouchStart={handleTouchInteraction}
       >
-        {/* Screenshot buttons: only the active screenshot is interactive. */}
         {projectScreenshots.map((screenshot, index) => (
           <button
             key={screenshot}
@@ -110,7 +104,6 @@ export default function MainProjectMobileSectionScreenshot() {
           </button>
         ))}
 
-        {/* Previous and next navigation controls. */}
         <button
           type="button"
           onClick={showPrevious}
@@ -129,7 +122,6 @@ export default function MainProjectMobileSectionScreenshot() {
           <ChevronRight size={18} />
         </button>
 
-        {/* Indicators allow visitors to jump directly to a screenshot. */}
         <div className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full bg-white/80 px-2.5 py-1.5">
           {projectScreenshots.map((screenshot, index) => (
             <button
@@ -148,7 +140,6 @@ export default function MainProjectMobileSectionScreenshot() {
         </div>
       </div>
 
-      {/* Lightbox displays the selected screenshot over the entire viewport. */}
       {isModalOpen && (
         <div
           role="dialog"
@@ -156,13 +147,12 @@ export default function MainProjectMobileSectionScreenshot() {
           aria-label="Aperçu des captures KineSoin"
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 p-3"
           onClick={(event) => {
-            // Closes the lightbox only when clicking the backdrop itself.
+            // Only closes when the backdrop itself is clicked.
             if (event.target === event.currentTarget) {
               setIsModalOpen(false)
             }
           }}
         >
-          {/* Closes the lightbox and returns to the carousel. */}
           <button
             type="button"
             onClick={() => setIsModalOpen(false)}
@@ -172,7 +162,6 @@ export default function MainProjectMobileSectionScreenshot() {
             <X size={24} />
           </button>
 
-          {/* Previous screenshot navigation. */}
           <button
             type="button"
             onClick={showPrevious}
@@ -182,14 +171,12 @@ export default function MainProjectMobileSectionScreenshot() {
             <ChevronLeft size={24} />
           </button>
 
-          {/* Enlarged version of the currently selected screenshot. */}
           <img
             src={projectScreenshots[activeIndex]}
             alt={`Capture d'écran ${activeIndex + 1} de KineSoin`}
             className="max-h-[80vh] max-w-[85vw] object-contain"
           />
 
-          {/* Next screenshot navigation. */}
           <button
             type="button"
             onClick={showNext}
@@ -199,7 +186,6 @@ export default function MainProjectMobileSectionScreenshot() {
             <ChevronRight size={24} />
           </button>
 
-          {/* Indicators allow navigation between screenshots in the lightbox. */}
           <div className="absolute bottom-6 flex items-center gap-2">
             {projectScreenshots.map((screenshot, index) => (
               <button
