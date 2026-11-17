@@ -5,7 +5,7 @@ import FeaturedProjectScreenshot from './components/FeaturedProjectScreenshot'
 // Presents KineSoin as the featured development project for recruiters.
 export default function FeaturedProjectSection() {
   return (
-    <section className="rounded-xl lg:border lg:border-blue-100 lg:bg-blue-50 lg:p-4">
+    <section className="rounded-xl lg:border lg:border-blue-100 lg:bg-blue-50 lg:p-4 my-auto">
       <div className="mb-4 flex items-center gap-2">
         <SectionHeading title="Projet principal" underline />
       </div>

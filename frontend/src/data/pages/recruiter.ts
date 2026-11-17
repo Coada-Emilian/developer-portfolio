@@ -1,13 +1,13 @@
 import {
-  Java,
-  SpringIcon,
   _React,
   _Vue,
-  TypescriptIcon,
-  Postgresql,
   DockerIcon,
   Git,
   GithubIcon,
+  Java,
+  Postgresql,
+  SpringIcon,
+  TypescriptIcon,
 } from '@dev.icons/react'
 import { BriefcaseBusiness, Code2, Layers3, Microscope, Target, TrendingUp } from 'lucide-react'
 
@@ -146,4 +146,14 @@ export const technologies = [
   { name: 'Docker', icon: DockerIcon },
   { name: 'Git', icon: Git },
   { name: 'GitHub', icon: GithubIcon },
+]
+
+export const learningPoints = [
+  'Formation continue : Java, Spring Boot, Vue.js',
+  'Approfondissement du frontend : React, TypeScript et écosystème JavaScript',
+  'Consolidation des compétences backend : API REST, Spring Data et persistance',
+  'Pratique des bases de données relationnelles et NoSQL',
+  'Réalisation et évolution régulière de projets personnels',
+  'Veille technologique, exploration de nouvelles approches et bonnes pratiques',
+  'Approche orientée qualité, maintenabilité et évolution des applications',
 ]
