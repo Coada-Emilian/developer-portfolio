@@ -1,3 +1,4 @@
+import FeaturedProjectSection from './sections/featured-project/FeaturedProjectSection'
 import HeroSection from './sections/HeroSection'
 import HighlightsSection from './sections/HighlightsSection'
 import JourneySection from './sections/journey/JourneySection'
@@ -15,6 +16,10 @@ export default function RecruiterPage() {
           <JourneySection />
 
           <TechnicalSkillsSection />
+        </div>
+
+        <div className="grid grid-cols-1 space-y-6 px-6 lg:grid-cols-2 lg:space-x-6">
+          <FeaturedProjectSection />
         </div>
       </div>
     </main>
