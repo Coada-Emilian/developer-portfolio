@@ -1,17 +1,11 @@
-import TitleUnderline from '../../../components/ui/TitleUnderline'
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { interests } from '../../../data/pages/about'
 
 export default function InterestsSection() {
   return (
-    <section>
+    <section className="flex flex-col gap-2">
       {/* Section heading */}
-      <div className="mb-2">
-        <h2 className="mb-2 text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
-          Centres d'intérêt
-        </h2>
-
-        <TitleUnderline />
-      </div>
+      <SectionHeading title="Centres d'intérêt" underline subsection />
 
       {/* Interests grid on mobile and tablet, vertical list on desktop */}
       <div className="grid grid-cols-5 gap-2 rounded-xl lg:flex lg:flex-col lg:gap-2 lg:border lg:border-blue-100 lg:bg-blue-100 lg:p-3">

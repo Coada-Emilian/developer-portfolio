@@ -1,14 +1,11 @@
 import { Code2, Layers3, Rocket } from 'lucide-react'
-import TitleUnderline from '../../../components/ui/TitleUnderline'
+import SectionHeading from '../../../components/shared/SectionHeading'
 
 export default function IntroductionSection() {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-2">
       {/* Section heading */}
-      <div>
-        <h2 className="text-sm font-extrabold text-slate-900 sm:text-2xl">Qui suis-je ?</h2>
-        <TitleUnderline />
-      </div>
+      <SectionHeading title="Qui suis-je ?" underline />
 
       {/* Introduction text */}
       <div className="flex flex-col gap-3 text-xs leading-relaxed text-slate-700 sm:text-base">
@@ -26,7 +23,7 @@ export default function IntroductionSection() {
         </div>
 
         {/* Expanded introduction for tablet and desktop */}
-        <div className="hidden flex-col gap-3 sm:flex">
+        <div className="hidden  gap-3 sm:flex sm:flex-col sm:font-medium">
           <p>
             Développeur Full Stack en reconversion professionnelle, je viens du domaine de la
             prothèse dentaire, un métier qui m'a appris la rigueur, la précision et le souci du

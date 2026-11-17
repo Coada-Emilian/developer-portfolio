@@ -1,5 +1,5 @@
 import { Check, Handshake } from 'lucide-react'
-
+import SectionHeading from '../../../../components/shared/SectionHeading'
 import { teamContributions } from '../../../../data/pages/skills'
 
 export default function TeamContributionSection() {
@@ -9,12 +9,10 @@ export default function TeamContributionSection() {
         {/* Team contribution heading */}
         <div className="flex shrink-0 items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-full text-blue-600">
-            <Handshake className="size-8 lg:size-9" />
+            <Handshake className="size-6 md:size-7 lg:size-9" />
           </div>
 
-          <h3 className="text-lg font-extrabold text-text-primary md:text-xl">
-            En équipe, j’apporte
-          </h3>
+          <SectionHeading title="En équipe, j’apporte" />
         </div>
 
         {/* Vertical separator */}
@@ -24,12 +22,9 @@ export default function TeamContributionSection() {
         <ul className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {teamContributions.map((contribution) => (
             <li key={contribution} className="flex items-start gap-2">
-              <Check
-                className="mt-0.5 size-4 shrink-0 text-blue-600 md:size-4.5 lg:size-5"
-                strokeWidth={2.5}
-              />
+              <Check className="mt-0.5 size-5 shrink-0 text-blue-600 lg:size-6" strokeWidth={2.5} />
 
-              <span className="text-xs leading-relaxed font-medium text-text-secondary lg:text-base">
+              <span className="text-xs leading-relaxed font-medium text-text-secondary md:text-sm lg:text-base">
                 {contribution}
               </span>
             </li>

@@ -1,3 +1,4 @@
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { approaches } from '../../../data/pages/about'
 
 export default function ApproachSection() {
@@ -19,13 +20,9 @@ export default function ApproachSection() {
         <path d="m14 4-4 16" />
       </svg>
 
-      <div>
+      <div className="flex flex-col gap-2">
         {/* Section heading */}
-        <div className="mb-2">
-          <h2 className="text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
-            Mon approche
-          </h2>
-        </div>
+        <SectionHeading title="Mon approche" subsection />
 
         {/* List of development principles */}
         <ul className="flex flex-col gap-2 pl-1">

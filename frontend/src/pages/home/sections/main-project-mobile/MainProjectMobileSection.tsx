@@ -1,3 +1,4 @@
+import SectionHeading from '../../../../components/shared/SectionHeading'
 import MainProjectMobileSectionInformation from './components/MainProjectMobileSectionInformation'
 import MainProjectMobileSectionScreenshot from './components/MainProjectMobileSectionScreenshot'
 
@@ -7,9 +8,7 @@ export default function MainProjectMobileSection() {
     <section className="bg-surface px-4 py-6 lg:hidden">
       {/* Section heading and decorative underline */}
       <div>
-        <h2 className="text-left text-lg font-extrabold text-text-primary">Projet principal</h2>
-
-        <div className="mt-2 h-1 w-9 rounded-full bg-blue-500" />
+        <SectionHeading title="Projet principal" underline />
       </div>
 
       {/* Project card containing its screenshot carousel and information */}

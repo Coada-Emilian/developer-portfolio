@@ -1,16 +1,12 @@
-import TitleUnderline from '../../../components/ui/TitleUnderline'
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { highlights } from '../../../data/pages/about'
 
 export default function HighlightsSection() {
   return (
-    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4">
+    <section className="rounded-xl border border-blue-100 bg-blue-100 p-4 flex flex-col gap-2">
       {/* Section heading */}
-      <div className="mb-3">
-        <h2 className="text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
-          En quelques points
-        </h2>
-        <TitleUnderline />
-      </div>
+
+      <SectionHeading title="En quelques points" subsection underline />
 
       {/* List of personal and professional highlights */}
       <ul className="flex flex-col gap-2 sm:px-2">

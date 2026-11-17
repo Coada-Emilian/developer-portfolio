@@ -1,3 +1,4 @@
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { objectives } from '../../../data/pages/about'
 
 export default function ObjectivesSection() {
@@ -15,13 +16,9 @@ export default function ObjectivesSection() {
         <rect x="17" y="2" width="4" height="20" rx="1" />
       </svg>
 
-      <div>
+      <div className="flex flex-col gap-2">
         {/* Section heading */}
-        <div className="mb-2">
-          <h2 className="text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
-            Mes objectifs
-          </h2>
-        </div>
+        <SectionHeading title="Mes objectifs" subsection />
 
         {/* List of professional objectives */}
         <ul className="flex flex-col gap-2 pl-1">

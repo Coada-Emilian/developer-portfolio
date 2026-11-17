@@ -52,7 +52,7 @@ export default function AboutPage() {
         </div>
 
         {/* Interests */}
-        <div className="min-w-0 pb-6">
+        <div className="min-w-0">
           <InterestsSection />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Check, Target } from 'lucide-react'
+import SectionHeading from '../../../../components/shared/SectionHeading'
 
 import { personalSkills, workingPrinciples } from '../../../../data/pages/skills'
 
@@ -18,24 +19,19 @@ export default function SkillsSection() {
       <aside className="flex flex-col rounded-xl border border-blue-100 bg-blue-50 p-4 shadow-sm">
         <div className="mb-4 flex items-center gap-3 rounded-lg p-3">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-lg text-blue-600">
-            <Target className="size-8" strokeWidth={2} />
+            <Target className="size-6 md:size-7 lg:size-9" strokeWidth={2} />
           </div>
 
-          <h3 className="text-lg font-extrabold text-text-primary md:text-xl">
-            Ma façon de travailler
-          </h3>
+          <SectionHeading title="Ma façon de travailler" />
         </div>
 
         {/* List of working principles */}
-        <ul className="space-y-3">
+        <ul className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 lg:flex lg:flex-col">
           {workingPrinciples.map((principle) => (
-            <li key={principle} className="flex items-start gap-2">
-              <Check
-                className="mt-0.5 size-4 shrink-0 text-blue-600 md:size-4.5 lg:size-5"
-                strokeWidth={2.5}
-              />
+            <li key={principle} className="flex items-center gap-2">
+              <Check className="mt-0.5 size-5 shrink-0 text-blue-600 lg:size-6" strokeWidth={2.5} />
 
-              <span className="text-xs leading-relaxed font-medium text-text-secondary lg:text-sm">
+              <span className="text-xs leading-relaxed font-medium text-text-secondary md:text-sm lg:text-base">
                 {principle}
               </span>
             </li>

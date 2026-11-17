@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
+import SectionHeading from '../../../../components/shared/SectionHeading'
 import { CAROUSEL_CONFIG } from '../../../../config/carousel.config'
 import { technologies } from '../../../../data/pages/home'
 import TechnologyCard from './components/TechnologyCard'
@@ -55,11 +56,8 @@ export default function TechnologiesSection() {
     <section className="bg-surface px-3 py-4 sm:px-8 md:py-8 lg:px-12 xl:px-36">
       <div className="mx-auto max-w-7xl md:max-w-11/12">
         {/* Section heading and decorative underline. */}
-        <h2 className="text-left text-lg font-extrabold text-text-primary md:text-2xl">
-          Technologies principales
-        </h2>
 
-        <div className="mt-2 h-1 w-9 rounded-full bg-blue-500" />
+        <SectionHeading title="Technologies principales" underline />
 
         {/* Responsive technology carousel; autoplay pauses while hovered. */}
         <div
