@@ -1,0 +1,5 @@
+export { default as AudienceNavigationSection } from './audience-navigation/AudienceNavigationSection'
+export { default as HeroSection } from './hero/HeroSection'
+export { default as MainProjectMobileSection } from './main-project-mobile/MainProjectMobileSection'
+export { default as MainProjectSection } from './main-project/MainProjectSection'
+export { default as TechnologiesSection } from './technologies/TechnologiesSection'

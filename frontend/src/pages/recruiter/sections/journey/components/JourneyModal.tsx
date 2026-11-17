@@ -1,5 +1,5 @@
 import { X } from 'lucide-react'
-import { experiences } from '../../../../data/pages/recruiter'
+import { experiences } from '../../../../../data/pages/recruiter'
 
 interface JourneyModalProps {
   setIsModalOpen: (isOpen: boolean) => void

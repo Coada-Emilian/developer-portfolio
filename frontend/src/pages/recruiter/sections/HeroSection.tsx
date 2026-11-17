@@ -1,5 +1,6 @@
 import PageHero from '../../../components/shared/PageHero'
 
+// Introduces the recruiter page and presents its professional focus across responsive breakpoints.
 export default function HeroSection() {
   return (
     <PageHero
