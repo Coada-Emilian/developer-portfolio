@@ -10,34 +10,30 @@ import ComplementaryInformationSection from './sections/complementary/Complement
 import PersonalSkillsSection from './sections/personal/PersonalSkillsSection'
 import TechnicalSkillsSection from './sections/technical/TechnicalSkillsSection'
 
+// Renders the Skills page content according to the current route.
 export default function SkillsPage() {
   const { pathname } = useLocation()
 
-  // Get the title associated with the current Skills route.
+  // Resolve the section title from the current Skills route.
   const sectionTitle = skillsSections[pathname as keyof typeof skillsSections]
 
-  // Redirect the base Skills route and any unknown paths to Technical Skills.
+  // Redirect the base Skills route and unknown paths to Technical Skills.
   if (pathname === '/skills' || !sectionTitle) {
     return <Navigate to="/skills/technical" replace />
   }
 
   return (
     <main className="min-h-screen bg-surface text-text-primary">
-      {/* Shared page introduction */}
       <HeroSection />
 
-      {/* Navigation between Skills categories */}
       <SkillsNavigation />
 
       <div className="mx-auto w-11/12">
         <SkillsSection title={sectionTitle}>
-          {/* Technical skills: technology categories and overview */}
           {pathname === '/skills/technical' && <TechnicalSkillsSection />}
 
-          {/* Personal skills */}
           {pathname === '/skills/personal' && <PersonalSkillsSection />}
 
-          {/* Complementary information */}
           {pathname === '/skills/complementary' && <ComplementaryInformationSection />}
         </SkillsSection>
       </div>

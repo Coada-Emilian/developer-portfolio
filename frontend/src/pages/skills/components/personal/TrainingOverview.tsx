@@ -8,6 +8,7 @@ interface RotatingCourseTitleProps {
   courses: (typeof trainingItems)[number]['courses']
 }
 
+// Rotates through the course titles for a training category.
 function RotatingCourseTitle({ courses }: RotatingCourseTitleProps) {
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -34,18 +35,18 @@ function RotatingCourseTitle({ courses }: RotatingCourseTitleProps) {
   )
 }
 
+// Summarizes training categories, course information and access to the detailed training page.
 export default function TrainingOverview() {
   return (
     <>
-      {/* Training section introduction */}
       <div className="flex min-w-70 items-center gap-3">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
           <GraduationCap className="size-9" />
         </div>
 
         <div>
-          <h3 className="font-bold text-lg text-text-primary">Formation & apprentissage</h3>
-          <p className="text-sm text-text-secondary font-medium">
+          <h3 className="text-lg font-bold text-text-primary">Formation & apprentissage</h3>
+          <p className="text-sm font-medium text-text-secondary">
             Parcours, formations terminées, en cours et à venir.
           </p>
         </div>
@@ -53,7 +54,6 @@ export default function TrainingOverview() {
 
       <div className="h-12 w-0.5 shrink-0 bg-gray-300" />
 
-      {/* Training categories and course information */}
       <div className="grid w-full min-w-0 flex-1 grid-cols-3 gap-3">
         {trainingItems.map((item) => {
           const Icon = item.icon
@@ -63,12 +63,12 @@ export default function TrainingOverview() {
               key={item.id}
               className="flex min-w-0 items-center gap-3 rounded-xl border border-blue-100 bg-surface px-4 py-3"
             >
-              <Icon className={`shrink-0 ${item.color} size-8`} />
+              <Icon className={`size-8 shrink-0 ${item.color}`} />
 
               <div className="min-w-0">
                 <h4 className="text-base font-bold text-text-primary">{item.title}</h4>
 
-                <p className="text-sm text-text-secondary font-semibold">
+                <p className="text-sm font-semibold text-text-secondary">
                   {item.courses.length} formations
                 </p>
 
@@ -81,7 +81,6 @@ export default function TrainingOverview() {
 
       <div className="h-12 w-0.5 shrink-0 bg-gray-300" />
 
-      {/* Link to the detailed training page */}
       <Link
         to="/skills/training"
         className="flex shrink-0 items-center gap-2 rounded-lg bg-blue-600 px-4 py-3 text-xs font-semibold text-white transition-colors hover:bg-blue-700"

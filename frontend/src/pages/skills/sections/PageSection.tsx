@@ -5,12 +5,12 @@ import SectionHeading from '../../../components/shared/SectionHeading'
 
 import SkillStatusLegend from '../components/technical/SkillStatusLegend'
 
+// Provides a shared section layout with a route-specific technical skills legend.
 export default function PageSection({ title, children }: PageSectionProps) {
   const { pathname } = useLocation()
 
   return (
     <section className="mt-2 mb-4 w-full">
-      {/* Section heading and optional technology status legend */}
       <div className="flex w-full flex-col md:flex-row lg:justify-between">
         <div className="flex flex-col md:w-10/12">
           <SectionHeading title={title} underline />
@@ -20,7 +20,6 @@ export default function PageSection({ title, children }: PageSectionProps) {
         {pathname === '/skills/technical' && <SkillStatusLegend />}
       </div>
 
-      {/* Section content */}
       <div className="mt-4">{children}</div>
     </section>
   )

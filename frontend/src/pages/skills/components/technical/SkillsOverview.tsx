@@ -3,10 +3,10 @@ import { Check, Star, TrendingUp } from 'lucide-react'
 import SectionHeading from '../../../../components/shared/SectionHeading'
 import { globalLevels, levelWidths, strengths } from '../../../../data/pages/skills'
 
+// Summarizes overall proficiency levels and key professional strengths.
 export default function SkillsOverview() {
   return (
     <aside className="grid grid-cols-1 gap-5 lg:h-full lg:grid-rows-2">
-      {/* Global proficiency levels */}
       <section className="h-fit min-h-0 rounded-2xl border border-border bg-blue-50 p-5 shadow-sm">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
@@ -16,7 +16,7 @@ export default function SkillsOverview() {
           <SectionHeading title="Niveau global" />
         </div>
 
-        {/* Proficiency levels and progress bars */}
+        {/* Displays each proficiency level with its corresponding progress bar. */}
         <div className="space-y-4">
           {globalLevels.map((item) => (
             <div key={item.name} className="space-y-1.5">
@@ -39,7 +39,6 @@ export default function SkillsOverview() {
         </div>
       </section>
 
-      {/* Professional strengths */}
       <section className="h-full min-h-0 rounded-2xl border border-border bg-blue-50 p-5 shadow-sm">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
@@ -48,7 +47,6 @@ export default function SkillsOverview() {
           <SectionHeading title="Points forts" />
         </div>
 
-        {/* List of key strengths */}
         <ul className="space-y-3">
           {strengths.map((strength) => (
             <li key={strength} className="flex items-center gap-2">

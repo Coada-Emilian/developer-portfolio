@@ -4,12 +4,13 @@ import MobilityCard from '../../components/complementary/MobilityCard'
 import MotivationCard from '../../components/complementary/MotivationCard'
 import StrengthsCard from '../../components/complementary/StrengthsCard'
 
+// Groups complementary personal information and professional profile details.
 export default function InformationSection() {
   return (
     <div className="flex flex-col gap-4">
       {/* Personal information */}
       <div className="grid w-full grid-cols-1 gap-5 lg:grid-cols-[2fr_2fr]">
-        <div className="flex flex-col gap-4 md:grid md:grid-cols-2 ">
+        <div className="flex flex-col gap-4 md:grid md:grid-cols-2">
           <LanguagesCard />
 
           <MobilityCard />
