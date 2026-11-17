@@ -438,10 +438,10 @@ export const teamContributions = [
 // Languages and their proficiency levels.
 
 export const languages = [
-  { name: 'Français', country: 'fr', level: 'B2', progress: 70 },
+  { name: 'Français', country: 'fr', level: 'C1', progress: 80 },
   { name: 'Roumain', country: 'ro', level: 'Natif', progress: 100 },
   { name: 'Anglais', country: 'gb', level: 'C2', progress: 95 },
-  { name: 'Norvégien', country: 'no', level: 'A1', progress: 25 },
+  { name: 'Norvégien', country: 'no', level: 'A1', progress: 20 },
 ]
 
 // ==========================================

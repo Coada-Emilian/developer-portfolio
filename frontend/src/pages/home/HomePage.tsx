@@ -1,4 +1,5 @@
 import { user } from '../../data/user'
+
 import AudienceNavigationSection from './sections/audience-navigation/AudienceNavigationSection'
 import HeroSection from './sections/hero/HeroSection'
 import MainProjectMobileSection from './sections/main-project-mobile/MainProjectMobileSection'

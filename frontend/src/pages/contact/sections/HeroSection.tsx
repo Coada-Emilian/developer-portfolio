@@ -1,5 +1,6 @@
 import PageHero from '../../../components/shared/PageHero'
 
+// Provides the Contact page hero with responsive introductory text.
 export default function HeroSection() {
   return (
     <PageHero

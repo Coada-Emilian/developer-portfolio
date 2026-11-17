@@ -1,28 +1,30 @@
 import { Check, Star, TrendingUp } from 'lucide-react'
 
+import SectionHeading from '../../../../components/shared/SectionHeading'
 import { globalLevels, levelWidths, strengths } from '../../../../data/pages/skills'
 
+// Summarizes overall proficiency levels and key professional strengths.
 export default function SkillsOverview() {
   return (
     <aside className="grid grid-cols-1 gap-5 lg:h-full lg:grid-rows-2">
-      {/* Global proficiency levels */}
       <section className="h-fit min-h-0 rounded-2xl border border-border bg-blue-50 p-5 shadow-sm">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-            <TrendingUp className="size-8 lg:size-9" />
+            <TrendingUp className="size-6 md:size-7 lg:size-9" />
           </div>
-          <h3 className="text-lg font-extrabold text-text-primary md:text-xl">Niveau global</h3>
+
+          <SectionHeading title="Niveau global" />
         </div>
 
-        {/* Proficiency levels and progress bars */}
+        {/* Displays each proficiency level with its corresponding progress bar. */}
         <div className="space-y-4">
           {globalLevels.map((item) => (
             <div key={item.name} className="space-y-1.5">
               <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-medium text-text-primary lg:text-sm">
+                <span className="text-xs font-medium text-text-primary md:text-sm">
                   {item.name}
                 </span>
-                <span className="shrink-0 text-xs font-semibold text-blue-600 lg:text-sm">
+                <span className="shrink-0 text-xs font-semibold text-blue-600 md:text-sm">
                   {item.level}
                 </span>
               </div>
@@ -37,21 +39,19 @@ export default function SkillsOverview() {
         </div>
       </section>
 
-      {/* Professional strengths */}
       <section className="h-full min-h-0 rounded-2xl border border-border bg-blue-50 p-5 shadow-sm">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
-            <Star className="size-8 lg:size-9" />
+            <Star className="size-6 md:size-7 lg:size-9" />
           </div>
-          <h3 className="text-lg font-extrabold text-text-primary md:text-xl">Points forts</h3>
+          <SectionHeading title="Points forts" />
         </div>
 
-        {/* List of key strengths */}
         <ul className="space-y-3">
           {strengths.map((strength) => (
-            <li key={strength} className="flex items-start gap-2">
+            <li key={strength} className="flex items-center gap-2">
               <Check className="mt-0.5 size-5 shrink-0 text-blue-600 lg:size-6" strokeWidth={2.5} />
-              <span className="text-sm leading-relaxed text-text-primary lg:text-base">
+              <span className="text-xs leading-relaxed text-text-primary md:text-sm">
                 {strength}
               </span>
             </li>

@@ -1,5 +1,6 @@
-import type { HeroSectionProps } from '../../../../@types/props/heroSection.props'
+import type { HeroSectionProps } from '../../../../../@types/props/pages/home/homePage.props'
 
+// Displays the user's name, professional title and introduction in the homepage hero.
 export default function HeroSectionIntroduction({ user }: HeroSectionProps) {
   return (
     <>

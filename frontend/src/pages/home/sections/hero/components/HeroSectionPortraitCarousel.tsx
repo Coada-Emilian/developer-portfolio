@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import type { HeroPortraitCarouselProps } from '../../../../../@types/props/pages/home/homePage.props'
 import { CAROUSEL_CONFIG } from '../../../../../config/carousel.config'
 
+// Displays the user's portrait carousel with automatic rotation and manual navigation.
 export default function HeroSectionPortraitCarousel({ photos, alt }: HeroPortraitCarouselProps) {
   // Tracks the currently displayed photo and autoplay state.
   const [activeIndex, setActiveIndex] = useState(0)

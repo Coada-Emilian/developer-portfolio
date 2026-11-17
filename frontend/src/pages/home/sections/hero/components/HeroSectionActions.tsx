@@ -1,5 +1,6 @@
 import { Code2, UserRound } from 'lucide-react'
 
+// Provides navigation actions from the homepage hero to the Projects and About pages.
 export default function HeroSectionActions() {
   return (
     <div className="mt-5 flex flex-wrap gap-3 lg:gap-4">

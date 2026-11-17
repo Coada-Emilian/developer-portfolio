@@ -1,17 +1,17 @@
 import { CalendarDays } from 'lucide-react'
 
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { contactLinks } from '../../../data/pages/contact'
 
+// Displays contact details, external links and current professional availability.
 export default function ContactInformationSection() {
   return (
     <section className="flex flex-col gap-5">
       {/* Section introduction */}
       <div>
-        <h2 className="text-2xl font-extrabold text-text-primary">Restons en contact !</h2>
+        <SectionHeading title="Restons en contact !" underline />
 
-        <div className="mt-2 h-1 w-12 rounded-full bg-blue-500" />
-
-        <p className="mt-3 text-sm leading-relaxed text-text-primary">
+        <p className="mt-3 text-xs font-medium leading-relaxed text-text-primary md:text-sm lg:text-base">
           Vous avez un projet, une opportunité ou une question ? N’hésitez pas à me contacter. Je
           serai ravi d’échanger avec vous.
         </p>
@@ -33,16 +33,20 @@ export default function ContactInformationSection() {
               rel={isEmail ? undefined : 'noopener noreferrer'}
               className="flex items-center gap-4 rounded-xl border border-blue-100 bg-blue-50/70 px-4 py-3 transition-colors hover:border-blue-300 hover:bg-blue-100/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
             >
-              <Icon className="size-8 shrink-0 text-blue-700" strokeWidth={2} />
+              <Icon className="size-5 shrink-0 text-blue-700 md:size-6 lg:size-7" strokeWidth={2} />
 
               <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold text-text-primary">{contact.label}</h3>
+                <h3 className="text-sm font-bold text-text-primary md:text-base lg:text-lg">
+                  {contact.label}
+                </h3>
 
-                <p className="truncate text-sm text-text-primary">{contact.value}</p>
+                <p className="truncate text-xs font-medium text-text-primary md:text-sm lg:text-base">
+                  {contact.value}
+                </p>
               </div>
 
               <ActionIcon
-                className="size-6 shrink-0 text-text-primary"
+                className="size-4 shrink-0 text-text-primary md:size-5 lg:size-6"
                 strokeWidth={2}
                 aria-hidden="true"
               />
@@ -52,13 +56,16 @@ export default function ContactInformationSection() {
       </div>
 
       {/* Availability information */}
-      <div className="mt-auto flex items-center gap-4 rounded-xl bg-blue-100/70 p-4">
-        <CalendarDays className="size-9 shrink-0 text-blue-700" strokeWidth={2} />
+      <div className="mt-auto flex items-start gap-4 rounded-xl bg-blue-100/70 p-4">
+        <CalendarDays
+          className="size-6 shrink-0 text-blue-700 md:size-7 lg:size-9"
+          strokeWidth={2}
+        />
 
-        <div>
-          <h3 className="text-base font-bold text-text-primary">Disponibilité</h3>
+        <div className="flex flex-col gap-2">
+          <SectionHeading title="Disponibilité" subsection />
 
-          <p className="text-sm leading-relaxed text-text-primary">
+          <p className="text-xs leading-relaxed text-text-primary md:text-sm lg:text-base">
             Ouvert aux opportunités (CDI, CDD, alternance, stage) et aux projets intéressants.
           </p>
         </div>
