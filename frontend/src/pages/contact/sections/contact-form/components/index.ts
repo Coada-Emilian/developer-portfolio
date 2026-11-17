@@ -1,0 +1,6 @@
+export { default as ContactFormMessageInput } from './ContactFormMessageInput'
+export { default as ContactFormNameAndEmailInputs } from './ContactFormNameAndEmailInputs'
+export { default as ContactFormPrivacyNotice } from './ContactFormPrivacyNotice'
+export { default as ContactFormSubjectInput } from './ContactFormSubjectInput'
+export { default as ContactFormSubmitButton } from './ContactFormSubmitButton'
+export { default as ContactFormTitle } from './ContactFormTitle'
