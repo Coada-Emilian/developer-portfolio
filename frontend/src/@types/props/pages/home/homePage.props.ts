@@ -9,6 +9,7 @@ export interface AudienceNavigationSectionCardProps {
   tabletDescription: string
   href: string
   icon: LucideIcon
+  mobileTitle: string
 }
 
 export interface HeroSectionProps {
