@@ -1,6 +1,6 @@
 export { default as AIAssistedDevelopmentSection } from './AIAssistedDevelopmentSection'
 export { default as CollaborationSection } from './CollaborationSection'
-export { default as ContactSection } from './ContactSection'
+export { default as ContactSectionFooter } from './ContactSectionFooter'
 export { default as FeaturedProjectSection } from './featured-project/FeaturedProjectSection'
 export { default as HeroSection } from './HeroSection'
 export { default as TechnicalEnvironmentSection } from './TechnicalEnvironmentSection'

@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 
+import ProjectsFilter from '../../../components/shared/ProjectsFilter'
 import ProjectCard from '../components/ProjectCard'
-import ProjectsFilter from '../components/ProjectsFilter'
 
 import type { ProjectFilter } from '../../../@types/types/pages/projects/projectFilter.types'
 import { projects } from '../../../data/projects'
