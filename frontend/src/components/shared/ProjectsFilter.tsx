@@ -1,5 +1,5 @@
-import type { ProjectFiltersProps } from '../../../@types/props/pages/projects/projectsPage.props'
-import { filters } from '../../../data/pages/projects'
+import type { ProjectFiltersProps } from '../../@types/props/pages/projects/projectsPage.props'
+import { filters } from '../../data/pages/projects'
 
 export default function ProjectFilters({ activeFilter, onFilterChange }: ProjectFiltersProps) {
   return (
