@@ -1,10 +1,11 @@
 import { user } from '../../data/user'
 
+import ProjectSection from '../../components/shared/project-section/ProjectSection'
+import { projects } from '../../data/projects'
 import {
   AudienceNavigationSection,
   HeroSection,
   MainProjectMobileSection,
-  MainProjectSection,
   TechnologiesSection,
 } from './sections'
 
@@ -15,7 +16,9 @@ export default function HomePage() {
 
       <AudienceNavigationSection />
 
-      <MainProjectSection />
+      {projects.map((project) => (
+        <ProjectSection key={project.id} project={project} />
+      ))}
 
       <MainProjectMobileSection />
 
