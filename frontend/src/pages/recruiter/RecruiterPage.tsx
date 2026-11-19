@@ -1,6 +1,6 @@
 import { highlights } from '../../data/pages/recruiter'
 import {
-  ContactSection,
+  ContactSectionFooter,
   FeaturedProjectSection,
   HeroSection,
   HighlightsSection,
@@ -34,7 +34,7 @@ export default function RecruiterPage() {
         </div>
 
         {/* Provides a final contact call to action for recruiters. */}
-        <ContactSection />
+        <ContactSectionFooter />
       </div>
     </main>
   )

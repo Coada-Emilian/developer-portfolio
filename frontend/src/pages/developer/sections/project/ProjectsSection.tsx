@@ -15,7 +15,7 @@ export default function ProjectsSection() {
       : projects.filter((project) => project.categories.includes(activeFilter))
 
   return (
-    <section id="projects" className="w-full bg-slate-50/70 px-3 sm:px-5 sm:py-10 lg:px-8 lg:py-12">
+    <section id="projects" className="w-full bg-slate-50/70">
       <div className="flex w-full flex-col gap-4 sm:gap-5">
         {/* Section heading */}
         <div className="flex flex-col gap-1">
@@ -34,7 +34,7 @@ export default function ProjectsSection() {
 
         {/* Projects grid */}
         {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
