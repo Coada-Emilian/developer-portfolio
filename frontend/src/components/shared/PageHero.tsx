@@ -47,9 +47,9 @@ export default function PageHero({
           <button
             type="button"
             onClick={handleBack}
-            className="mb-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-blue-200 bg-white/90 px-3 py-1.5 text-sm font-bold text-blue-950 shadow-sm transition-colors hover:bg-blue-100"
+            className="mb-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-blue-200 bg-blue-50/75 px-2 py-1 md:px-3 md:py-1.5 text-xxxs md:text-sm font-bold text-blue-950 shadow-sm transition-colors hover:bg-blue-100"
           >
-            <ArrowLeft aria-hidden="true" className="size-4" />
+            <ArrowLeft aria-hidden="true" className="size-3 md:size-4" />
             Retour
           </button>
         )}
