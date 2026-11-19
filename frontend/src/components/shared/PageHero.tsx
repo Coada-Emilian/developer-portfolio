@@ -13,6 +13,7 @@ export default function PageHero({
   tabletSubtitle,
   mobileSubtitle,
   backButton,
+  project,
 }: PageHeroProps) {
   const navigate = useNavigate()
 
@@ -20,6 +21,8 @@ export default function PageHero({
   const handleBack = () => {
     navigate(-1)
   }
+
+  const ProjectIcon = project?.icon
 
   return (
     <section className="relative flex items-center overflow-hidden px-5 py-8 sm:px-8 md:py-5 lg:px-16 lg:py-6">
@@ -47,16 +50,22 @@ export default function PageHero({
           <button
             type="button"
             onClick={handleBack}
-            className="mb-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-blue-200 bg-blue-50/75 px-2 py-1 md:px-3 md:py-1.5 text-xxxs md:text-sm font-bold text-blue-950 shadow-sm transition-colors hover:bg-blue-100"
+            className="mb-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-blue-200 bg-blue-50/75 px-2 py-1 text-xxxs font-bold text-blue-950 shadow-sm transition-colors hover:bg-blue-100 md:px-3 md:py-1.5 md:text-sm"
           >
             <ArrowLeft aria-hidden="true" className="size-3 md:size-4" />
             Retour
           </button>
         )}
 
-        <h1 className="text-lg font-extrabold text-white md:text-2xl lg:text-3xl">{title}</h1>
-
-        <TitleUnderline />
+        <div className="mb-3 flex items-center md:items-start gap-3">
+          {ProjectIcon && (
+            <ProjectIcon aria-hidden="true" className="size-6 text-white md:size-9" />
+          )}
+          <div>
+            <h1 className="text-lg font-extrabold text-white md:text-2xl lg:text-3xl">{title}</h1>
+            <TitleUnderline />
+          </div>
+        </div>
 
         {mobileSubtitle && (
           <p className="mt-3 w-full pb-4 text-xs text-white sm:pb-0 md:hidden">{mobileSubtitle}</p>

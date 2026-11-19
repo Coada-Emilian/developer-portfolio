@@ -1,11 +1,13 @@
+import type { IProject } from '../../interfaces/pages/projects/IProject'
 import type { IHighlight } from '../../interfaces/shared/IHighlight'
 
 export interface PageHeroProps {
-  title: string
+  title: string | undefined
   desktopSubtitle?: string
   tabletSubtitle?: string
   mobileSubtitle?: string
   backButton?: boolean
+  project?: IProject
 }
 
 export interface SectionHeadingProps {
