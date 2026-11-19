@@ -14,6 +14,7 @@ export default function HeroSection({ project }: HeroSectionProps) {
       tabletSubtitle={project?.description.tablet}
       desktopSubtitle={project?.description.desktop}
       project={project}
+      backButton={true}
     />
   )
 }
