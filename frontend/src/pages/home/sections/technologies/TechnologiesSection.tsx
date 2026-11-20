@@ -50,7 +50,7 @@ export default function TechnologiesSection() {
   }, [isPaused, activeIndex, maxIndex, showNext])
 
   return (
-    <section className="bg-surface px-3 py-4 sm:px-8 md:py-8 lg:px-12 xl:px-36">
+    <section className="bg-surface px-3 py-4 sm:px-8 md:py-8 lg:px-12 w-full">
       <div className="mx-auto  ">
         <SectionHeading title="Technologies principales" underline />
 

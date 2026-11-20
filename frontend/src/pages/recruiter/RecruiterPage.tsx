@@ -1,7 +1,8 @@
+import ProjectSection from '../../components/shared/project-section/ProjectSection'
 import { highlights } from '../../data/pages/recruiter'
+import { projects } from '../../data/projects'
 import {
   ContactSectionFooter,
-  FeaturedProjectSection,
   HeroSection,
   HighlightsSection,
   JourneySection,
@@ -11,6 +12,8 @@ import {
 
 // Composes the recruiter-focused page, presenting professional experience, technical skills and featured work.
 export default function RecruiterPage() {
+  const mainProject = projects.find((project) => project.featured) || projects[0]
+
   return (
     <main className="min-h-screen bg-surface text-text-primary">
       <HeroSection />
@@ -28,7 +31,7 @@ export default function RecruiterPage() {
 
         {/* Combines the featured development project with ongoing training and learning. */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <FeaturedProjectSection />
+          <ProjectSection key={mainProject.id} project={mainProject} />
 
           <TrainingSection />
         </div>

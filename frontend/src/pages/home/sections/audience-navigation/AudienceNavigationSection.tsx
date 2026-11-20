@@ -6,7 +6,7 @@ import AudienceNavigationSectionCard from './components/AudienceNavigationSectio
 export default function AudienceNavigationSection() {
   return (
     <section className=" bg-blue-50">
-      <div className="mx-auto grid grid-cols-3 gap-3 px-6 py-3 lg:gap-6 lg:px-36">
+      <div className="mx-auto grid grid-cols-3 gap-3 py-3 lg:gap-6">
         {/* Recruiters: career path, skills and key projects */}
         <AudienceNavigationSectionCard
           desktopTitle="Pour les recruteurs"

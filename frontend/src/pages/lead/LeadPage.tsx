@@ -1,17 +1,19 @@
 import HighlightsSection from '../../components/shared/HighlightsSection'
+import ProjectSection from '../../components/shared/project-section/ProjectSection'
 import { highlights } from '../../data/pages/lead'
+import { projects } from '../../data/projects'
 
 import {
   AIAssistedDevelopmentSection,
   CollaborationSection,
   ContactSectionFooter,
-  FeaturedProjectSection,
   HeroSection,
   TechnicalEnvironmentSection,
   WorkflowSection,
 } from './sections'
 
 export default function LeadPage() {
+  const featuredProject = projects.find((project) => project.featured) || projects[0]
   return (
     <main className="min-h-screen bg-surface text-text-primary">
       {/* Page introduction focused on technical leadership and collaboration. */}
@@ -21,7 +23,11 @@ export default function LeadPage() {
         <HighlightsSection highlights={highlights} />
         <WorkflowSection />
         <TechnicalEnvironmentSection />
-        <FeaturedProjectSection />
+        <ProjectSection
+          key={featuredProject.id}
+          project={featuredProject}
+          isAlternateSection={true}
+        />
         <CollaborationSection />
         <AIAssistedDevelopmentSection />
         <ContactSectionFooter />
