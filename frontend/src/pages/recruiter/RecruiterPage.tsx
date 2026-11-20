@@ -31,7 +31,7 @@ export default function RecruiterPage() {
 
         {/* Combines the featured development project with ongoing training and learning. */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <ProjectSection key={mainProject.id} project={mainProject} isAlternateSection={true} />
+          <ProjectSection key={mainProject.id} project={mainProject} />
 
           <TrainingSection />
         </div>
