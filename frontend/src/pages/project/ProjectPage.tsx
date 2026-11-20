@@ -4,6 +4,7 @@ import ProjectSection from '../../components/shared/project-section/ProjectSecti
 import { highlights } from '../../data/pages/project'
 import { projects } from '../../data/projects'
 import HeroSection from './sections/HeroSection'
+import QualityHighlightsSection from './sections/QualityHighlights'
 import ProjectVideoSection from './sections/VideoSection'
 
 export default function ProjectPage() {
@@ -21,6 +22,8 @@ export default function ProjectPage() {
         {currentProject && <ProjectSection project={currentProject} isProjectSection />}
 
         {currentProject && <ProjectVideoSection project={currentProject} />}
+
+        <QualityHighlightsSection />
       </div>
     </main>
   )

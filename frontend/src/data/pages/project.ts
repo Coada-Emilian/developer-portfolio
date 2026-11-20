@@ -1,4 +1,13 @@
-import { Code2, Database, Layers3, ShieldCheck } from 'lucide-react'
+import {
+  CircleCheck,
+  Code2,
+  Database,
+  FlaskConical,
+  Layers3,
+  Monitor,
+  ShieldCheck,
+  TriangleAlert,
+} from 'lucide-react'
 
 export const highlights = [
   {
@@ -21,5 +30,29 @@ export const highlights = [
     title: 'Tests & qualité',
     description:
       'Des tests, des validations et des bonnes pratiques pour un code fiable et maintenable.',
+  },
+]
+
+export const qualityHighlights = [
+  {
+    icon: FlaskConical,
+    title: 'Tests unitaires',
+    description: 'Des tests ciblés sur les fonctions et services clés (logique métier, données).',
+  },
+  {
+    icon: CircleCheck,
+    title: 'Validation des données',
+    description: 'Des règles de validation côté API (format, champs obligatoires, cohérence).',
+  },
+  {
+    icon: TriangleAlert,
+    title: 'Gestion des erreurs',
+    description: 'Une gestion centralisée des erreurs, avec des messages clairs et adaptés.',
+  },
+  {
+    icon: Monitor,
+    title: 'Vérifications responsive',
+    description:
+      'Une interface adaptée aux différents écrans (ordinateur, tablette, mobile) pour un usage confortable.',
   },
 ]
