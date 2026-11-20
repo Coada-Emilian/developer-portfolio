@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import HighlightsSection from '../../components/shared/HighlightsSection'
 import ProjectSection from '../../components/shared/project-section/ProjectSection'
+import SectionHeading from '../../components/shared/SectionHeading'
 import { highlights } from '../../data/pages/project'
 import { projects } from '../../data/projects'
 import HeroSection from './sections/HeroSection'
@@ -21,7 +22,14 @@ export default function ProjectPage() {
       <div className="flex flex-col gap-5 px-4 py-5 sm:gap-6 sm:px-6 lg:p-6">
         <HighlightsSection highlights={highlights} />
 
-        {currentProject && <ProjectSection project={currentProject} isProjectSection />}
+        {currentProject && (
+          <>
+            {!currentProject.featured && (
+              <SectionHeading title="Presentation du projet" underline />
+            )}
+            <ProjectSection project={currentProject} isProjectSection />
+          </>
+        )}
 
         {currentProject && <ProjectVideoSection project={currentProject} />}
 

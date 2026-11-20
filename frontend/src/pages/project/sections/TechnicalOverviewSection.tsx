@@ -1,12 +1,11 @@
 import { Code2, Database, Monitor } from 'lucide-react'
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { apiEndpoints, architecture, dataModel } from '../../../data/pages/project'
 
 export default function TechnicalOverviewSection() {
   return (
     <section className="w-full">
-      <h3 className="mb-3 text-sm font-bold text-text-primary md:text-base lg:text-lg xl:text-xl">
-        Sous le capot
-      </h3>
+      <SectionHeading title="Structure technique" underline />
 
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
         {/* Application architecture */}
