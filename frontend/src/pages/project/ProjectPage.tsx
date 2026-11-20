@@ -5,6 +5,7 @@ import { highlights } from '../../data/pages/project'
 import { projects } from '../../data/projects'
 import HeroSection from './sections/HeroSection'
 import QualityHighlightsSection from './sections/QualityHighlights'
+import TechnicalOverviewSection from './sections/TechnicalOverviewSection'
 import ProjectVideoSection from './sections/VideoSection'
 
 export default function ProjectPage() {
@@ -22,6 +23,8 @@ export default function ProjectPage() {
         {currentProject && <ProjectSection project={currentProject} isProjectSection />}
 
         {currentProject && <ProjectVideoSection project={currentProject} />}
+
+        <TechnicalOverviewSection />
 
         <QualityHighlightsSection />
       </div>
