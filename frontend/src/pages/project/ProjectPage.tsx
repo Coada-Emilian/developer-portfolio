@@ -4,6 +4,7 @@ import ProjectSection from '../../components/shared/project-section/ProjectSecti
 import { highlights } from '../../data/pages/project'
 import { projects } from '../../data/projects'
 import HeroSection from './sections/HeroSection'
+import ProjectVideoSection from './sections/VideoSection'
 
 export default function ProjectPage() {
   const { id } = useParams()
@@ -18,6 +19,8 @@ export default function ProjectPage() {
         <HighlightsSection highlights={highlights} />
 
         {currentProject && <ProjectSection project={currentProject} isProjectSection />}
+
+        {currentProject && <ProjectVideoSection project={currentProject} />}
       </div>
     </main>
   )
