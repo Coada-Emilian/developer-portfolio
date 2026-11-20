@@ -10,15 +10,15 @@ import {
 } from './sections'
 
 export default function HomePage() {
+  const mainProject = projects.find((project) => project.featured) || projects[0]
+
   return (
     <main className="min-h-screen bg-surface text-text-primary">
       <HeroSection user={user} />
 
       <AudienceNavigationSection />
 
-      {projects.map((project) => (
-        <ProjectSection key={project.id} project={project} />
-      ))}
+      <ProjectSection key={mainProject.id} project={mainProject} />
 
       <MainProjectMobileSection />
 
