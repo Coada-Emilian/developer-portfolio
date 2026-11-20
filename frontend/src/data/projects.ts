@@ -39,7 +39,7 @@ export const projects: IProject[] = [
     projectType: 'Full Stack',
     context: 'Projet personnel',
     status: 'En développement',
-    period: 'Septembre 2024 – Juillet 2026',
+    period: 'Sept. 2024 – Juil. 2026',
 
     featured: true,
 

@@ -6,21 +6,24 @@ import type { IProject } from '../../../../@types/interfaces/pages/projects/IPro
 
 import projectBackground from '../../../../assets/images/project_background.png'
 import { technicalChallenges } from '../../../../data/pages/lead'
+import KeyInformationSection from './KeyInformationSection'
 
 interface ProjectInformationProps {
   project: IProject
   isAlternateSection?: boolean
+  isProjectSection?: boolean
 }
 
 export default function ProjectInformation({
   project,
   isAlternateSection,
+  isProjectSection,
 }: ProjectInformationProps) {
   const ProjectIcon = project.icon
 
   return (
     <div
-      className={`relative flex w-full min-w-0  gap-5 rounded-xl bg-cover bg-center p-4 sm:gap-6 sm:p-5 lg:h-96 lg:justify-center lg:gap-8 ${isAlternateSection ? 'flex-row items-center' : 'flex-col'}`}
+      className={`relative flex w-full min-w-0  gap-5 rounded-xl bg-cover bg-center p-4 sm:gap-6 sm:p-5 lg:h-96 lg:justify-center lg:gap-8 ${isAlternateSection ? 'flex-row items-center' : isProjectSection ? 'flex-col md:flex-row items-center' : 'flex-col'}`}
       style={{ backgroundImage: `url(${projectBackground})` }}
     >
       <div className="absolute inset-0 rounded-xl bg-white/60" />
@@ -64,23 +67,25 @@ export default function ProjectInformation({
         </div>
 
         {/* Project links */}
-        <div className="relative flex items-start gap-3 sm:gap-4">
-          <Link
-            to={`/projects/${project.id}`}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-900 px-3 py-3 text-xs font-semibold text-white transition hover:bg-blue-800 sm:flex-none sm:px-5 sm:text-base"
-          >
-            <span>
-              Voir<span className="hidden md:inline"> le</span> projet
-            </span>
-            <ExternalLink className="size-3 shrink-0" />
-          </Link>
+        <div className={`relative flex gap-3 sm:gap-4}`}>
+          {!isProjectSection && (
+            <Link
+              to={`/projects/${project.id}`}
+              className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-900 px-3 py-3 text-xs font-semibold text-white transition hover:bg-blue-800 sm:flex-none sm:px-5 sm:text-base"
+            >
+              <span>
+                Voir<span className="hidden md:inline"> le</span> projet
+              </span>
+              <ExternalLink className="size-3 shrink-0" />
+            </Link>
+          )}
 
           {project.github && (
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-blue-900 bg-slate-100 px-3 py-3 text-xs font-semibold text-text-primary transition hover:bg-blue-50 sm:flex-none sm:px-5 sm:text-base"
+              className={`${isProjectSection ? '' : 'flex-1 '}flex items-center justify-center gap-2 rounded-xl border border-blue-900 bg-slate-100 p-3 text-xs font-semibold text-text-primary transition hover:bg-blue-50 sm:flex-none sm:px-5 sm:text-base`}
             >
               <GithubIcon className="size-3 shrink-0" />
               <span>
@@ -118,6 +123,14 @@ export default function ProjectInformation({
               ))}
             </ul>
           </div>
+        </div>
+      )}
+
+      {isProjectSection && (
+        <div className="flex flex-col md:flex-row md:gap-6 h-full items-center md:w-full">
+          <div className="bg-blue-400/75 w-0.5 h-11/12 hidden md:block"></div>
+
+          <KeyInformationSection project={project} />
         </div>
       )}
     </div>

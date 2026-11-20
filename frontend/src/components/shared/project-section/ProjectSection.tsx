@@ -7,9 +7,14 @@ import ProjectInformation from './components/ProjectInformation'
 interface ProjectSectionProps {
   project: IProject
   isAlternateSection?: boolean
+  isProjectSection?: boolean
 }
 
-export default function ProjectSection({ project, isAlternateSection }: ProjectSectionProps) {
+export default function ProjectSection({
+  project,
+  isAlternateSection,
+  isProjectSection,
+}: ProjectSectionProps) {
   return (
     <section
       className={`bg-surface lg:px-12 lg:py-8 xl:px-0 xl:py-2 xl:w-full px-4 py-6 md:px-6 md:py-8`}
@@ -22,7 +27,11 @@ export default function ProjectSection({ project, isAlternateSection }: ProjectS
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-4 lg:mt-0 lg:flex lg:h-full lg:items-center">
           <div className="bg-blue-200/75 w-0.5 h-11/12 hidden lg:block"></div>
           <div className="bg-gray-200/75 w-11/12 h-0.5 lg:hidden mx-auto"></div>
-          <ProjectInformation project={project} isAlternateSection={isAlternateSection} />
+          <ProjectInformation
+            project={project}
+            isAlternateSection={isAlternateSection}
+            isProjectSection={isProjectSection}
+          />
         </div>
       </div>
     </section>
