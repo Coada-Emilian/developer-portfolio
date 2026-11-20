@@ -1,6 +1,5 @@
 export { default as HighlightsSection } from '../../../components/shared/HighlightsSection'
 export { default as ContactSectionFooter } from './ContactSectionFooter'
-export { default as FeaturedProjectSection } from './featured-project/FeaturedProjectSection'
 export { default as HeroSection } from './HeroSection'
 export { default as JourneySection } from './journey/JourneySection'
 export { default as TechnicalSkillsSection } from './TechnicalSkillsSection'

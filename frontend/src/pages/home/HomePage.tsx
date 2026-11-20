@@ -2,12 +2,7 @@ import { user } from '../../data/user'
 
 import ProjectSection from '../../components/shared/project-section/ProjectSection'
 import { projects } from '../../data/projects'
-import {
-  AudienceNavigationSection,
-  HeroSection,
-  MainProjectMobileSection,
-  TechnologiesSection,
-} from './sections'
+import { AudienceNavigationSection, HeroSection, TechnologiesSection } from './sections'
 
 export default function HomePage() {
   const mainProject = projects.find((project) => project.featured) || projects[0]
@@ -19,8 +14,6 @@ export default function HomePage() {
       <AudienceNavigationSection />
 
       <ProjectSection key={mainProject.id} project={mainProject} />
-
-      <MainProjectMobileSection />
 
       <TechnologiesSection />
     </main>

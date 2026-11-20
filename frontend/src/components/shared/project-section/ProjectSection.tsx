@@ -6,11 +6,14 @@ import ProjectInformation from './components/ProjectInformation'
 
 interface ProjectSectionProps {
   project: IProject
+  isAlternateSection?: boolean
 }
 
-export default function ProjectSection({ project }: ProjectSectionProps) {
+export default function ProjectSection({ project, isAlternateSection }: ProjectSectionProps) {
   return (
-    <section className="bg-surface px-4 py-6 sm:px-6 sm:py-8 lg:px-12 lg:py-8 xl:px-36">
+    <section
+      className={`bg-surface   lg:px-12 lg:py-8  ${isAlternateSection ? 'xl:px-0 xl:py-2 xl:w-full' : 'xl:px-36 px-4 py-6 md:px-6 md:py-8'}`}
+    >
       {project.featured && <SectionHeading title="Projet principal" underline />}
 
       <div className="mt-4 rounded-2xl border border-blue-100 bg-blue-50 p-4 lg:mt-5 lg:grid lg:grid-cols-2 lg:items-center lg:gap-10 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
