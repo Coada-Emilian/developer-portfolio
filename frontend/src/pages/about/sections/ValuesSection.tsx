@@ -1,17 +1,12 @@
-import TitleUnderline from '../../../components/ui/TitleUnderline'
+import SectionHeading from '../../../components/shared/SectionHeading'
 import { values } from '../../../data/pages/about'
 
+// Highlights the personal and professional values that guide the user's work.
 export default function ValuesSection() {
   return (
-    <section>
-      {/* Section heading */}
-      <h2 className="mb-2 text-base font-bold text-slate-900 sm:text-xl sm:font-extrabold">
-        Ce qui me définit
-      </h2>
+    <section className="flex flex-col gap-2">
+      <SectionHeading title="Ce qui me définit" underline subsection />
 
-      <TitleUnderline />
-
-      {/* Grid of personal and professional values */}
       <div className="grid grid-cols-5 gap-2">
         {values.map(({ label, icon: Icon }) => (
           <div

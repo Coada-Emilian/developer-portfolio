@@ -1,31 +1,44 @@
+import ProjectSection from '../../components/shared/project-section/ProjectSection'
+import { highlights } from '../../data/pages/recruiter'
+import { projects } from '../../data/projects'
+import {
+  ContactSectionFooter,
+  HeroSection,
+  HighlightsSection,
+  JourneySection,
+  TechnicalSkillsSection,
+  TrainingSection,
+} from './sections'
+
+// Composes the recruiter-focused page, presenting professional experience, technical skills and featured work.
 export default function RecruiterPage() {
+  const mainProject = projects.find((project) => project.featured) || projects[0]
+
   return (
-    <main className="min-h-screen bg-surface px-6 py-16 text-text-primary">
-      {/* Page introduction focused on professional background and opportunities. */}
-      <section className="mx-auto max-w-5xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-          Espace recruteurs
-        </p>
+    <main className="min-h-screen bg-surface text-text-primary">
+      <HeroSection />
 
-        <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Un développeur motivé, prêt à relever de nouveaux défis.
-        </h1>
+      {/* Groups the recruiter page content into distinct sections with consistent spacing. */}
+      <div className="flex flex-col gap-5 px-4 py-5 sm:gap-6 sm:px-6 lg:p-6">
+        <HighlightsSection highlights={highlights} />
 
-        <div className="mt-4 h-1 w-12 rounded-full bg-blue-500" />
+        {/* Presents professional experience alongside the main technical skills. */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <JourneySection />
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-primary">
-          Découvrez mon parcours professionnel, mes compétences techniques, mes expériences et mon
-          approche du développement logiciel.
-        </p>
-
-        {/* Future content: professional profile, CV, skills and availability. */}
-        <div className="mt-12 rounded-xl border border-blue-100 bg-slate-100 p-8">
-          <p className="text-sm font-medium text-text-primary">
-            Retrouvez prochainement ici mon parcours, mon CV, mes compétences et les informations
-            nécessaires pour envisager une collaboration.
-          </p>
+          <TechnicalSkillsSection />
         </div>
-      </section>
+
+        {/* Combines the featured development project with ongoing training and learning. */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <ProjectSection key={mainProject.id} project={mainProject} />
+
+          <TrainingSection />
+        </div>
+
+        {/* Provides a final contact call to action for recruiters. */}
+        <ContactSectionFooter />
+      </div>
     </main>
   )
 }

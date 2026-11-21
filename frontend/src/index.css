@@ -26,6 +26,9 @@
 
   --text-xxs: 0.625rem;
   --text-xxs--line-height: 1rem;
+
+  --text-xxxs: 0.5rem;
+  --text-xxxs--line-height: 0.75rem;
 }
 
 @layer base {

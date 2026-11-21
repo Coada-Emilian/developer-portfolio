@@ -1,35 +1,44 @@
 import { useParams } from 'react-router-dom'
+import HighlightsSection from '../../components/shared/HighlightsSection'
+import ProjectSection from '../../components/shared/project-section/ProjectSection'
+import SectionHeading from '../../components/shared/SectionHeading'
+import { highlights } from '../../data/pages/project'
+import { projects } from '../../data/projects'
+import HeroSection from './sections/HeroSection'
+import QualityHighlightsSection from './sections/QualityHighlights'
+import TechnicalChallengesSection from './sections/TechnicalChallengesSection'
+import TechnicalOverviewSection from './sections/TechnicalOverviewSection'
+import ProjectVideoSection from './sections/VideoSection'
 
 export default function ProjectPage() {
-  const { slug } = useParams<{ slug: string }>()
+  const { id } = useParams()
+
+  const currentProject = projects.find((project) => project.id === id)
 
   return (
-    <main className="min-h-screen bg-surface px-6 py-16 text-text-primary">
-      {/* Project introduction and dynamic project identification. */}
-      <section className="mx-auto max-w-5xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-          Étude de projet
-        </p>
+    <main className="min-h-screen bg-surface text-text-primary">
+      {currentProject && <HeroSection project={currentProject} />}
 
-        <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
-          {slug ? slug.replaceAll('-', ' ') : 'Projet'}
-        </h1>
+      <div className="flex flex-col gap-5 px-4 py-5 sm:gap-6 sm:px-6 lg:p-6">
+        <HighlightsSection highlights={highlights} />
 
-        <div className="mt-4 h-1 w-12 rounded-full bg-blue-500" />
+        {currentProject && (
+          <>
+            {!currentProject.featured && (
+              <SectionHeading title="Presentation du projet" underline />
+            )}
+            <ProjectSection project={currentProject} isProjectSection />
+          </>
+        )}
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-primary">
-          Découvrez les objectifs, les fonctionnalités, les choix techniques et les étapes de
-          développement de ce projet.
-        </p>
+        {currentProject && <ProjectVideoSection project={currentProject} />}
 
-        {/* Future content: project overview, features, architecture and technologies. */}
-        <div className="mt-12 rounded-xl border border-blue-100 bg-slate-100 p-8">
-          <p className="text-sm font-medium text-text-primary">
-            Cette page présentera prochainement une étude détaillée du projet, de sa conception à
-            son implémentation.
-          </p>
-        </div>
-      </section>
+        <TechnicalOverviewSection />
+
+        <TechnicalChallengesSection />
+
+        <QualityHighlightsSection />
+      </div>
     </main>
   )
 }

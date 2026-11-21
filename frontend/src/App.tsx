@@ -20,11 +20,11 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/developer" element={<DevPage />} />
-        <Route path="/lead" element={<LeadPage />} />
+        <Route path="/developers" element={<DevPage />} />
+        <Route path="/leads" element={<LeadPage />} />
         <Route path="/projects/:id" element={<ProjectPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/recruiter" element={<RecruiterPage />} />
+        <Route path="/recruiters" element={<RecruiterPage />} />
         <Route path="/skills/technical" element={<SkillsPage />} />
         <Route path="/skills/personal" element={<SkillsPage />} />
         <Route path="/skills/complementary" element={<SkillsPage />} />
